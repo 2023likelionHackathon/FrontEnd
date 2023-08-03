@@ -1,5 +1,5 @@
 import React from "react";
-import "./BottomBar.css";
+import "../css/BottomBar.css";
 import { Link } from "react-router-dom";
 const BottomBar = () => {
   return (
