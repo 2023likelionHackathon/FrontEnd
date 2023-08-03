@@ -1,0 +1,8 @@
+.backGround {
+  background-color: antiquewhite;
+  display: flex;
+}
+.mobileWeb {
+  margin-left: 100vh;
+  margin-right: 100vh;
+}
