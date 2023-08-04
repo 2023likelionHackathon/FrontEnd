@@ -1,6 +1,6 @@
 import Main_page from "./pages/Main_page";
 import Login_page from "./pages/Login_page";
-import Feed_main from "./components/Feed/Feed_main";
+import Feed_page from "./pages/Feed_page";
 function App() {
   // const axios_get = () => {
   //   axios
@@ -21,7 +21,7 @@ function App() {
   // });
   // console.log(user.getUser);
   return (
-      <Feed_main/>
+      <Feed_page/>
   );
 }
 
