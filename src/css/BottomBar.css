@@ -19,6 +19,9 @@ nav > div {
 }
 .wrapper{
   background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .icons{
   display: flex;
@@ -32,4 +35,7 @@ nav > div {
 }
 .pics{
   height:31px;
+}
+.btbar{
+
 }

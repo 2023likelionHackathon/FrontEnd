@@ -1,5 +1,17 @@
-
 .feed {
     display: flex;
     flex-direction: row;
-}
+  }
+  
+  .feed_timeline {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  

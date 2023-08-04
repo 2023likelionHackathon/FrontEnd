@@ -8,8 +8,7 @@
 }
 
 .white_page {
-  padding: 20px;
-  width: 50vw; /* 화면 너비의 80%로 설정하여 중간 정도 크기로 만듭니다. */
+  width: 546px; /* 화면 너비의 80%로 설정하여 중간 정도 크기로 만듭니다. */
   height: 100vh;
   background-color: white;
 }
