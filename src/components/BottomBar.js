@@ -4,24 +4,36 @@ import { Link } from "react-router-dom";
 const BottomBar = () => {
   return (
     <nav className="wrapper">
-      <div>
-        <Link to="/">
-          <img src="pics/Home.png"></img>
+      <div className="icons">
+        <Link to="/"  style={{ textDecoration: "none", color: "black" }}>
+          <div className="pics">
+            <img src="pics/Home.png"></img>
+          </div>
+          <span className="sp">홈</span>
         </Link>
       </div>
-      <div>
-        <Link to="/">
-          <img src="pics/+.png"></img>
+      <div className="icons">
+        <Link to="/"  style={{ textDecoration: "none", color: "black" }}>
+          <div className="pics">
+            <img src="pics/+.png" ></img>
+          </div>
+          <span className="sp">글쓰기</span> 
         </Link>
       </div>
-      <div>
-        <Link to="/">
-          <img src="pics/Market.png"></img>
+      <div className="icons">
+        <Link to="/"  style={{ textDecoration: "none", color: "black" }}>
+          <div className="pics">
+            <img src="pics/Market.png" ></img>
+          </div>
+          <span className="sp">시장 검색</span>
         </Link>
       </div>
-      <div>
-        <Link to="/">
-          <img src="pics/profile.png"></img>
+      <div className="icons">
+        <Link to="/"  style={{ textDecoration: "none", color: "black" }}>
+          <div className="pics">
+            <img src="pics/profile.png"></img>
+          </div>
+          <span className="sp">프로필</span>
         </Link>
       </div>
     </nav>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "../../css/LoginForm.css";
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
@@ -30,7 +29,8 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="white-page">
+    <div className="container">
+      <div className="white_page">
       <div className="logoBar">
         <img src="pics/Logo.png"></img>
         <input
@@ -66,6 +66,8 @@ const LoginForm = () => {
       {/* Link 컴포넌트를 사용하여 회원가입 페이지로 이동 */}
       {/* <Link to="/signup">Sign Up</Link> */}
     </div>
+    </div>
+    
   );
 };
 

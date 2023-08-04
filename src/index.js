@@ -4,7 +4,7 @@ import App from "./App";
 import BottomBar from "./components/BottomBar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Join_Memebership from "./components/About_Login/Join_Memebership";
-import LoginForm from "./components/About_Login/LoginForm";
+import Login_page from "./pages/Login_page";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <LoginForm></LoginForm>,
+    element: <Login_page></Login_page>,
   },
 ]);
 
