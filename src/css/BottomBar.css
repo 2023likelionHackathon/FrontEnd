@@ -19,9 +19,10 @@ nav > div {
 .wrapper {
   background-color: white;
   position: fixed;
-  margin-left: 30.52vw;
   bottom: 0;
-  width: 36.87vw;
+  width: 546px;
+  left:50%;
+  transform: translateX(-50%);
 }
 .icons {
   display: flex;
