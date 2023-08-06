@@ -1,14 +1,15 @@
-import React from 'react';
-import BottomBar from '../components/BottomBar';
-import LoginForm from '../components/About_Login/LoginForm';
+import React from "react";
+import BottomBar from "../components/BottomBar";
+import LoginForm from "../components/About_Login/LoginForm";
+import SearchBar from "../components/SearchBar";
 const Login_page = () => {
-    return (
-        <div>
-            <LoginForm/>
-            <BottomBar/>
-        </div>
-
-    );
+  return (
+    <div>
+      <SearchBar />
+      <LoginForm />
+      <BottomBar />
+    </div>
+  );
 };
 
 export default Login_page;

@@ -20,9 +20,7 @@ function App() {
   //   handleGetUser();
   // });
   // console.log(user.getUser);
-  return (
-      <Feed_page/>
-  );
+  return <Feed_page />;
 }
 
 export default App;

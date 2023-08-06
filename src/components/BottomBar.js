@@ -14,9 +14,9 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="icons">
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+          <Link to="/write" style={{ textDecoration: "none", color: "black" }}>
             <div className="pics">
-              <img src="pics/+.png" ></img>
+              <img src="pics/+.png"></img>
             </div>
             <span className="sp">글쓰기</span>
           </Link>
@@ -24,7 +24,7 @@ const BottomBar = () => {
         <div className="icons">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <div className="pics">
-              <img src="pics/Market.png" ></img>
+              <img src="pics/Market.png"></img>
             </div>
             <span className="sp">시장 검색</span>
           </Link>
@@ -39,7 +39,6 @@ const BottomBar = () => {
         </div>
       </nav>
     </div>
-
   );
 };
 

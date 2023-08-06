@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../css/LoginForm.css";
+import SearchBar from "../SearchBar";
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
@@ -31,43 +32,36 @@ const LoginForm = () => {
   return (
     <div className="container">
       <div className="white_page">
-      <div className="logoBar">
-        <img src="pics/Logo.png"></img>
-        <input
-          type="search"
-          value={search}
-          onChange={handlePasswordChange}
-          placeholder="       시장 또는 가계명을 검색해보세요"
-        />
-      </div>
-      <hr />
-      <div className="loginForm">
-        <label>
-          아이디
+        <div className="loginForm">
+          <label>
+            아이디
+            <br />
+            <input
+              type="text"
+              value={username}
+              onChange={handleUsernameChange}
+            />
+          </label>
           <br />
-          <input type="text" value={username} onChange={handleUsernameChange} />
-        </label>
-        <br />
-        <label>
-          비밀번호
+          <label>
+            비밀번호
+            <br />
+            <input
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </label>
           <br />
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </label>
-        <br />
-      </div>
+        </div>
 
-      <center>
-        <button onClick={handleLogin}>로그인</button>
-      </center>
-      {/* Link 컴포넌트를 사용하여 회원가입 페이지로 이동 */}
-      {/* <Link to="/signup">Sign Up</Link> */}
+        <center>
+          <button onClick={handleLogin}>로그인</button>
+        </center>
+        {/* Link 컴포넌트를 사용하여 회원가입 페이지로 이동 */}
+        {/* <Link to="/signup">Sign Up</Link> */}
+      </div>
     </div>
-    </div>
-    
   );
 };
 

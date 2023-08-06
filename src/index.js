@@ -5,6 +5,13 @@ import BottomBar from "./components/BottomBar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Join_Memebership from "./components/About_Login/Join_Memebership";
 import Login_page from "./pages/Login_page";
+import Feed_page from "./pages/Feed_page";
+import Main_page from "./pages/Main_page";
+import Search_page from "./pages/Search_page";
+import Join_page from "./pages/Join_page ";
+import FindMyInfo_page from "./pages/FindMyInfo_page";
+import SijangInfo_page from "./pages/SijangInfo_page";
+import Write_page from "./pages/Write_page";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([
@@ -13,16 +20,36 @@ const router = createBrowserRouter([
     element: <App></App>,
   },
   {
-    path: "/bottom",
-    element: <BottomBar></BottomBar>,
+    path: "/feed",
+    element: <Feed_page></Feed_page>,
   },
   {
-    path: "/join",
-    element: <Join_Memebership></Join_Memebership>,
+    path: "/main",
+    element: <Main_page></Main_page>,
   },
   {
     path: "/login",
     element: <Login_page></Login_page>,
+  },
+  {
+    path: "/search",
+    element: <Search_page></Search_page>,
+  },
+  {
+    path: "/write",
+    element: <Write_page></Write_page>,
+  },
+  {
+    path: "/join",
+    element: <Join_page></Join_page>,
+  },
+  {
+    path: "/find",
+    element: <FindMyInfo_page></FindMyInfo_page>,
+  },
+  {
+    path: "/sijang",
+    element: <SijangInfo_page></SijangInfo_page>,
   },
 ]);
 

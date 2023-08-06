@@ -11,31 +11,28 @@ nav > div {
   justify-content: center;
   /* 세로길이 설정 */
   height: auto;
-
 }
-.wrapper >div:not(:last-child) {
-  margin-right:20px;
-  margin-left:10px;
+.wrapper > div:not(:last-child) {
+  margin-right: 20px;
+  margin-left: 10px;
 }
-.wrapper{
+.wrapper {
   background-color: white;
   position: fixed;
+  margin-left: 30.52vw;
   bottom: 0;
-  width: 100%;
+  width: 36.87vw;
 }
-.icons{
+.icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:70px;
+  height: 70px;
 }
-.sp{
-  color:gray;
-  font-size:10px;
+.sp {
+  color: gray;
+  font-size: 10px;
 }
-.pics{
-  height:31px;
-}
-.btbar{
-
+.pics {
+  height: 31px;
 }
