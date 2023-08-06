@@ -1,0 +1,41 @@
+.locationBar {
+  font-size: 15px;
+}
+.locationBar {
+  padding: 10px;
+  background-color: white;
+  width: 35.5vw;
+  justify-content: space-between;
+  display: flex; /* 이미지와 검색 입력란을 한 줄에 표시하기 위해 flex를 사용 */
+  align-items: center; /* 가운데 정렬을 위해 추가 */
+  margin-left: 30.53vw;
+}
+.location1 {
+  margin-left: 80px;
+}
+.location3 {
+  margin-right: 80px;
+}
+.sijang {
+  padding: 10px;
+  background-color: white;
+  width: 35.5vw;
+  justify-content: space-between;
+  display: flex; /* 이미지와 검색 입력란을 한 줄에 표시하기 위해 flex를 사용 */
+  align-items: center; /* 가운데 정렬을 위해 추가 */
+  margin-left: 30.53vw;
+  height: 100vh;
+}
+.sijangSelect {
+  padding: 10px;
+  background-color: white;
+  width: 35.5vw;
+  font-size: 15px;
+  justify-content: space-between;
+  display: flex; /* 이미지와 검색 입력란을 한 줄에 표시하기 위해 flex를 사용 */
+  align-items: center; /* 가운데 정렬을 위해 추가 */
+  margin-left: 30.53vw;
+}
+.whatSijang {
+  margin-left: 2vw;
+}

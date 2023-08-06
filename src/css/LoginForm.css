@@ -53,7 +53,11 @@ button {
   display: flex; /* 이미지와 검색 입력란을 한 줄에 표시하기 위해 flex를 사용 */
   align-items: center; /* 가운데 정렬을 위해 추가 */
 }
-
+.logoBar img {
+  float: left;
+  width: 15vw;
+  height: 10vh;
+}
 .logoBar input {
   float: right;
   width: 30vw;

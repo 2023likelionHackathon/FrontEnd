@@ -22,7 +22,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="icons">
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+          <Link to="/search" style={{ textDecoration: "none", color: "black" }}>
             <div className="pics">
               <img src="pics/Market.png"></img>
             </div>

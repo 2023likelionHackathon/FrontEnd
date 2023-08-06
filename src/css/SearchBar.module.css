@@ -1,18 +1,18 @@
 .logoBar {
   display: flex; /* 이미지와 검색 입력란을 한 줄에 표시하기 위해 flex를 사용 */
   align-items: center; /* 가운데 정렬을 위해 추가 */
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
 }
 .logoBar img {
   float: left;
-  width: 3vw;
-  height: 7vh;
-  margin-right: 2vw;
-  margin-left: 1vw;
+  width: 40px;
+  height: 60px;
+  margin-right: 30px;
+  margin-left: 20px;
 }
 .logoBar input {
   float: right;
-  width: 30vw;
+  width: 380px;
   padding: 10px 5px;
   background-color: rgb(243, 239, 239);
   border-radius: 15px;
@@ -23,11 +23,11 @@
   background-position: 10px center; /* 배경 이미지 위치 조정 */
 }
 .hrBar {
-  height: 0.2vh;
+  height: 2px;
   background-color: rgb(247, 128, 128);
 }
 .container {
-  margin-left: 30.53vw;
+  margin-left: 452px;
   background-color: white;
   width: 526px;
   margin-top: -8px;
