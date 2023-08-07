@@ -35,7 +35,7 @@ const Feed_page = () => {
         console.error(error);
       }
     } */}
-      <div>{testt.data.writer}</div>
+
       <SearchBar />
       <Timeline />
       <BottomBar />
