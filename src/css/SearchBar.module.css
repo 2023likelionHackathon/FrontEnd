@@ -26,10 +26,18 @@
   height: 2px;
   background-color: rgb(247, 128, 128);
 }
+
 .container {
-  margin-left: 452px;
   background-color: white;
   width: 546px;
+<<<<<<< HEAD
   margin-top: -8px;
   padding: 10px;
+=======
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top:5%;
+  transform: translate(-50%, -50%);
+>>>>>>> e4531a2301619a55d7bd63dc908372f35c9e7360
 }
