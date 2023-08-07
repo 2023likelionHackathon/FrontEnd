@@ -1,84 +1,84 @@
 body {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .container {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 .post {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .post_header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 18px;
-    margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .postheader_user {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
-.postheader_user>span {
-    color: grey;
-    font-size: 13px;
-    margin-left: 5px;
+.postheader_user > span {
+  color: grey;
+  font-size: 13px;
+  margin-left: 5px;
 }
 
-.post_image>img {
-    width: 500px;
-    border-radius: 6px;
-    border: 0.6px solid rgba(128, 128, 128, 0, 6);
-    margin-bottom: 12px;
+.post_image > img {
+  width: 650px;
+  border-radius: 6px;
+  border: 0.6px solid rgba(128, 128, 128, 0, 6);
+  margin-bottom: 12px;
 }
 
 .post_footerIcons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .postIcon1,
 .postIcon2,
-.postIcon3{
-    padding: 5px;
-    font-size: 30px;
-    transition:color 0.3s ease-in-out;
+.postIcon3 {
+  padding: 5px;
+  font-size: 30px;
+  transition: color 0.3s ease-in-out;
 }
 
 .postIcon1:hover {
-    cursor: pointer;
-    color:red;
+  cursor: pointer;
+  color: red;
 }
 .postIcon2:hover,
-.postIcon3:hover{
-    cursor:pointer;
-    color: grey;
+.postIcon3:hover {
+  cursor: pointer;
+  color: grey;
 }
 .avatar {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
 .chat {
-    font-size: 12px;
-    color: rgb(174, 167, 167);
+  font-size: 12px;
+  color: rgb(174, 167, 167);
 }
 
 .like {
-    font-size: 12px;
-    color: rgb(174, 167, 167);
+  font-size: 12px;
+  color: rgb(174, 167, 167);
 }

@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Feed_main from "../components/Feed/Feed_main";
 import BottomBar from "../components/BottomBar";
 import SearchBar from "../components/SearchBar";
 import Timeline from "../components/Feed/timeline/Timeline";
 import axios from "axios";
 const Feed_page = () => {
+  const getData = async () => {
+    try {
+      return await axios.get("http://54.180.53.205/board/viewAll");
+    } catch (error) {
+      console.error("아오 싯팔");
+    }
+  };
+  const test = async () => {
+    const testt = await getData();
+
+    console.log(testt);
+  };
+  test();
   return (
     <div>
       {/* async function getData() {
@@ -22,7 +35,7 @@ const Feed_page = () => {
         console.error(error);
       }
     } */}
-
+      <div>{testt.data.writer}</div>
       <SearchBar />
       <Timeline />
       <BottomBar />

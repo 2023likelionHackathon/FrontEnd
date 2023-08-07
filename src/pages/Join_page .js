@@ -6,6 +6,7 @@ const Join_page = () => {
   return (
     <div>
       <SearchBar />
+      
       <BottomBar />
     </div>
   );

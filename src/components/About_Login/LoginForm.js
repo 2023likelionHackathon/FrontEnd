@@ -32,36 +32,51 @@ const LoginForm = () => {
   return (
     <div className="container">
       <div className="white_page">
-        <div className="loginForm">
-          <label>
-            아이디
-            <br />
-            <input
-              type="text"
-              value={username}
-              onChange={handleUsernameChange}
-            />
-          </label>
-          <br />
-          <label>
-            비밀번호
-            <br />
-            <input
-              type="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-          </label>
-          <br />
-        </div>
+        <img src="pics/Logo2.png"></img>
+      </div>
+      <div className="idPassword">
+        <label>
+          <input
+            className="id"
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            placeholder=" 아이디"
+          />
+        </label>
+        <label>
+          <input
+            className="password"
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            placeholder=" 비밀번호"
+          />
+        </label>
 
-        <center>
-          <button onClick={handleLogin}>로그인</button>
-        </center>
-        {/* Link 컴포넌트를 사용하여 회원가입 페이지로 이동 */}
-        {/* <Link to="/signup">Sign Up</Link> */}
+        <button className="Button" onClick={handleLogin}>
+          로그인
+        </button>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          className="autoLogin"
+          placeholder="자동로그인"
+        ></input>
+        자동로그인
+        <input type=""></input>
       </div>
     </div>
+    // <div className="container">
+    //   <div className="white_page">
+    //     <div className="loginForm">
+    //
+    //       <br />
+    //     </div>
+
+    //   </div>
+    // </div>
   );
 };
 
