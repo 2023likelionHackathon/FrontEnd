@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Join_Memebership = () => {
+const Join_Membership = () => {
   // 각 입력값을 저장할 상태(state) 정의
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -59,4 +59,4 @@ const Join_Memebership = () => {
   );
 };
 
-export default Join_Memebership;
+export default Join_Membership;

@@ -50,6 +50,14 @@ const router = createBrowserRouter([
     path: "/sijang",
     element: <SijangInfo_page></SijangInfo_page>,
   },
+  {
+    path:"/find_id",
+    element: <FindMyInfo_page/>,
+  },
+  {
+    path:"/find_pwd",
+    element: <FindMyInfo_page/>,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

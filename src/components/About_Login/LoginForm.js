@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../css/LoginForm.css";
 import SearchBar from "../SearchBar";
+import { Link } from "react-router-dom"
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
@@ -22,22 +23,15 @@ const LoginForm = () => {
     console.log("Password:", password);
     // 여기서 실제로 서버에 로그인 요청을 보내는 등의 로그인 처리를 할 수 있습니다.
   };
-
-  // 회원가입 버튼을 클릭했을 때 동작하는 함수
-  const handleSignUp = () => {
-    console.log("Go to sign up page");
-    window.location.href = "/signup";
-  };
-
   return (
     <div className="container">
       <div className="white_page">
         <img src="pics/NewLogo.png"></img>
       </div>
       <div className="idPassword">
-        <label>
+        <label className="label_">
           <input
-            className="id"
+            className="input_"
             type="text"
             value={username}
             onChange={handleUsernameChange}
@@ -46,7 +40,7 @@ const LoginForm = () => {
         </label>
         <label>
           <input
-            className="password"
+            className="input_"
             type="password"
             value={password}
             onChange={handlePasswordChange}
@@ -58,25 +52,17 @@ const LoginForm = () => {
           로그인
         </button>
       </div>
-      <div>
-        <input
-          type="checkbox"
-          className="autoLogin"
-          placeholder="자동로그인"
-        ></input>
-        자동로그인
-        <input type=""></input>
+      <div className="find_info">
+        <div className="join_member">
+          <Link to="/join" className="join_link">
+            회원가입
+          </Link>
+        </div>
+        <div className="find">
+          <Link to="/find_id" className="find__id">아이디 찾기</Link> | <Link to="/find_id" className="find__pwd">비밀번호 찾기</Link> 
+        </div>
       </div>
     </div>
-    // <div className="container">
-    //   <div className="white_page">
-    //     <div className="loginForm">
-    //
-    //       <br />
-    //     </div>
-
-    //   </div>
-    // </div>
   );
 };
 
