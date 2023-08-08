@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Join_Memebership from "./components/About_Login/Join_Memebership";
+import Join_Membership from "./components/About_Login/Join_Membership";
 import Login_page from "./pages/Login_page";
 import Feed_page from "./pages/Feed_page";
 import Main_page from "./pages/Main_page";
