@@ -6,8 +6,6 @@ const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [search, setsearch] = useState("");
-
   // 아이디와 비밀번호를 입력할 때마다 상태(state)를 업데이트하는 핸들러 함수들
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -59,7 +57,7 @@ const LoginForm = () => {
           </Link>
         </div>
         <div className="find">
-          <Link to="/find_id" className="find__id">아이디 찾기</Link> | <Link to="/find_id" className="find__pwd">비밀번호 찾기</Link> 
+          <Link to="/find_id" className="find__id">아이디 찾기</Link> | <Link to="/find_id" className="find__pwd">비밀번호 찾기</Link>
         </div>
       </div>
     </div>
