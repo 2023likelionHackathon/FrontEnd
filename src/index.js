@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import BottomBar from "./components/BottomBar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Join_Memebership from "./components/About_Login/Join_Memebership";
 import Login_page from "./pages/Login_page";
