@@ -7,12 +7,13 @@
   float: left;
   width: 40px;
   height: 60px;
+
   margin-right: 30px;
   margin-left: 20px;
 }
 .logoBar input {
   float: right;
-  width: 380px;
+  width: 550px;
   padding: 10px 5px;
   background-color: rgb(243, 239, 239);
   border-radius: 15px;
@@ -29,7 +30,8 @@
 
 .container {
   background-color: white;
-  width: 546px;
-  margin-top: -8px;
+  width: 687px;
+  margin-top: -13px;
   padding: 10px;
+  margin-left: 371.3px;
 }

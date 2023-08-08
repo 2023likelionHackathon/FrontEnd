@@ -32,7 +32,7 @@ const LoginForm = () => {
   return (
     <div className="container">
       <div className="white_page">
-        <img src="pics/Logo2.png"></img>
+        <img src="pics/NewLogo.png"></img>
       </div>
       <div className="idPassword">
         <label>

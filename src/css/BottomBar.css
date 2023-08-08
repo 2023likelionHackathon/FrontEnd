@@ -14,14 +14,14 @@ nav > div {
 }
 .wrapper > div:not(:last-child) {
   margin-right: 20px;
-  margin-left: 10px;
+  margin-left: 17px;
 }
 .wrapper {
   background-color: white;
   position: fixed;
-  margin-left: 275px;
+  margin-left: 371.3px;
   bottom: 0;
-  width: 900px;
+  width: 707px;
 }
 .icons {
   display: flex;

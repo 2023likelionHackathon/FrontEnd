@@ -9,7 +9,7 @@ const SearchBar = () => {
       {" "}
       {/* 화면을 컨테이너로 설정 */}
       <div className={styles.logoBar}>
-        <img src="pics/Logo2.png" alt="Logo" />
+        <img src="pics/NewLogo.png" alt="Logo" />
         <input
           type="search"
           value={search}
