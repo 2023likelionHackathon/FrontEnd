@@ -66,6 +66,7 @@ const Join_Membership = () => {
             아이디
           </span>
         </label>
+        
         <button className={styles.duplicate}
           onClick={() => {
             const isDuplicate = handleDuplicateCheck('id');

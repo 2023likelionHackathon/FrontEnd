@@ -12,7 +12,6 @@ import FindMyInfo_page from "./pages/FindMyInfo_page";
 import SijangInfo_page from "./pages/SijangInfo_page";
 import Write_page from "./pages/Write_page";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 const router = createBrowserRouter([
   {
     path: "/",
