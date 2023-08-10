@@ -1,9 +1,12 @@
 import React from "react";
 import BottomBar from "../components/BottomBar";
+import SearchBar from "../components/SearchBar";
+import Write_content from "../components/Write/Write_content";
 const Write_page = () => {
   return (
     <div>
-      <h1>아 리액트 거지같다 api 통신 빡세다 fuck </h1>
+      <SearchBar />
+      <Write_content/>
       <BottomBar />
     </div>
   );

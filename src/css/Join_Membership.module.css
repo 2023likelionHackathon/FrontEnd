@@ -79,6 +79,8 @@
     margin-top:20px;
     border-style: none;
     cursor:pointer;
+    color:whitesmoke;
+    font-weight: 700;
 }
 .duplicate {
     background-color: white;
