@@ -6,15 +6,17 @@ import HeartOutLineIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import StarIcon from '@mui/icons-material/Star';
-
-const StarRaiting = () => {
+import StarHalfIcon from '@mui/icons-material/StarHalf';
+const CustomRating = ({ value }) => {
   return (
     <Rating
-      name="star rating"
-      value={4.5}
+      name="custom-rating"
+      value={3.5}
       precision={0.5}
-      readOnly
+      //realOnly
+      emptyIcon={<StarIcon style={{ opacity: 0.5 }} />}
       icon={<StarIcon style={{ color: 'rgba(255, 0, 0, 0.6)' }} />}
+      halfIcon={<StarHalfIcon style={{ color: 'rgba(255, 0, 0, 0.6)' }} />}
     />
   );
 };
@@ -40,7 +42,7 @@ const Posts = ({ user, postImage, likes, timeStamp, chats }) => {
             <Avatar className={styles.avatar}>{user.charAt(0).toUpperCase()}</Avatar>
             {user} <span>_{timeStamp}</span>
           </div>
-          <StarRaiting />
+          <CustomRating/>
         </div>
         <div className={styles.post_image}>
           <img src={postImage} alt='image' />
