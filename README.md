@@ -12,3 +12,6 @@ public/pics -> jpeg,jpg,svg,png 등등..
 
 0801 TUE
 npm install redux
+npm install @mui/material
+
+이거밖에 없는듯? 하다가 안깔린거 있으면 지선생한테 물어봐서 깔면 돼!
