@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import styles from "../../css/Join_Membership.module.css";
+import axios from "axios";
 const Join_Membership = () => {
   const [formData, setFormData] = useState({
     userId: "",
     pw: "",
+    pw_check: "",
     email: "",
     name: "",
     nickname: "",
@@ -23,6 +25,7 @@ const Join_Membership = () => {
       ...prevData, //이전값 복사 코드
       [name]: value, //새값 업데이트
     }));
+    console.log(formData);
   };
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
@@ -41,6 +44,23 @@ const Join_Membership = () => {
       return;
     }
     console.log("Form Data:", formData);
+    axios
+      .post("http://localhost:8080/user/join", {
+        userId: formData.userId,
+        pw: formData.pw,
+        email: formData.email,
+        name: formData.name,
+        nickname: formData.nickname,
+        role: formData.role,
+        code: formData.code,
+      })
+      .then((res) => {
+        console.log("res", res);
+      })
+      .catch((error) => {
+        console.error("Error:", error.response.data.message);
+        alert(error.response.data.message);
+      });
   };
   return (
     <div className={styles.container}>
@@ -60,13 +80,13 @@ const Join_Membership = () => {
       <div className={styles.field}>
         <input
           type="text"
-          name="id"
+          name="userId"
           autoComplete="off"
           required
           value={formData.userId}
           onChange={handleInputChange}
         />
-        <label for="id" className={styles.label_wrapper}>
+        <label for="userId" className={styles.label_wrapper}>
           <span className={styles.label_text}>아이디</span>
         </label>
 
@@ -83,7 +103,7 @@ const Join_Membership = () => {
       <div className={styles.field}>
         <input
           type="password"
-          name="pwd"
+          name="pw"
           autoComplete="off"
           required
           value={formData.pwd}
@@ -92,21 +112,21 @@ const Join_Membership = () => {
             handlePasswordCheck();
           }}
         />
-        <label for="pwd" className={styles.label_wrapper}>
+        <label for="pw" className={styles.label_wrapper}>
           <span className={styles.label_text}>비밀번호</span>
         </label>
       </div>
       <div className={styles.field}>
         <input
           type="password"
-          name="pwd_check"
+          name="pw_check"
           autoComplete="off"
           required
           value={formData.pwd_check}
           onChange={handleInputChange}
           onBlur={handlePasswordCheck}
         />
-        <label for="pwd_check" className={styles.label_wrapper}>
+        <label for="pw_check" className={styles.label_wrapper}>
           <span className={styles.label_text}>비밀번호 확인</span>
         </label>
         {!passwordMatch && (
