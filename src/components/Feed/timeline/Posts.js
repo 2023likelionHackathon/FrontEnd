@@ -79,10 +79,14 @@ const Posts = ({
         <div className={styles.post_header}>
           <div className={styles.postheader_user}>
             <Avatar className={styles.avatar}>
-              {writer ? writer.charAt(0).toUpperCase(): ""}
+              {writer ? writer.charAt(0).toUpperCase() : ""}
             </Avatar>
-              <div className={styles.post_writer}>{writer}</div>
-            {writer && (<span className={styles.post_date}>{getDayMinuteCounter({ date: createdDate })}</span>)}
+            <div className={styles.post_writer}>{writer}</div>
+            {writer && (
+              <span className={styles.post_date}>
+                {getDayMinuteCounter({ date: createdDate })}
+              </span>
+            )}
           </div>
           <CustomRating score={score} />
         </div>

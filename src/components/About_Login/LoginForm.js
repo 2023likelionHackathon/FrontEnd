@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "../../css/LoginForm.css";
 import SearchBar from "../SearchBar";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import styles from "../../css/LoginForm.module.css";
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
@@ -36,14 +35,14 @@ const LoginForm = () => {
       });
   };
   return (
-    <div className="container">
-      <div className="white_page">
+    <div className={styles.container}>
+      <div className={styles.white_page}>
         <img src="pics/NewLogo.png"></img>
       </div>
-      <div className="idPassword">
-        <label className="label_">
+      <div className={styles.idPassword}>
+        <label className={styles.label_}>
           <input
-            className="input_"
+            className={styles.input_}
             type="text"
             value={username}
             onChange={handleUsernameChange}
@@ -52,29 +51,29 @@ const LoginForm = () => {
         </label>
         <label>
           <input
-            className="input_"
+            className={styles.input_}
             type="password"
             value={password}
             onChange={handlePasswordChange}
             placeholder=" 비밀번호"
           />
         </label>
-        <button className="Button" onClick={handleLogin}>
+        <button className={styles.Button} onClick={handleLogin}>
           로그인
         </button>
       </div>
-      <div className="find_info">
-        <div className="join_member">
-          <Link to="/join" className="join_link">
+      <div className={styles.find_info}>
+        <div className={styles.join_member}>
+          <Link to="/join" className={styles.join_link}>
             회원가입
           </Link>
         </div>
-        <div className="find">
-          <Link to="/find_id" className="find__id">
+        <div className={styles.find}>
+          <Link to="/find_id" className={styles.find__id}>
             아이디 찾기
           </Link>{" "}
           |{" "}
-          <Link to="/find_id" className="find__pwd">
+          <Link to="/find_pwd" className={styles.find__pwd}>
             비밀번호 찾기
           </Link>
         </div>

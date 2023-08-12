@@ -21,7 +21,7 @@ nav > div {
   position: fixed;
   bottom: 0;
   width: 707px;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%);
 }
 .icons {
@@ -36,4 +36,10 @@ nav > div {
 }
 .pics {
   height: 31px;
+}
+.icons.active {
+  /* 여기에 선택된 아이콘의 스타일을 정의하세요 */
+
+  background-color: blanchedalmond;
+  /* ... */
 }
