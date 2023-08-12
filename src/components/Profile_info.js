@@ -23,14 +23,14 @@ const Profile_info = () => {
                 </div>
             </div>
             <div className={styles.Grid}>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
-               <img src="pics/s_fish2.png" className={styles.images}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
+               <img src="pics/s_fish2.png" className={styles.images__}/>
             </div>
             <div className={styles.margin_div}>
 

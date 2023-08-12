@@ -28,7 +28,6 @@
     margin-top: 30px;
     transform: translateX(-100px);
 }
-
 .images {
     width: 14px;
     height: 18.67px;
@@ -98,7 +97,7 @@
     text-decoration: none;
     color:black
 }
-.images{
+.images__{
     width: 155px;
     height: 155px;
 }
