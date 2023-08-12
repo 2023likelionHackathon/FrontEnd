@@ -36,7 +36,7 @@ const Write_content = () => {
   };
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>새 게시물</h1>
+      <h1 className={styles.title_}>새 게시물</h1>
       <textarea
         className={styles.text}
         id="content"
@@ -91,7 +91,7 @@ const Write_content = () => {
         </div>
       </div>
       <hr />
-      <h3>별점 매기기</h3>
+      <h3 className={styles.star_ev}>별점 매기기</h3>
       <img className={styles.star} src="pics/star.png"></img>
       <button className={styles.Button} onClick={handleUpload}>
         공유
