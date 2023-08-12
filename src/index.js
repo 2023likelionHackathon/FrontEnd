@@ -11,6 +11,8 @@ import Join_page from "./pages/Join_page ";
 import FindMyInfo_page from "./pages/FindMyInfo_page";
 import SijangInfo_page from "./pages/SijangInfo_page";
 import Write_page from "./pages/Write_page";
+import Ddukdo from "./pages/Ddukdo";
+import Gn from "./pages/Gn";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
   {
     path:"/find_pwd",
     element: <FindMyInfo_page/>,
+  },
+  {
+    path:"/ddukdo",
+    element:<Ddukdo/>,
+  },
+  {
+    path:"/gn",
+    element:<Gn/>
   }
 ]);
 

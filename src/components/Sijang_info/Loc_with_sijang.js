@@ -22,7 +22,7 @@ const Loc_with_sijang = () => {
                 성동구의 시장
             </div>
             <div className={`${styles.geumnam} ${styles.sijangs}`}>
-                <Link to="/" className={styles.link_}>
+                <Link to="/gn" className={styles.link_}>
                     <div className={styles.sijang_info}>
                         <div className={styles.GN_pic}></div>
                         <div className={styles.about}>
@@ -34,7 +34,7 @@ const Loc_with_sijang = () => {
 
             </div>
             <div className={`${styles.ddukdo} ${styles.sijangs}`}>
-                <Link to="/" className={styles.link_}>
+                <Link to="/ddukdo" className={styles.link_}>
                     <div className={styles.sijang_info}>
                         <div className={styles.dd_pic}></div>
                         <div className={styles.about}>

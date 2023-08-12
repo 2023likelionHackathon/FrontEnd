@@ -1,0 +1,18 @@
+.container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 800px;
+    width: 707px;
+    position: absolute;
+    top:6%;
+    left:50%;
+    transform: translateX(-50%);
+  }
+.p{
+    color:grey;
+    font-size:20px;
+}
