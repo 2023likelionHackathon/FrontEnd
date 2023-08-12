@@ -14,6 +14,7 @@ import Write_page from "./pages/Write_page";
 import Ddukdo from "./pages/Ddukdo";
 import Gn from "./pages/Gn";
 import Jumpo_show from "./pages/Jumpo_show";
+import Profile from "./pages/Profile";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -71,7 +72,11 @@ const router = createBrowserRouter([
   {
     path:"/sijang_detail", // 가게이름 불러와서 하게 만들기(임시임)
     element:<Jumpo_show/>
-  }
+  },
+  {
+    path:"/profile",
+    element:<Profile/>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

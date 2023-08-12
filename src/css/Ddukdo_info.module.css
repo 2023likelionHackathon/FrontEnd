@@ -74,7 +74,8 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 4px;
+    margin-top:32px;
 }
 .box_{
     width: 250px;
@@ -96,4 +97,8 @@
 .Link_{
     text-decoration: none;
     color:black
+}
+.images{
+    width: 155px;
+    height: 155px;
 }
