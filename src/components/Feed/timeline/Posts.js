@@ -16,7 +16,7 @@ const CustomRating = (props) => {
       name="custom-rating"
       value={props.score}
       precision={0.5}
-      //realOnly
+      readOnly
       emptyIcon={<StarIcon style={{ opacity: 0.5 }} />}
       icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
       halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
@@ -79,9 +79,10 @@ const Posts = ({
         <div className={styles.post_header}>
           <div className={styles.postheader_user}>
             <Avatar className={styles.avatar}>
-              {writer.charAt(0).toUpperCase()}
+              {writer ? writer.charAt(0).toUpperCase(): ""}
             </Avatar>
-            {writer} <span>{getDayMinuteCounter({ date: createdDate })}</span>
+              <div className={styles.post_writer}>{writer}</div>
+            {writer && (<span className={styles.post_date}>{getDayMinuteCounter({ date: createdDate })}</span>)}
           </div>
           <CustomRating score={score} />
         </div>

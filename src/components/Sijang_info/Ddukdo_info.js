@@ -1,80 +1,101 @@
 import React from 'react';
 import styles from "../../css/Ddukdo_info.module.css";
-
+import { Link } from 'react-router-dom';
 
 const DivGrid = () => {
     return (
         <div className={styles.grid}>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            <Link to="/sijang_detail" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/s_fish2.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.성수물고기</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성수동 2가 339-122</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.box_}>
-                <img src="pics/ddukdo.png"/>
-                <div className={styles.text_box}>
-                    <h3 className={styles.jumpo_name}>1.점포이름</h3>
-                    <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+            </Link>
+            <Link to="/" className={styles.Link_}> 
+                <div className={styles.box_}>
+                    <img src="pics/ddukdo.png" />
+                    <div className={styles.text_box}>
+                        <h3 className={styles.jumpo_name}>1.점포이름</h3>
+                        <span className={styles.detail_address}>서울특별시 성동구 성덕정길 91</span>
+                    </div>
                 </div>
-            </div>
+            </Link>
+
 
         </div>
     );
@@ -105,14 +126,14 @@ const Ddukdo_info = () => {
                     </div>
                 </div>
             </div>
-            <hr className={styles.hr_bar}/>
+            <hr className={styles.hr_bar} />
             <div className={styles.jumpo}>시장 내 점포</div>
             <div className={styles.gridContainer}>
-                <DivGrid/>
+                <DivGrid />
             </div>
-            
-            
-             
+
+
+
             <div className={styles.margin_div}></div>
         </div>
     );
