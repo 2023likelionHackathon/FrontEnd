@@ -1,103 +1,133 @@
 /* 기본 스타일링 */
 .container {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    height: 800px;
-    width: 707px;
-    position: absolute;
-    top:7%;
-    left:50%;
-    transform: translateX(-50%);
-  }
-.field{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    color:black;
-    width: 400px;
-    height: 100px;
-    overflow: hidden;
-    margin-top:10px;
-  }
-.field input{
-    position: absolute;
-    height: 100%;
-    width:75%;
-    color:black;
-    line-height: 20px;
-    outline:0;
-    background-color:inherit;
-    padding-top:60px;
-    border: none;
-    box-sizing: border-box;
-    font-size:20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  height: 800px;
+  width: 707px;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: auto;
 }
-.field .label_wrapper{
-    position:absolute;
-    height: 100%;
-    width: 75%;
-    bottom:0;
-    background-color: inherit;
-    left:0;
-    pointer-events: none;
-    border-bottom:1px solid #999999;
+.field {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: black;
+  width: 400px;
+  height: 90px;
+  overflow: hidden;
+  margin-top: 10px;
 }
-.field .label_text{
-    position: absolute;
-    bottom:5px;
-    left:0px;
-    transition: all 0.2s ease;
+.field input {
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  color: black;
+  line-height: 20px;
+  outline: 0;
+  background-color: inherit;
+  padding-top: 60px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 15px;
 }
-.field .label_wrapper::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-bottom: 4px solid rgba(255,0,0,0.5);
-    left:0;
-    bottom:-1px;
-    transform: translateX(-100%);
-    transition:transform 0.2s ease;
+.field .label_wrapper {
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  bottom: 0;
+  background-color: inherit;
+  left: 0;
+  pointer-events: none;
+  border-bottom: 1px solid #999999;
+}
+.field .label_text {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.2s ease;
+}
+.field .label_wrapper::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 4px solid rgba(255, 0, 0, 0.5);
+  left: 0;
+  bottom: -1px;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
 }
 .field input:focus + .label_wrapper .label_text,
-.field input:valid + .label_wrapper .label_text{
-    font-size:15px;
-    color: rgba(255,0,0,0.5);
-    transform: translateY(-150%);
+.field input:valid + .label_wrapper .label_text {
+  font-size: 15px;
+  color: rgba(255, 0, 0, 0.5);
+  transform: translateY(-150%);
 }
 .field input:focus + .label_wrapper::after,
-.field input:valid + .label_wrapper::after{
-    transform: translateX(0%);
+.field input:valid + .label_wrapper::after {
+  transform: translateX(0%);
 }
-.btn{
-    background-color: rgba(255,0,0,0.5);
-    width: 295px;
-    height: 45px;
-    margin-top:20px;
-    border-style: none;
-    cursor:pointer;
-    color:whitesmoke;
-    font-weight: 700;
+.btn {
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 295px;
+  height: 45px;
+  margin-top: 20px;
+  border-style: none;
+  cursor: pointer;
+  color: whitesmoke;
+  font-weight: 700;
 }
 .duplicate {
-    background-color: white;
-    color: rgba(255, 0, 0, 0.5);
-    position: absolute;
-    top: 80%;
-    transform: translateY(-50%);
-    right: 0;
-    padding: 0;
-    width:70px;
-    height: 30px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 40px;
-    border-color: rgba(255, 0, 0, 0.5);
-    box-shadow: 2px 2px #dad5d5;
-  }
-.error{
-    color: black;
+  background-color: white;
+  color: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 0;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 40px;
+  border-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 2px 2px #dad5d5;
+}
+.error {
+  color: black;
+}
+
+.role_field {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: black;
+  width: 400px;
+  height: 30px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.radioButtonLabel {
+  display: block;
+  margin-bottom: 8px; /* 조정 가능 */
+  font-size: 12px; /* 조정 가능 */
+}
+.radioButtonLabel input[type="radio"] {
+  /* 기존 스타일 속성들 */
+  width: 14px; /* 원하는 크기로 조정 */
+  height: 14px; /* 원하는 크기로 조정 */
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 6px;
+  position: relative;
+  top: 5px;
+}
+.emptySpace {
+  height: 80px; /* 원하는 높이로 조정 */
 }

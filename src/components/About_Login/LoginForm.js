@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../../css/LoginForm.css";
 import SearchBar from "../SearchBar";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import axios from "axios";
+
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
@@ -20,6 +22,18 @@ const LoginForm = () => {
     console.log("Username:", username);
     console.log("Password:", password);
     // 여기서 실제로 서버에 로그인 요청을 보내는 등의 로그인 처리를 할 수 있습니다.
+    axios
+      .post("http://localhost:8080/authorize", {
+        username: username,
+        password: password,
+      })
+      .then((res) => {
+        console.log("res", res);
+      })
+      .catch((error) => {
+        console.error("Error:", error.response.data.message);
+        alert(error.response.data.message);
+      });
   };
   return (
     <div className="container">
@@ -56,7 +70,13 @@ const LoginForm = () => {
           </Link>
         </div>
         <div className="find">
-          <Link to="/find_id" className="find__id">아이디 찾기</Link> | <Link to="/find_id" className="find__pwd">비밀번호 찾기</Link>
+          <Link to="/find_id" className="find__id">
+            아이디 찾기
+          </Link>{" "}
+          |{" "}
+          <Link to="/find_id" className="find__pwd">
+            비밀번호 찾기
+          </Link>
         </div>
       </div>
     </div>
