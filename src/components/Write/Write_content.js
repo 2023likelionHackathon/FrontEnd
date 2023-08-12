@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import styles from "../../css/Write_content.module.css";
 import axios from "axios";
-
+import { Rating } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+import StarHalfIcon from "@mui/icons-material/StarHalf";
 const Write_content = () => {
   const [content, setContent] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
@@ -44,11 +46,12 @@ const Write_content = () => {
         onChange={(e) => setContent(e.target.value)}
         placeholder="문구 입력 ..."
       />
-      <h1 className={styles.imgAdd}>사진 추가</h1>
+
       <div className={styles.imgControl}>
+        <h1 className={styles.imgAdd}>사진 추가</h1>
         <div className={styles.imageUpload}>
           <label htmlFor="fileInput" className={styles.addImg}>
-            <img src="pics/+write.png" alt="파일 선택" />
+            <img src="pics/+write.png" alt="파일 선택" className={styles.add_pics} />
             <input
               id="fileInput"
               type="file"
@@ -91,8 +94,20 @@ const Write_content = () => {
         </div>
       </div>
       <hr />
-      <h3 className={styles.star_ev}>별점 매기기</h3>
-      <img className={styles.star} src="pics/star.png"></img>
+      <div className={styles.star_box}>
+        <h3 className={styles.star_ev}>별점 매기기</h3>
+        <Rating className={styles.Rating}
+          name="star_rating"
+          precision={0.5}
+          emptyIcon={<StarIcon style={{ opacity: 0.5 }} />}
+          icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
+          halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
+        >
+
+        </Rating>
+      </div>
+
+
       <button className={styles.Button} onClick={handleUpload}>
         공유
       </button>

@@ -21,34 +21,32 @@
 textarea {
   margin-bottom: 30px;
 }
-
 .imgControl {
   display: flex;
+  flex-direction: column;
+  transform: translateX(-255px);
 }
 .imgAdd {
   font-size: 16px;
-  margin-left: -450px;
 }
 .title_ {
   font-size: 20px;
 }
-.addImg {
-  margin-left: -250px;
-}
+
 .addImg img {
   width: 52px;
   height: 52px;
 }
 .addLoc {
   font-size: 16px;
-
-  margin-left: -243px;
+  display: flex;
+  transform: translateX(-210px);
 }
 hr {
-  width: 80%;
-  border-color: #999999;
-  border-top: 1px solid #999999;
-  margin: 10px 0;
+  background: rgb(247, 128, 128);
+  height: 2px;
+  border: 0;
+  width:80%;
 }
 .Button {
   border: none;
@@ -76,14 +74,15 @@ hr {
   width: 18.11px;
   height: 19.02px;
 }
-.star_ev {
-  margin-left: -420px;
+.star_box {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-220px);
 }
-.star {
-  width: 182.49px;
-  height: 29.86px;
-  margin-top: -15px;
-  margin-left: -350px;
+.star_ev{
+  display: flex;
+  align-items: center;
+  font-size:16px;
 }
 .addLocBtn {
   min-width: 150px;
