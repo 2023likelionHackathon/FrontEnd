@@ -1,15 +1,19 @@
 import React, { useState } from "react";
-import { useRef } from "react";
 import styles from "../../css/Write_content.module.css";
-import axios from "axios";
 import { Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
+import axios from "axios";
+import FileUpload from "./UpLoad";
 const Write_content = () => {
   const [content, setContent] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
-  const fileInputRef = useRef(null);
-  const [dropdownVisibility, setDropdownVisibility] = React.useState(false);
+  const [isDropdownActive, setIsDropdownActive] = useState(false);
+  const [ratingValue, setRatingValue] = useState(0);
+  const toggleDropdown = () => {
+    setIsDropdownActive(!isDropdownActive);
+  };
+
   const handleImageChange = (event) => {
     const file = event.target.files[0];
 
@@ -23,19 +27,25 @@ const Write_content = () => {
       reader.readAsDataURL(file);
     }
   };
+
   const handleUpload = () => {
-    // axios
-    //   .post("http://localhost:8080/authorize", {
-    //     ,
-    //   })
-    //   .then((res) => {
-    //     console.log("res", res);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error.response.data.message);
-    //     alert(error.response.data.message);
-    //   });
+    const data = {
+      content: content,
+      rating: ratingValue,
+      // 이미지 데이터도 추가 가능
+    };
+
+    axios
+      .post("http://54.180.53.205/board/viewAll", data)
+      .then((res) => {
+        console.log("Response:", res.data);
+      })
+      .catch((error) => {
+        console.error("Error:", error.response.data.message);
+        alert(error.response.data.message);
+      });
   };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title_}>새 게시물</h1>
@@ -48,47 +58,41 @@ const Write_content = () => {
       />
 
       <div className={styles.imgControl}>
-        <h1 className={styles.imgAdd}>사진 추가</h1>
+        <div className={styles.imgAdd}>사진 추가</div>
         <div className={styles.imageUpload}>
           <label htmlFor="fileInput" className={styles.addImg}>
-            <img src="pics/+write.png" alt="파일 선택" className={styles.add_pics} />
+            <img
+              src="pics/+write.png"
+              alt="파일 선택"
+              className={styles.add_pics}
+            />
             <input
               id="fileInput"
               type="file"
               accept="image/*"
               onChange={handleImageChange}
-              ref={fileInputRef}
               style={{ display: "none" }}
             />
           </label>
-
-          {/* {selectedImage && (
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <img
-                src={selectedImage}
-                alt="선택한 사진"
-                style={{ maxWidth: "30px", height: "auto" }}
-              />
-            </div>
-          )} */}
         </div>
       </div>
       <hr />
       <div className={styles.addLocDiv}>
-        <h1 className={styles.addLoc}>장소 추가</h1>
-        <div className={styles.addLocBtn}>
-          <input id="dropdown" type="checkbox" />
-
-          <label className="dropdownLabel" for="dropdown">
-            <div>CSS</div>
-            <div className="caretIcon" />
-          </label>
-          <div className="content">
+        <h3 className={styles.addLoc}>장소 추가</h3>
+        <div
+          className={`${styles.dropDown} ${
+            isDropdownActive ? styles.active : ""
+          }`}
+          onClick={toggleDropdown}
+        >
+          <span className={styles.dropDownText}>
+            <img src="pics/addLoc.png"></img>
+          </span>
+          <div className={styles.dropDownContent}>
             <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-              <li>Option 3</li>
-              <li>Option 4</li>
+              <li>성동구</li>
+              <li>광진구</li>
+              <li>강북구</li>
             </ul>
           </div>
         </div>
@@ -96,19 +100,16 @@ const Write_content = () => {
       <hr />
       <div className={styles.star_box}>
         <h3 className={styles.star_ev}>별점 매기기</h3>
-        <Rating className={styles.Rating}
+        <Rating
+          className={styles.Rating}
           name="star_rating"
           precision={0.5}
           emptyIcon={<StarIcon style={{ opacity: 0.5 }} />}
           icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
           halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
-        >
-
-        </Rating>
+        ></Rating>
       </div>
-
-
-      <button className={styles.Button} onClick={handleUpload}>
+      <button className={styles.Button} onClick={FileUpload}>
         공유
       </button>
     </div>

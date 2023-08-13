@@ -9,8 +9,8 @@
   height: 800px;
   width: 707px;
   position: absolute;
-  top:6%;
-  left:50%;
+  top: 6%;
+  left: 50%;
   transform: translateX(-50%);
 }
 .idPassword {
@@ -66,13 +66,13 @@ hr {
 .id {
   margin-top: 30px;
 }
-.find_info{
+.find_info {
   display: flex;
   flex-direction: row;
-  margin-top:10px;
-  font-size:12px;
+  margin-top: 10px;
+  font-size: 12px;
 }
-.find{
+.find {
   margin-left: 86px;
 }
 .join_link:before,
@@ -80,39 +80,39 @@ hr {
 .find__id::before,
 .find__pwd:before,
 .find__id:after,
-.find__pwd:after{
+.find__pwd:after {
   content: "";
-  position: absolute; 
-  bottom: -2px; 
-  width: 0; 
-  height: 2px; 
-  background-color: black; 
-  transition: width 0.3s ease-in-out; 
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
 }
 
 .join_link:before,
 .find__id::before,
 .find__pwd:before {
-  left: 50%; 
-  transform: translateX(-50%); 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .join_link:after,
 .find__id:after,
 .find__pwd::after {
   right: 50%;
-  transform: translateX(50%); 
+  transform: translateX(50%);
 }
 
 .join_link:hover:before,
 .join_link:hover:after,
 .find__id:hover:before,
-.find__pwd:hover:before{
-  width: 90%; 
+.find__pwd:hover:before {
+  width: 90%;
 }
-.join_link, 
+.join_link,
 .find__id,
-.find__pwd{
+.find__pwd {
   text-decoration: none;
   color: black;
   position: relative;

@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   background-color: white;
-  height: 800px;
+  height: 750px;
   width: 707px;
   position: absolute;
   top: 6%;
@@ -28,6 +28,9 @@ textarea {
 }
 .imgAdd {
   font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 .title_ {
   font-size: 20px;
@@ -40,13 +43,13 @@ textarea {
 .addLoc {
   font-size: 16px;
   display: flex;
-  transform: translateX(-210px);
+  transform: translateX(-170px);
 }
 hr {
   background: rgb(247, 128, 128);
   height: 2px;
   border: 0;
-  width:80%;
+  width: 80%;
 }
 .Button {
   border: none;
@@ -64,7 +67,7 @@ hr {
 }
 
 .addLocDiv {
-  display: inline-block;
+  display: flex;
   justify-content: space-between;
 }
 .addBtn {
@@ -79,10 +82,11 @@ hr {
   flex-direction: column;
   transform: translateX(-220px);
 }
-.star_ev{
+.star_ev {
   display: flex;
   align-items: center;
-  font-size:16px;
+  font-size: 16px;
+  font-weight: bold;
 }
 .addLocBtn {
   min-width: 150px;
@@ -92,4 +96,54 @@ hr {
 .addLocBtn input {
   background-image: url(../../public/pics/addLoc.png);
   background-repeat: no-repeat;
+}
+
+/* Dropdown 스타일 */
+.dropDown {
+  position: relative;
+  cursor: pointer;
+}
+.dropDown img {
+  width: 30%;
+  height: 50%;
+}
+.dropDownText {
+  display: block;
+  padding: 10px;
+  background-color: white;
+
+  border-radius: 5px;
+}
+.dropDownText img {
+  transition: transform 0.3s ease-in-out; /* 애니메이션 효과 설정 */
+}
+
+.dropDownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.dropDown.active .dropDownContent {
+  display: block;
+}
+.dropDown.active .dropDownText img {
+  transform: rotate(90deg); /* 클릭 시 180도 회전 */
+}
+
+.dropDownContent ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropDownContent ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
