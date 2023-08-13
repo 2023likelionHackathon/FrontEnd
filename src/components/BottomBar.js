@@ -3,19 +3,36 @@ import styles from "../css/BottomBar.module.css";
 import { Link } from "react-router-dom";
 
 const BottomBar = () => {
-  const [activeIcon, setActiveIcon] = useState(""); // 초기 활성 아이콘 설정
+  const [activeIcon, setActiveIcon] = useState(""); // 초기 활성 null
 
   const handleIconClick = (iconName) => {
-    setActiveIcon(iconName); // 클릭한 아이콘을 활성 아이콘으로 설정
+    setActiveIcon(() => iconName);
   };
+
+  const HomeClassName =
+    activeIcon === "홈"
+      ? `${styles.icons} ${styles.selected}`
+      : `${styles.lcons}`;
+
+  const WriteClassName =
+    activeIcon === "글쓰기"
+      ? `${styles.icons} ${styles.selected}`
+      : `${styles.lcons}`;
+
+  const MarketClassName =
+    activeIcon === "시장 검색"
+      ? `${styles.icons} ${styles.selected}`
+      : `${styles.lcons}`;
+
+  const ProfileClassName =
+    activeIcon === "프로필"
+      ? `${styles.icons} ${styles.selected}`
+      : `${styles.lcons}`;
 
   return (
     <div className={styles.btBar}>
       <nav className={styles.wrapper}>
-        <div
-          className={`${styles.icons} ${activeIcon === "홈" ? "active" : ""}`}
-          onClick={() => handleIconClick("홈")}
-        >
+        <div className={HomeClassName} onClick={() => handleIconClick("홈")}>
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <div className={styles.pics}>
               <img src="pics/NewHome.png" alt="홈" />
@@ -24,9 +41,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div
-          className={`${styles.icons}  ${
-            activeIcon === "글쓰기" ? "active" : ""
-          }`}
+          className={WriteClassName}
           onClick={() => handleIconClick("글쓰기")}
         >
           <Link to="/write" style={{ textDecoration: "none", color: "black" }}>
@@ -37,9 +52,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div
-          className={`${styles.icons}  ${
-            activeIcon === "시장 검색" ? "active" : ""
-          }`}
+          className={MarketClassName}
           onClick={() => handleIconClick("시장 검색")}
         >
           <Link to="/search" style={{ textDecoration: "none", color: "black" }}>
@@ -50,9 +63,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div
-          className={`${styles.icons}  ${
-            activeIcon === "프로필" ? "active" : ""
-          }`}
+          className={ProfileClassName}
           onClick={() => handleIconClick("프로필")}
         >
           <Link to="/login" style={{ textDecoration: "none", color: "black" }}>

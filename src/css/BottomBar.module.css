@@ -37,8 +37,7 @@ nav > div {
 .pics {
   height: 31px;
 }
-.icons.active {
-  /* 여기에 선택된 아이콘의 스타일을 정의하세요 */
 
+.selected {
   filter: opacity(1) drop-shadow(0 0 0 black);
 }
