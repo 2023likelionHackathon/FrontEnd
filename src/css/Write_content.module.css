@@ -115,13 +115,14 @@ hr {
   border-radius: 5px;
 }
 .dropDownText img {
-  transition: transform 0.3s ease-in-out; /* 애니메이션 효과 설정 */
+  transition: transform 0.3s ease-in-out;
 }
 
 .dropDownContent {
   position: absolute;
   top: 100%;
   left: 0;
+  width: 200px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-top: none;

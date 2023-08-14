@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import styles from "../css/BottomBar.module.css";
 import { Link } from "react-router-dom";
+import styled from "@emotion/styled";
 
 const BottomBar = () => {
   const [activeIcon, setActiveIcon] = useState(""); // 초기 활성 null
 
   const handleIconClick = (iconName) => {
     setActiveIcon(() => iconName);
+  };
+  const [isValid, setIsValid] = useState(false);
+
+  const toggleColor = () => {
+    setIsValid(!isValid);
   };
 
   const HomeClassName =
@@ -32,7 +38,13 @@ const BottomBar = () => {
   return (
     <div className={styles.btBar}>
       <nav className={styles.wrapper}>
-        <div className={HomeClassName} onClick={() => handleIconClick("홈")}>
+        <div
+          className={HomeClassName}
+          onClick={toggleColor}
+          style={{
+            filter: isValid ? "opacity(1) drop-shadow(0 0 0 black)" : "",
+          }}
+        >
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <div className={styles.pics}>
               <img src="pics/NewHome.png" alt="홈" />
@@ -42,7 +54,10 @@ const BottomBar = () => {
         </div>
         <div
           className={WriteClassName}
-          onClick={() => handleIconClick("글쓰기")}
+          onClick={toggleColor}
+          style={{
+            filter: isValid ? "opacity(1) drop-shadow(0 0 0 black)" : "",
+          }}
         >
           <Link to="/write" style={{ textDecoration: "none", color: "black" }}>
             <div className={styles.pics}>
@@ -53,7 +68,10 @@ const BottomBar = () => {
         </div>
         <div
           className={MarketClassName}
-          onClick={() => handleIconClick("시장 검색")}
+          onClick={toggleColor}
+          style={{
+            filter: isValid ? "opacity(1) drop-shadow(0 0 0 black)" : "",
+          }}
         >
           <Link to="/search" style={{ textDecoration: "none", color: "black" }}>
             <div className={styles.pics}>
@@ -64,7 +82,10 @@ const BottomBar = () => {
         </div>
         <div
           className={ProfileClassName}
-          onClick={() => handleIconClick("프로필")}
+          onClick={toggleColor}
+          style={{
+            filter: isValid ? "opacity(1) drop-shadow(0 0 0 black)" : "",
+          }}
         >
           <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
             <div className={styles.pics}>

@@ -90,9 +90,22 @@ const Write_content = () => {
           </span>
           <div className={styles.dropDownContent}>
             <ul>
-              <li>성동구</li>
-              <li>광진구</li>
-              <li>강북구</li>
+              <li>뚝도지기</li>
+              <li>은식당</li>
+              <li>호랑이식탁</li>
+              <li>훈이네</li>
+              <li>연탄생고기</li>
+              <li>2002횟집</li>
+              <li>영수분식</li>
+              <li>락지</li>
+              <li>대성정</li>
+              <li>뚱이네포차</li>
+              <li>우리동네칼국수</li>
+              <li>떡마을</li>
+              <li>지수언니</li>
+              <li>미정이네 코다리찜</li>
+              <li>연탄요리집</li>
+              <li>서울맛집</li>
             </ul>
           </div>
         </div>

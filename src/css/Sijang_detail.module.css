@@ -1,141 +1,139 @@
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    width: 707px;
-    position: absolute;
-    top: 11%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 707px;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
-.margin_div{
-    margin-bottom: 15vh;
-    background-color: white;
-    
+.margin_div {
+  margin-bottom: 15vh;
+  background-color: white;
 }
 .image {
-    width: 667px;
-    height: 366px;
+  width: 667px;
+  height: 366px;
+  border-radius: 15px;
 }
 
 .title {
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    margin-left: 7px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 7px;
 }
 
 .loc {
-    font-size: 16px;
-    color: grey;
-    margin-left: 7px;
+  font-size: 16px;
+  color: grey;
+  margin-left: 7px;
 }
 
 .time {
-    font-size: 32px;
-    font-weight: bold;
-    margin-left: 7px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 7px;
 }
 
-.days{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 2%;
-    margin-top: 7px;
-    margin-right: 7px;
-    color: grey;
+.days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2%;
+  margin-top: 7px;
+  margin-right: 7px;
+  color: grey;
 }
 .field {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-.lines{
-    margin-top: 7px;
+.lines {
+  margin-top: 7px;
 }
-.line__{
-    width: 423px;
-
+.line__ {
+  width: 423px;
 }
 .use_ {
-    color: grey;
-    margin-top: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-left:4px;
+  color: grey;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 4px;
 }
-.rest{
-    color:red;
-    font-weight: bold;
+.rest {
+  color: red;
+  font-weight: bold;
 }
-.samechu{
-    display: flex;
-    flex-direction: row;
-    margin-left:7px;
+.samechu {
+  display: flex;
+  flex-direction: row;
+  margin-left: 7px;
 }
-.samechu_{
-    font-size: 32px;
-    font-weight: bold;
+.samechu_ {
+  font-size: 32px;
+  font-weight: bold;
 }
-.samechu_text{
-    display: flex;
-    color: grey;
-    font-size:16px;
-    margin-top:auto
+.samechu_text {
+  display: flex;
+  color: grey;
+  font-size: 16px;
+  margin-top: auto;
 }
-.menu_img_text{
-    margin-top:7px;
-    display: flex;
-    flex-direction: row;
+.menu_img_text {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
 }
-.gazami_img{
-    width:128px;
-    height: 128px;
+.gazami_img {
+  width: 128px;
+  height: 128px;
 }
-.menu_text{
-    margin-left:2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.menu_text {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.title_menu{
-    color:black;
-    font-size:24px;
-    font-weight: bold;
+.title_menu {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
 }
-.price{
-    color:grey;
-    font-size: 14px;
-    margin-bottom: 10px;
+.price {
+  color: grey;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
-.explain{
-    color:rgb(74, 72, 72);
-    font-size:14px;
+.explain {
+  color: rgb(74, 72, 72);
+  font-size: 14px;
 }
-.menus_{
-    display: flex;
-    flex-direction: column;
+.menus_ {
+  display: flex;
+  flex-direction: column;
 }
 .menu1,
 .menu2,
-.menu3{
-    display: flex;
-    flex-direction: row;
-    margin-top:5px;
-    margin-left:2%;
+.menu3 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-left: 2%;
 }
-.menu_info{
-    font-size:32px;
-    font-weight: bold;
+.menu_info {
+  font-size: 32px;
+  font-weight: bold;
 }
-.food{
-    margin-right: 5px;
-    color:grey;
+.food {
+  margin-right: 5px;
+  color: grey;
 }
-.price{
-    margin-left:5px;
+.price {
+  margin-left: 5px;
 }
