@@ -45,7 +45,7 @@ const Join_Membership = () => {
     }
     console.log("Form Data:", formData);
     axios
-      .post("http://localhost:8080/user/join", {
+      .post("http://54.180.53.205/user/join", {
         userId: formData.userId,
         pw: formData.pw,
         email: formData.email,

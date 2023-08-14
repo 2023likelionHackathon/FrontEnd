@@ -8,6 +8,7 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import moment from "moment/moment";
+import axios from "axios";
 
 const CustomRating = (props) => {
   console.log("score", props.score);
@@ -58,19 +59,42 @@ const Posts = ({
   score,
   likes,
   imgUrlList,
-  replyList,
+  size_reply,
   createdDate,
 }) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [likeCount, setLikeCount] = useState(likes);
+  console.log(document.cookie);
+  const [isLiked, setIsLiked] = useState(likes.isLiked);
+  const [likeCount, setLikeCount] = useState(likes.likes_cnt);
 
-  const handleLikeClick = () => {
-    if (!isLiked) {
-      setLikeCount(likeCount + 1);
-    } else {
-      setLikeCount(likeCount - 1);
+  const axiosInstance = axios.create({
+    baseURL: "http://localhost:8080",
+    withCredentials: true, // 쿠키 전송을 위한 옵션 설정
+  });
+  // 쿠키 추출
+  const accessToken = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("access_token="))
+    .split("=")[1];
+
+  // 요청에 쿠키 포함하여 보내기
+  axiosInstance.defaults.headers.common[
+    "Cookie"
+  ] = `access_token=${accessToken}`;
+  const handleLikeClick = async () => {
+    console.log("boardId", boardId);
+    try {
+      const resp = await axiosInstance.post(`/board/like/${boardId}`, {
+        crossDomain: true, // CORS 요청임을 명시적으로 지정
+      });
+      const { isLiked: updatedIsLiked, likes_cnt: updatedLikeCount } =
+        resp.data;
+
+      setIsLiked(updatedIsLiked);
+      setLikeCount(updatedLikeCount);
+    } catch (error) {
+      console.error("Error handling like:", error);
+      alert(error.response.data.message);
     }
-    setIsLiked(!isLiked);
   };
 
   return (
@@ -101,9 +125,9 @@ const Posts = ({
                 style={{ color: isLiked ? "red" : "inherit" }}
                 onClick={handleLikeClick}
               />
-              <span className={styles.like}>{likes}</span>
+              <span className={styles.like}>{likeCount}</span>
               <ChatBubbleOutlineIcon className={styles.postIcon2} />
-              <span className={styles.chat}>{replyList.length}</span>
+              <span className={styles.chat}>{size_reply}</span>
             </div>
             <div className={styles.Icons_save}>
               <BookmarkBorderIcon className={styles.postIcon3} />
