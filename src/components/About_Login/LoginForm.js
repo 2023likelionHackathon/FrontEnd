@@ -17,7 +17,7 @@ const LoginForm = () => {
   };
 
   const axiosInstance = axios.create({
-    baseURL: "http://54.180.53.205",
+    baseURL: "http://localhost:8080",
     withCredentials: true, // CORS 정책에 따른 쿠키 전송 허용
   });
 

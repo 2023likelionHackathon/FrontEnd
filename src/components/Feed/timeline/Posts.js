@@ -80,13 +80,13 @@ const Posts = ({
   // axiosInstance.defaults.headers.common[
   //   "Cookie"
   // ] = `access_token=${accessToken}`;
-
+  axios.defaults.withCredentials = true;
   const handleLikeClick = async () => {
     console.log("boardId", boardId);
-    axios.defaults.withCredentials = true;
+
     try {
       const resp = await axios.post(
-        `http://54.180.53.205/board/like/${boardId}`,
+        `http://localhost:8080/board/like/${boardId}`,
         {
           withCredentials: true,
         }
