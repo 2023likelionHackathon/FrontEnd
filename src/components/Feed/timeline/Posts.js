@@ -123,6 +123,7 @@ const Posts = ({
           <img src={imgUrlList[0]} alt="image" />
         </div>
         <div className={styles.footer}>
+          <div className={styles.post_content}>{content}</div>
           <div className={styles.post_footerIcons}>
             <div className={styles.Icons_union}>
               <HeartOutLineIcon
