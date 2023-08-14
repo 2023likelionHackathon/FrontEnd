@@ -33,7 +33,7 @@ const Timeline = () => {
               score={post.score}
               likes={post.likes}
               imgUrlList={post.imgUrlList}
-              replyList={post.size_reply}
+              size_reply={post.size_reply}
               createdDate={post.createdDate}
             />
           ))}
