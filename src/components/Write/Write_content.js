@@ -104,9 +104,9 @@ const Write_content = () => {
           className={styles.Rating}
           name="star_rating"
           precision={0.5}
-          emptyIcon={<StarIcon style={{ opacity: 0.5 }} />}
-          icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
-          halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)" }} />}
+          emptyIcon={<StarIcon style={{ opacity: 0.5,fontSize:"45px" }} />}
+          icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)",fontSize:"45px" }} />}
+          halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)",fontSize:"45px" }} />}
         ></Rating>
       </div>
       <button className={styles.Button} onClick={FileUpload}>

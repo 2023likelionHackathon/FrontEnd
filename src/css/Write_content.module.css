@@ -25,6 +25,8 @@ textarea {
   display: flex;
   flex-direction: column;
   transform: translateX(-255px);
+  justify-content: center;
+  height: 20%;
 }
 .imgAdd {
   font-size: 16px;
@@ -36,14 +38,17 @@ textarea {
   font-size: 20px;
 }
 
-.addImg img {
-  width: 52px;
-  height: 52px;
+.add_pics{
+  display: flex;
+  flex-direction: column;
+  transform: translateY(17px);
+  width: 60px;
+  height: 60px;
 }
 .addLoc {
   font-size: 16px;
   display: flex;
-  transform: translateX(-170px);
+  transform: translateX(-210px);
 }
 hr {
   background: rgb(247, 128, 128);
@@ -57,8 +62,9 @@ hr {
   padding: 10px 5px;
   font-size: 1.2vw;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 800;
   color: white;
+  font-size:15px;
   width: 260px;
   height: 34px;
   background-color: rgb(247, 128, 128);
@@ -80,7 +86,9 @@ hr {
 .star_box {
   display: flex;
   flex-direction: column;
-  transform: translateX(-220px);
+  transform: translateX(-75%);
+  height: 20%;
+  justify-content: center;
 }
 .star_ev {
   display: flex;
