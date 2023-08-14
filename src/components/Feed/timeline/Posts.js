@@ -62,30 +62,35 @@ const Posts = ({
   size_reply,
   createdDate,
 }) => {
-  console.log(document.cookie);
+  console.log("cookie", document.cookie);
   const [isLiked, setIsLiked] = useState(likes.isLiked);
   const [likeCount, setLikeCount] = useState(likes.likes_cnt);
 
-  const axiosInstance = axios.create({
-    baseURL: "http://localhost:8080",
-    withCredentials: true, // 쿠키 전송을 위한 옵션 설정
-  });
-  // 쿠키 추출
-  const accessToken = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("access_token="))
-    .split("=")[1];
+  // const axiosInstance = axios.create({
+  //   baseURL: "http://localhost:8080",
+  //   withCredentials: true , // 쿠키 전송을 위한 옵션 설정
+  // });
+  // // 쿠키 추출
+  // const accessToken = document.cookie
+  //   .split("; ")
+  //   .find((row) => row.startsWith("access_token="))
+  //   .split("=")[1];
 
-  // 요청에 쿠키 포함하여 보내기
-  axiosInstance.defaults.headers.common[
-    "Cookie"
-  ] = `access_token=${accessToken}`;
+  // // 요청에 쿠키 포함하여 보내기
+  // axiosInstance.defaults.headers.common[
+  //   "Cookie"
+  // ] = `access_token=${accessToken}`;
+
   const handleLikeClick = async () => {
     console.log("boardId", boardId);
+    axios.defaults.withCredentials = true;
     try {
-      const resp = await axiosInstance.post(`/board/like/${boardId}`, {
-        crossDomain: true, // CORS 요청임을 명시적으로 지정
-      });
+      const resp = await axios.post(
+        `http://54.180.53.205/board/like/${boardId}`,
+        {
+          withCredentials: true,
+        }
+      );
       const { isLiked: updatedIsLiked, likes_cnt: updatedLikeCount } =
         resp.data;
 
