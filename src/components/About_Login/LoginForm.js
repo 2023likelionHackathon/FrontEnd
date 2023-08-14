@@ -16,18 +16,26 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
+  const axiosInstance = axios.create({
+    baseURL: "http://localhost:8080",
+    withCredentials: true, // CORS 정책에 따른 쿠키 전송 허용
+  });
+
   // 로그인 버튼을 클릭했을 때 동작하는 함수
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
     // 여기서 실제로 서버에 로그인 요청을 보내는 등의 로그인 처리를 할 수 있습니다.
-    axios
-      .post("http://localhost:8080/authorize", {
+    axiosInstance
+      .post("/authorize", {
         username: username,
         password: password,
       })
       .then((res) => {
         console.log("res", res);
+        alert("로그인에 성공하셨습니다!");
+        setUsername("");
+        setPassword("");
       })
       .catch((error) => {
         console.error("Error:", error.response.data.message);
