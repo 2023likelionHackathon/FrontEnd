@@ -9,6 +9,7 @@ import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import moment from "moment/moment";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CustomRating = (props) => {
   console.log("score", props.score);
@@ -132,7 +133,9 @@ const Posts = ({
                 onClick={handleLikeClick}
               />
               <span className={styles.like}>{likeCount}</span>
-              <ChatBubbleOutlineIcon className={styles.postIcon2} />
+              <Link to={`/comment/${boardId}`}>
+                <ChatBubbleOutlineIcon className={styles.postIcon2} />
+              </Link>
               <span className={styles.chat}>{size_reply}</span>
             </div>
             <div className={styles.Icons_save}>

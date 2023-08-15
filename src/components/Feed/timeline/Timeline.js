@@ -4,21 +4,19 @@ import Posts from "./Posts";
 import BottomBar from "../../BottomBar";
 import SearchBar from "../../SearchBar";
 import axios from "axios";
-const Timeline = () => {
-  const [posts, setPosts] = useState([]);
-  const getPostList = async () => {
-    const resp = await (
-      await axios.get("http://api.domarketdodo.shop/board/viewAll", {
-        withCredentials: true,
-      })
-    ).data; // 2) feed data 할당
-    setPosts(resp); // posts에 data 할당
-    console.log("resp", resp);
-  };
+const Timeline = ({posts}) => {
+  if(!posts){
+    return <div>
+      로딩중
+    </div>
+  }
 
-  useEffect(() => {
-    getPostList(); // 1) feed 조회 함수 호출
-  }, []);
+  if(posts.length === 0 ){
+    return <div>
+      여기 게시글이 없어
+    </div>
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.timeline}>

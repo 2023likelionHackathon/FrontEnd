@@ -1,43 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Feed_main from "../components/Feed/Feed_main";
 import BottomBar from "../components/BottomBar";
 import SearchBar from "../components/SearchBar";
 import Timeline from "../components/Feed/timeline/Timeline";
 import axios from "axios";
 const Feed_page = () => {
-  const getData = async () => {
-    try {
-      return await axios.get("http://api.domarketdodo.shop/board/viewAll");
-    } catch (error) {
-      console.error("아오 싯팔");
-    }
+  const [posts, setPosts] = useState();
+  const [search, setSearch] = useState("");
+  const getPostList = async () => {
+    const resp = await axios.get("http://api.domarketdodo.shop/board/viewAll", {
+      withCredentials: true,
+    });
+    setPosts(resp.data); // posts에 data 할당
+    console.log("resp", resp.data);
   };
-  const test = async () => {
-    const testt = await getData();
 
-    console.log(testt);
-  };
-  test();
+  useEffect(() => {
+    getPostList(); // 1) feed 조회 함수 호출
+  }, []);
   return (
     <div>
-      {/* async function getData() {
-      try {
-        //응답 성공
-        const response = await axios.get('http://54.180.53.205/board/viewAll',{
-          params:{
-            //url 뒤에 붙는 param id값
-            id: 12345
-          }
-        });
-        console.log(response);
-      } catch (error) {
-        //응답 실패
-        console.error(error);
-      }
-    } */}
-
-      <SearchBar />
-      <Timeline />
+      <SearchBar isSearch search={search} setSearch={setSearch}/>
+      <Timeline posts={posts?.filter(post => post.storeName.indexOf(search) !== -1)} />
       <BottomBar />
     </div>
   );

@@ -4,6 +4,7 @@ import Sijang_detail6 from "../components/Sijang_info/Sijang_detail/Sijang_detai
 import BottomBar from "../components/BottomBar";
 
 const Jumpo_show6 = () => {
+  
   return (
     <div>
       <SearchBar />
