@@ -1,15 +1,45 @@
 import React, { useState } from "react";
 import styles from "../../css/Write_content.module.css";
-import { Rating } from "@mui/material";
+import { Rating, styled } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import axios from "axios";
 import FileUpload from "./UpLoad";
+import Modal from "@mui/material/Modal";
+const CustomBackdrop = styled('div')({
+});
+const modalStyle = {
+  display: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
+  backgroundColor: "white",
+  zIndex: "1000",
+  width: "300px",
+  heigth: "300px",
+  border: "1px solid black",
+};
 const Write_content = () => {
   const [content, setContent] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
   const [ratingValue, setRatingValue] = useState(0);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlace, setSelectedPlace] = useState("");
+  const [selectedTag, setSelectedTag] = useState("");
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handlePlaceSelect = (place) => {
+    setSelectedPlace(place);
+    toggleModal();
+  };
+  const handleTagSelect = (tag) => {
+    setSelectedTag(tag);
+  };
+
   const toggleDropdown = () => {
     setIsDropdownActive(!isDropdownActive);
   };
@@ -32,7 +62,7 @@ const Write_content = () => {
     const data = {
       content: content,
       rating: ratingValue,
-      // 이미지 데이터도 추가 가능
+      tag: selectedTag,     //추가 data 부분
     };
 
     axios
@@ -78,11 +108,19 @@ const Write_content = () => {
       </div>
       <hr />
       <div className={styles.addLocDiv}>
-        <h3 className={styles.addLoc}>장소 추가</h3>
+        <div className={styles.addLocHeader}>
+          <h3 className={styles.addLoc}>장소 추가</h3>
+          {selectedPlace && (
+          <div className={styles.selectedItems}>
+            <span>선택한 시장: {selectedPlace}</span>
+            <br />
+            {selectedTag && <span>선택한 매장: {selectedTag}</span>}
+          </div>
+        )}
+        </div>
         <div
-          className={`${styles.dropDown} ${
-            isDropdownActive ? styles.active : ""
-          }`}
+          className={`${styles.dropDown} ${isDropdownActive ? styles.active : ""
+            }`}
           onClick={toggleDropdown}
         >
           <span className={styles.dropDownText}>
@@ -90,36 +128,83 @@ const Write_content = () => {
           </span>
           <div className={styles.dropDownContent}>
             <ul>
-              <li>뚝도지기</li>
-              <li>은식당</li>
-              <li>호랑이식탁</li>
-              <li>훈이네</li>
-              <li>연탄생고기</li>
-              <li>2002횟집</li>
-              <li>영수분식</li>
-              <li>락지</li>
-              <li>대성정</li>
-              <li>뚱이네포차</li>
-              <li>우리동네칼국수</li>
-              <li>떡마을</li>
-              <li>지수언니</li>
-              <li>미정이네 코다리찜</li>
-              <li>연탄요리집</li>
-              <li>서울맛집</li>
+              <li onClick={() => handlePlaceSelect("뚝도청춘시장")}>뚝도청춘시장</li>
+              <li onClick={() => handlePlaceSelect("금남시장")}>금남시장</li>
             </ul>
           </div>
         </div>
+        
       </div>
       <hr />
+      <Modal
+        open={isModalOpen}
+        onClose={toggleModal}
+        className={styles.pop_up}
+        BackdropComponent={CustomBackdrop}
+        style={modalStyle}
+
+      >
+        <div className={styles.modalContent}>
+          <h2 className={styles.choose_}>장소 선택</h2>
+          <ul>
+            {selectedPlace === "뚝도청춘시장" && (
+              <>
+                <li onClick={() => handleTagSelect("뚝도지기")} className={`${styles.list_} ${selectedTag === "뚝도지기" ? styles.selected : ""}`}>뚝도지기</li>
+                <li onClick={() => handleTagSelect("은식당")} className={`${styles.list_} ${selectedTag === "은식당" ? styles.selected : ""}`}>은식당</li>
+                <li onClick={() => handleTagSelect("호랑이식탁")} className={`${styles.list_} ${selectedTag === "호랑이식탁" ? styles.selected : ""}`}>호랑이식탁</li>
+                <li onClick={() => handleTagSelect("훈이네")} className={`${styles.list_} ${selectedTag === "훈이네" ? styles.selected : ""}`}>훈이네</li>
+                <li onClick={() => handleTagSelect("연탄생고기")} className={`${styles.list_} ${selectedTag === "연탄생고기" ? styles.selected : ""}`}>연탄생고기</li>
+                <li onClick={() => handleTagSelect("2002횟집")} className={`${styles.list_} ${selectedTag === "2002횟집" ? styles.selected : ""}`}>2002횟집</li>
+                <li onClick={() => handleTagSelect("영수분식")} className={`${styles.list_} ${selectedTag === "영수분식" ? styles.selected : ""}`}>영수분식</li>
+                <li onClick={() => handleTagSelect("락지")} className={`${styles.list_} ${selectedTag === "락지" ? styles.selected : ""}`}>락지</li>
+                <li onClick={() => handleTagSelect("대성정")} className={`${styles.list_} ${selectedTag === "대성정" ? styles.selected : ""}`}>대성정</li>
+                <li onClick={() => handleTagSelect("뚱이네포차")} className={`${styles.list_} ${selectedTag === "뚱이네포차" ? styles.selected : ""}`}>뚱이네포차</li>
+                <li onClick={() => handleTagSelect("우리동네칼국수")} className={`${styles.list_} ${selectedTag === "우리동네칼국수" ? styles.selected : ""}`}>우리동네칼국수</li>
+                <li onClick={() => handleTagSelect("떡마을")} className={`${styles.list_} ${selectedTag === "떡마을" ? styles.selected : ""}`}>떡마을</li>
+                <li onClick={() => handleTagSelect("지수언니")} className={`${styles.list_} ${selectedTag === "지수언니" ? styles.selected : ""}`}>지수언니</li>
+                <li onClick={() => handleTagSelect("미정이네 코다리찜")} className={`${styles.list_} ${selectedTag === "미정이네 코다리찜" ? styles.selected : ""}`}>미정이네 코다리찜</li>
+                <li onClick={() => handleTagSelect("연탄요리집")} className={`${styles.list_} ${selectedTag === "연탄요리집" ? styles.selected : ""}`}>연탄요리집</li>
+                <li onClick={() => handleTagSelect("서울맛집")} className={`${styles.list_} ${selectedTag === "서울맛집" ? styles.selected : ""}`}>서울맛집</li>
+              </>
+            )}
+            {selectedPlace === "금남시장" && (
+              <>
+                <span className={styles.no_jumpo}>등록된 점포가 없습니다.</span>
+              </>
+            )}
+          </ul>
+          <div className={styles.select__btns}>
+            <button
+              className={styles.Ok_btn}
+              onClick={() => {
+                toggleModal();
+              }}
+            >확인</button>
+            <button className={styles.cancel_btn} onClick={() => {
+              toggleModal();
+            }}>취소</button>
+            <button 
+              className={styles.init_btn}
+              onClick={() => {
+                handlePlaceSelect("");
+                handleTagSelect("");
+              }}
+              >
+                초기화
+            </button>
+          </div>
+
+        </div>
+      </Modal>
       <div className={styles.star_box}>
         <h3 className={styles.star_ev}>별점 매기기</h3>
         <Rating
           className={styles.Rating}
           name="star_rating"
           precision={0.5}
-          emptyIcon={<StarIcon style={{ opacity: 0.5,fontSize:"45px" }} />}
-          icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)",fontSize:"45px" }} />}
-          halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)",fontSize:"45px" }} />}
+          emptyIcon={<StarIcon style={{ opacity: 0.5, fontSize: "45px" }} />}
+          icon={<StarIcon style={{ color: "rgba(255, 0, 0, 0.6)", fontSize: "45px" }} />}
+          halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)", fontSize: "45px" }} />}
         ></Rating>
       </div>
       <button className={styles.Button} onClick={FileUpload}>

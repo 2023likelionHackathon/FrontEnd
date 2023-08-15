@@ -48,7 +48,8 @@ textarea {
 .addLoc {
   font-size: 16px;
   display: flex;
-  transform: translateX(-210px);
+  margin-right:200px;
+
 }
 hr {
   background: rgb(247, 128, 128);
@@ -75,6 +76,7 @@ hr {
 .addLocDiv {
   display: flex;
   justify-content: space-between;
+  transform: translateX(-50px);
 }
 .addBtn {
   float: right;
@@ -155,4 +157,59 @@ hr {
 .dropDownContent ul li {
   padding: 10px;
   border-bottom: 1px solid #ccc;
+}
+
+.list_{
+  cursor: pointer;
+  list-style-type: none;
+}
+.modalContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Ok_btn{
+  background-color: rgb(247, 128, 128);
+  width:60px;
+  border:none;
+  margin-right:7px;
+  cursor: pointer;
+  font-size:16px;
+  color: white;
+  font-weight: 770;
+}
+.cancel_btn{
+  background-color: grey;
+  width:60px;
+  border:none;
+  margin-left:7px;
+  cursor: pointer;
+  font-size:16px;
+  color:white;
+  font-weight: 770;
+}
+.selected{
+  text-decoration: none rgb(247,128,128);
+  color:rgb(247,128,128);
+  font-weight: bold;
+}
+.no_jumpo{
+  color:grey;
+}
+.addLocHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.init_btn{
+  background-color: grey;
+  width:60px;
+  border:none;
+  margin-left:7px;
+  cursor: pointer;
+  font-size:16px;
+  color:white;
+  font-weight: 770;
 }
