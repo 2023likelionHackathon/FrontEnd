@@ -76,6 +76,58 @@ const Write_content = () => {
       });
   };
 
+  const [fileList, setFileList] = React.useState([]);
+
+  const onSaveFiles = (e) => {
+    const uploadFiles = Array.prototype.slice.call(e.target.files); // 파일선택창에서 선택한 파일들
+
+    uploadFiles.forEach((uploadFile) => {
+      setFileList((prevFileList) => [...prevFileList, uploadFile]);
+    });
+
+  };
+
+  const onFileUpload = () => {
+    const formData = new FormData();
+    console.log("before!!", fileList);
+    fileList.forEach((file) => {
+      // 파일 데이터 저장
+      formData.append("imgUrl", file);
+    });
+    console.log(fileList);
+
+    // 객체
+    const boardDto = {
+      store_id: 1,
+      score: 4.0,
+      content: "좋아용~",
+    };
+
+    formData.append(
+      "boardDto",
+      new Blob([JSON.stringify(boardDto)], { type: "application/json" })
+    ); // 직렬화하여 객체 저장
+
+    try {
+      const response = axios
+        .post("http://api.domarketdodo.shop/board/post", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data", // Content-Type 설정
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title_}>새 게시물</h1>
@@ -100,7 +152,7 @@ const Write_content = () => {
               id="fileInput"
               type="file"
               accept="image/*"
-              onChange={handleImageChange}
+              onChange={onSaveFiles}
               style={{ display: "none" }}
             />
           </label>
@@ -207,7 +259,7 @@ const Write_content = () => {
           halfIcon={<StarHalfIcon style={{ color: "rgba(255, 0, 0, 0.6)", fontSize: "45px" }} />}
         ></Rating>
       </div>
-      <button className={styles.Button} onClick={FileUpload}>
+      <button className={styles.Button} onClick={onFileUpload}>
         공유
       </button>
     </div>
