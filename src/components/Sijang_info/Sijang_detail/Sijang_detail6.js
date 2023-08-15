@@ -3,6 +3,7 @@ import styles from "../../../css/Sijang_detail.module.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Posts from "../../Feed/timeline/Posts";
 const Sijang_detail6 = () => {
+  
   return (
     <div className={styles.container}>
       <div className={styles.intro}>

@@ -17,7 +17,7 @@ const LoginForm = () => {
   };
 
   const axiosInstance = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "http://api.domarketdodo.shop",
     withCredentials: true, // CORS 정책에 따른 쿠키 전송 허용
   });
 

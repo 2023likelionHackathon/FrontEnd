@@ -35,7 +35,7 @@ const FileUpload = () => {
 
     try {
       const response = axios
-        .post("http://localhost:8080/board/post", formData, {
+        .post("http://api.domarketdodo.shop/board/post", formData, {
           headers: {
             "Content-Type": "multipart/form-data", // Content-Type 설정
           },

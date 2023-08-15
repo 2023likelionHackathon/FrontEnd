@@ -31,11 +31,12 @@ import Jumpo_show15 from "./pages/Jumpo_show15";
 import Jumpo_show16 from "./pages/Jumpo_show16";
 import Jumpo_show17 from "./pages/Jumpo_show17";
 import Profile from "./pages/Profile";
+import Comment_page from "./pages/Comment_page";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <Feed_page></Feed_page>,
   },
   {
     path: "/feed",
@@ -156,6 +157,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/comment/:boardId",
+    element: <Comment_page />,
   },
 ]);
 

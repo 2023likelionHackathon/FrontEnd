@@ -32,12 +32,23 @@
 
 .container {
   background-color: white;
-  width: 687px;
-  position:absolute;
-  left:50%;
+  min-width: 687px;
+  /* position:absolute; */
+  /* left:50%; */
   padding: 10px;
-  top:6%;
-  transform: translate(-50%,-50%);
-  z-index: 1;
+  /* top:6%; */
   
+  /* transform: translate(-50%,-50%); */
+  z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .container {
+    min-width: 100%;
+  }
+}
+.box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
