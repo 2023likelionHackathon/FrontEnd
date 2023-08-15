@@ -38,7 +38,7 @@ textarea {
   font-size: 20px;
 }
 
-.add_pics{
+.add_pics {
   display: flex;
   flex-direction: column;
   transform: translateY(17px);
@@ -48,8 +48,7 @@ textarea {
 .addLoc {
   font-size: 16px;
   display: flex;
-  margin-right:200px;
-
+  margin-right: 200px;
 }
 hr {
   background: rgb(247, 128, 128);
@@ -65,7 +64,7 @@ hr {
   text-decoration: none;
   font-weight: 800;
   color: white;
-  font-size:15px;
+  font-size: 15px;
   width: 260px;
   height: 34px;
   background-color: rgb(247, 128, 128);
@@ -159,57 +158,63 @@ hr {
   border-bottom: 1px solid #ccc;
 }
 
-.list_{
+.list_ {
   cursor: pointer;
   list-style-type: none;
 }
-.modalContent{
+.modalContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.Ok_btn{
+.Ok_btn {
   background-color: rgb(247, 128, 128);
-  width:60px;
-  border:none;
-  margin-right:7px;
+  width: 60px;
+  border: none;
+  margin-right: 7px;
   cursor: pointer;
-  font-size:16px;
+  font-size: 16px;
   color: white;
   font-weight: 770;
 }
-.cancel_btn{
+.cancel_btn {
   background-color: grey;
-  width:60px;
-  border:none;
-  margin-left:7px;
+  width: 60px;
+  border: none;
+  margin-left: 7px;
   cursor: pointer;
-  font-size:16px;
-  color:white;
+  font-size: 16px;
+  color: white;
   font-weight: 770;
 }
-.selected{
-  text-decoration: none rgb(247,128,128);
-  color:rgb(247,128,128);
+.selected {
+  text-decoration: none rgb(247, 128, 128);
+  color: rgb(247, 128, 128);
   font-weight: bold;
 }
-.no_jumpo{
-  color:grey;
+.no_jumpo {
+  color: grey;
 }
 .addLocHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.init_btn{
+.init_btn {
   background-color: grey;
-  width:60px;
-  border:none;
-  margin-left:7px;
+  width: 60px;
+  border: none;
+  margin-left: 7px;
   cursor: pointer;
-  font-size:16px;
-  color:white;
+  font-size: 16px;
+  color: white;
   font-weight: 770;
+}
+.emptySpace {
+  height: 80px; /* 원하는 높이로 조정 */
+}
+.emptySpace2 {
+  height: 40px; /* 원하는 높이로 조정 */
 }
