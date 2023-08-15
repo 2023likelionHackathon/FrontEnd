@@ -8,7 +8,7 @@ const Timeline = () => {
   const [posts, setPosts] = useState([]);
   const getPostList = async () => {
     const resp = await (
-      await axios.get("http://domarketdodo.shop/board/viewAll", {
+      await axios.get("http://api.domarketdodo.shop/board/viewAll", {
         withCredentials: true,
       })
     ).data; // 2) feed data 할당
