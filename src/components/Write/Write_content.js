@@ -28,6 +28,8 @@ const Write_content = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState("");
   const [selectedTag, setSelectedTag] = useState("");
+  const [fileList, setFileList] = React.useState([]);
+  
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -76,7 +78,7 @@ const Write_content = () => {
       });
   };
 
-  const [fileList, setFileList] = React.useState([]);
+  
 
   const onSaveFiles = (e) => {
     const uploadFiles = Array.prototype.slice.call(e.target.files); // 파일선택창에서 선택한 파일들
