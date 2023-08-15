@@ -7,7 +7,7 @@ import axios from "axios";
 const Feed_page = () => {
   const getData = async () => {
     try {
-      return await axios.get("http://54.180.53.205:8080/board/viewAll");
+      return await axios.get("http://api.domarketdodo.shop/board/viewAll");
     } catch (error) {
       console.error("아오 싯팔");
     }

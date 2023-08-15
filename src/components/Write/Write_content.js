@@ -66,7 +66,7 @@ const Write_content = () => {
     };
 
     axios
-      .post("http://54.180.53.205/board/viewAll", data)
+      .post("http://api.domarketdodo.shop/board/viewAll", data)
       .then((res) => {
         console.log("Response:", res.data);
       })

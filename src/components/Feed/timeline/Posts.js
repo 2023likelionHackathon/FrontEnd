@@ -86,7 +86,7 @@ const Posts = ({
 
     try {
       const resp = await axios.post(
-        `http://54.180.53.205:8080/board/like/${boardId}`,
+        `http://api.domarketdodo.shop/board/like/${boardId}`,
         {
           withCredentials: true,
         }
