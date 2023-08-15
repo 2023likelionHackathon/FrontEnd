@@ -35,7 +35,7 @@ const FileUpload = () => {
 
     try {
       const response = axios
-        .post("http://localhost:8080/board/post", formData, {
+        .post("http://54.180.53.205:8080/board/post", formData, {
           headers: {
             "Content-Type": "multipart/form-data", // Content-Type 설정
           },
