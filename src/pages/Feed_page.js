@@ -20,9 +20,11 @@ const Feed_page = () => {
   }, []);
   return (
     <div>
-      <SearchBar isSearch search={search} setSearch={setSearch}/>
-      <Timeline posts={posts?.filter(post => post.storeName.indexOf(search) !== -1)} />
-      <BottomBar />
+      <SearchBar isSearch search={search} setSearch={setSearch} />
+      <Timeline
+        posts={posts?.filter((post) => post.storeName.indexOf(search) !== -1)}
+      />
+      <BottomBar index={"홈"} />
     </div>
   );
 };

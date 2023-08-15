@@ -4,17 +4,13 @@ import Posts from "./Posts";
 import BottomBar from "../../BottomBar";
 import SearchBar from "../../SearchBar";
 import axios from "axios";
-const Timeline = ({posts}) => {
-  if(!posts){
-    return <div>
-      로딩중
-    </div>
+const Timeline = ({ posts }) => {
+  if (!posts) {
+    return <div style={{ overflow: "scroll" }}>로딩중</div>;
   }
 
-  if(posts.length === 0 ){
-    return <div>
-      여기 게시글이 없어
-    </div>
+  if (posts.length === 0) {
+    return <div>여기 게시글이 없어</div>;
   }
 
   return (

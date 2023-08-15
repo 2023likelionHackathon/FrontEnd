@@ -7,8 +7,8 @@ const Search_page = ({ props }) => {
   return (
     <div>
       <SearchBar />
-      <Loc_with_sijang/>
-      <BottomBar />
+      <Loc_with_sijang />
+      <BottomBar index={"시장 검색"} />
     </div>
   );
 };

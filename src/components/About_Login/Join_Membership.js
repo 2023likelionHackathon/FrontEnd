@@ -61,6 +61,7 @@ const Join_Membership = () => {
         console.error("Error:", error.response.data.message);
         alert(error.response.data.message);
       });
+    document.location.href = "/";
   };
   return (
     <div className={styles.container}>
