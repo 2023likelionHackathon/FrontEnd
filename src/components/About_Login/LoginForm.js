@@ -85,15 +85,6 @@ const LoginForm = () => {
             회원가입
           </Link>
         </div>
-        {/* <div className={styles.find}>
-          <Link to="/find_id" className={styles.find__id}>
-            아이디 찾기
-          </Link>{" "}
-          |{" "}
-          <Link to="/find_pwd" className={styles.find__pwd}>
-            비밀번호 찾기
-          </Link>
-        </div> */}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 .container {
   display: flex;
   align-items: center;
@@ -8,6 +9,7 @@
   top: 11%;
   left: 50%;
   transform: translate(-50%, 0%);
+  font-family: Pretendard,'Noto Sans KR',sans-serif;
 }
 .margin_div {
   margin-bottom: 15vh;
@@ -136,4 +138,9 @@
 }
 .price {
   margin-left: 5px;
+}
+.title_star{
+  display: flex;
+  flex-direction: row;
+  
 }
