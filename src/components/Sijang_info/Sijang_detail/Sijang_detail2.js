@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../../css/Sijang_detail.module.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Posts from "../../Feed/timeline/Posts";
-const Sijang_detail2 = () => {
+const Sijang_detail2 = ({ posts, store }) => {
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
@@ -93,7 +93,23 @@ const Sijang_detail2 = () => {
           </div>
         </div>
         <hr />
-        {/* <Posts/>  포스트 백으로부터 받아와서 매핑*/}
+        <div className={styles.timeline_posts}>
+          {posts.map((post) => (
+            <Posts
+              boardId={post.boardId}
+              userId={post.userId}
+              writer={post.writer}
+              storeId={post.storeId}
+              storeName={post.storeName}
+              content={post.content}
+              score={post.score}
+              likes={post.likes}
+              imgUrlList={post.imgUrlList}
+              size_reply={post.size_reply}
+              createdDate={post.createdDate}
+            />
+          ))}
+        </div>
       </div>
       <div className={styles.margin_div}></div>
     </div>
