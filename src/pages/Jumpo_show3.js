@@ -8,7 +8,7 @@ const Jumpo_show3 = () => {
   const [posts, setPosts] = useState();
   const [store, setStore] = useState();
   const getPostList = async () => {
-    const resp = await axios.get("http://api.domarketdodo.shop/store/view/3");
+    const resp = await axios.get("http://api.domarketdodo.shop/store/view/2");
     setPosts(resp.data.boardList); // posts에 data 할당
     setStore(resp.data.store);
     console.log("resp", resp.data);
