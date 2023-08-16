@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../css/Sijang_detail.module.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Rating } from "@mui/material";
@@ -6,20 +6,29 @@ import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { useParams } from "react-router-dom";
 import { markets } from "../../lib/market";
+import  Timeline  from "../Feed/timeline/Timeline";
+import axios from "axios";
 
 const StoreDetail = () => {
+  const [posts, setPosts] = useState([])
   const {marketId, storeId} = useParams();
 
   const market = markets[marketId];
   const store = markets[marketId].stores[storeId];
 
+  const getPostList = async() => {
+    const res = await axios.get(`http://api.domarketdodo.shop/store/view/${storeId}`)
+    console.log(res.data);
+    setPosts(res.data.boardList ?? []);
+  }
+  useEffect(() => {getPostList()}, [])
   
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
         <img src="/pics/marketTitle/seongSuTitle.png" className={styles.image} />
         <div className={styles.title_star}>
-          <div className={styles.title}>성수물고기</div>
+          <div className={styles.title}>{store.name}</div>
           <Rating
             className={styles.Rating}
             name="star_rating"
@@ -120,7 +129,7 @@ const StoreDetail = () => {
           
         </div>
         <hr />
-        {/* <Posts/>  포스트 백으로부터 받아와서 매핑*/}
+        <Timeline posts={posts}></Timeline>
       </div>
       <div className={styles.margin_div}></div>
     </div>

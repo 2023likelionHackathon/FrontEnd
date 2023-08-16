@@ -1,10 +1,10 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 50%;
-  top: 11%;
-  transform: translate(-50%, 0%);
+  /* position: absolute; */
+  /* left: 50%; */
+  /* top: 11%; */
+  /* transform: translate(-50%, 0%); */
   width: 707px;
 }
 
