@@ -13,13 +13,16 @@ const Comment_page = () => {
   const [parentId, setParentId] = useState("");
 
   const getCommentList = async () => {
+    console.log("?");
+
     const resp = await axios.get(
-      `http://api.domarketdodo/reply/view/${boardId}`,
+      `http://api.domarketdodo.shop/reply/view/${boardId}`,
       {
         withCredentials: true,
       }
     );
     setComments(resp.data); // posts에 data 할당
+    console.log(comments);
     console.log("resp", resp.data);
   };
 
@@ -36,7 +39,7 @@ const Comment_page = () => {
       parentId: parentId,
     });
     await axios
-      .post(`http://api.domarketdodo/reply/post/`, {
+      .post(`http://api.domarketdodo.shop/reply/post/`, {
         comment: content,
         boardId: boardId,
         parentId: parentId,
