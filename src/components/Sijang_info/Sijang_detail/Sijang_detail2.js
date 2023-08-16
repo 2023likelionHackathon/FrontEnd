@@ -5,7 +5,7 @@ import Posts from "../../Feed/timeline/Posts";
 import { Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
-const Sijang_detail2 = () => {
+const Sijang_detail2 = ({ posts, store }) => {
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
@@ -116,7 +116,23 @@ const Sijang_detail2 = () => {
           </div>
         </div>
         <hr />
-        {/* <Posts/>  포스트 백으로부터 받아와서 매핑*/}
+        <div className={styles.timeline_posts}>
+          {posts.map((post) => (
+            <Posts
+              boardId={post.boardId}
+              userId={post.userId}
+              writer={post.writer}
+              storeId={post.storeId}
+              storeName={post.storeName}
+              content={post.content}
+              score={post.score}
+              likes={post.likes}
+              imgUrlList={post.imgUrlList}
+              size_reply={post.size_reply}
+              createdDate={post.createdDate}
+            />
+          ))}
+        </div>
       </div>
       <div className={styles.margin_div}></div>
     </div>

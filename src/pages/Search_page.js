@@ -7,7 +7,7 @@ const Search_page = ({ props }) => {
   return (
     <div>
       <SearchBar />
-      <Loc_with_sijang/>
+      <Loc_with_sijang />
       <BottomBar />
     </div>
   );

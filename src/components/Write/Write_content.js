@@ -6,6 +6,7 @@ import StarHalfIcon from "@mui/icons-material/StarHalf";
 import axios from "axios";
 import FileUpload from "./UpLoad";
 import Modal from "@mui/material/Modal";
+import { useNavigate } from "react-router-dom";
 
 const CustomBackdrop = styled("div")({});
 
@@ -22,6 +23,7 @@ const modalStyle = {
 };
 
 const Write_content = () => {
+  const navigate = useNavigate();
   const [content, setContent] = useState("");
   //const [selectedImage, setSelectedImage] = useState(null);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
@@ -64,6 +66,7 @@ const Write_content = () => {
   };
 
   const onFileUpload = () => {
+    navigate("/");
     const formData = new FormData();
     fileList.forEach((file) => {
       // 파일 데이터 저장
@@ -84,23 +87,25 @@ const Write_content = () => {
       new Blob([JSON.stringify(boardDto)], { type: "application/json" })
     ); // 직렬화하여 객체 저장
 
-    try {
-      const response = axios
-        .post("http://api.domarketdodo.shop/board/post", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data", // Content-Type 설정
-          },
-        })
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          alert(error.response.data.message);
-          console.error("Error:", error);
-        });
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    // try {
+    //   const response = axios
+    //     .post("http://api.domarketdodo.shop/board/post", formData, {
+    //       headers: {
+    //         "Content-Type": "multipart/form-data", // Content-Type 설정
+    //       },
+    //     })
+    //     .then((response) => {
+    //       console.log(response.data);
+    //       alert("글 등록에 성공하셨습니다!");
+    //       navigate("/");
+    //     })
+    //     .catch((error) => {
+    //       alert(error.response.data.message);
+    //       console.error("Error:", error);
+    //     });
+    // } catch (error) {
+    //   console.error("Error:", error);
+    // }
   };
 
   return (

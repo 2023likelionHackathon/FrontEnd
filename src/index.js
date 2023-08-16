@@ -32,6 +32,9 @@ import Jumpo_show16 from "./pages/Jumpo_show16";
 import Jumpo_show17 from "./pages/Jumpo_show17";
 import Profile from "./pages/Profile";
 import Comment_page from "./pages/Comment_page";
+import { createStore } from "redux";
+import reducer from "./store/Stored_info";
+import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -164,9 +167,13 @@ const router = createBrowserRouter([
   },
 ]);
 
+const store = createStore(reducer);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
