@@ -11,6 +11,7 @@
 .margin_div {
   height: 8vh;
 }
+
 .loading {
   overflow: scroll;
   text-align: center;
@@ -66,9 +67,10 @@
   animation-delay: 0.4s;
   background-color: yellowgreen;
 }
+
 @keyframes loading {
   /*loading이라는 keyframe 애니메이션*/
-  0%,                      /* 0, 50, 100은 구간*/
+  0%,
   100% {
     opacity: 0; /* 안보였다가 */
     transform: scale(
@@ -79,4 +81,7 @@
     opacity: 1; /* 보였다가 */
     transform: scale(1.2); /* 1.2배 */
   }
+}
+.emptySpace {
+  height: 20px; /* 원하는 높이로 조정 */
 }

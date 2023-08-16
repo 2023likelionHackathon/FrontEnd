@@ -20,26 +20,26 @@ const Loc_with_sijang = () => {
     <div className={styles.SeongDong}>
       <div className={styles.box}>
         <div className={styles.intro}>성동구의 시장</div>
-        <div className={`${styles.geumnam} ${styles.sijangs}`}>
-          <Link to="/gn" className={styles.link_}>
-            <div className={styles.sijang_info}>
-              <div className={styles.GN_pic}></div>
-              <div className={styles.about}>
-                <p>1.금남시장</p>
-                <br />
-                <span>서울특별시 성동구 금호동3가 326</span>
-              </div>
-            </div>
-          </Link>
-        </div>
         <div className={`${styles.ddukdo} ${styles.sijangs}`}>
           <Link to="/ddukdo" className={styles.link_}>
             <div className={styles.sijang_info}>
               <div className={styles.dd_pic}></div>
               <div className={styles.about}>
-                <p>2.뚝도청춘시장</p>
+                <p>1. 뚝도청춘시장</p>
                 <br />
                 <span>서울 성동구 성수이로 32-15 2층</span>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className={`${styles.geumnam} ${styles.sijangs}`}>
+          <Link to="/gn" className={styles.link_}>
+            <div className={styles.sijang_info}>
+              <div className={styles.GN_pic}></div>
+              <div className={styles.about}>
+                <p>2. 금남시장</p>
+                <br />
+                <span>서울특별시 성동구 금호동3가 326</span>
               </div>
             </div>
           </Link>
@@ -70,6 +70,7 @@ const Loc_with_sijang = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.emptySpace} />
       <div className={styles.nav_bar}>
         <div
           className={loc3ClassName}
