@@ -7,7 +7,7 @@ const SearchBar = ({ isSearch = false, search, setSearch }) => {
       <div className={styles.container}>
         <div className={styles.logoBar}>
           <Link to="/">
-            <img src="/pics/NewLogo.png" alt="Logo" />
+            <img src="/pics/LogoLogo.png" alt="Logo" />
           </Link>
           {isSearch && (
             <input
