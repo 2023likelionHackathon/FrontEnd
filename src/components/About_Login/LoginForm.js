@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../../css/LoginForm.module.css";
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
   // 아이디와 비밀번호를 입력할 때마다 상태(state)를 업데이트하는 핸들러 함수들
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -15,9 +17,10 @@ const LoginForm = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-
+  ///===========지워!!!==============================
+  axios.defaults.withCredentials = true; // 전역 설정
   const axiosInstance = axios.create({
-    baseURL: "http://api.domarketdodo.shop",
+    baseURL: "http://localhost:8080",
     withCredentials: true, // CORS 정책에 따른 쿠키 전송 허용
   });
 
@@ -34,6 +37,7 @@ const LoginForm = () => {
       .then((res) => {
         console.log("res", res);
         alert("로그인에 성공하셨습니다!");
+        navigate("/profile");
         setUsername("");
         setPassword("");
       })
@@ -76,7 +80,7 @@ const LoginForm = () => {
             회원가입
           </Link>
         </div>
-        <div className={styles.find}>
+        {/* <div className={styles.find}>
           <Link to="/find_id" className={styles.find__id}>
             아이디 찾기
           </Link>{" "}
@@ -84,7 +88,7 @@ const LoginForm = () => {
           <Link to="/find_pwd" className={styles.find__pwd}>
             비밀번호 찾기
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

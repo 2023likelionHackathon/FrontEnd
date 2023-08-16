@@ -67,20 +67,6 @@ const Posts = ({
   const [isLiked, setIsLiked] = useState(likes.isLiked);
   const [likeCount, setLikeCount] = useState(likes.likes_cnt);
 
-  // const axiosInstance = axios.create({
-  //   baseURL: "http://localhost:8080",
-  //   withCredentials: true , // 쿠키 전송을 위한 옵션 설정
-  // });
-  // // 쿠키 추출
-  // const accessToken = document.cookie
-  //   .split("; ")
-  //   .find((row) => row.startsWith("access_token="))
-  //   .split("=")[1];
-
-  // // 요청에 쿠키 포함하여 보내기
-  // axiosInstance.defaults.headers.common[
-  //   "Cookie"
-  // ] = `access_token=${accessToken}`;
   axios.defaults.withCredentials = true;
   const handleLikeClick = async () => {
     console.log("boardId", boardId);
