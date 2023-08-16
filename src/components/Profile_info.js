@@ -37,6 +37,7 @@ const Profile_info = ({ user, posts }) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.emptySpace} />
       <div className={styles.my_profile}>내 프로필</div>
       <div className={styles.profile_line_face}>
         <img src="pics/profile_line.png" className={styles.lines} />

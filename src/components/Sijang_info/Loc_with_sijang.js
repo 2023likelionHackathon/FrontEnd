@@ -70,6 +70,7 @@ const Loc_with_sijang = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.emptySpace} />
       <div className={styles.nav_bar}>
         <div
           className={loc3ClassName}

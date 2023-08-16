@@ -10,3 +10,6 @@
 .margin_div {
   height: 8vh;
 }
+.emptySpace {
+  height: 20px; /* 원하는 높이로 조정 */
+}
