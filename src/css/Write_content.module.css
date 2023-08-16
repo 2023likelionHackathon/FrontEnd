@@ -176,6 +176,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 }
 
 .Ok_btn {
