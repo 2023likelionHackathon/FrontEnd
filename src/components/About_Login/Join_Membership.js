@@ -11,12 +11,6 @@ const Join_Membership = () => {
     nickname: "",
     role: "",
     code: "",
-    // name: '',
-    // id: '',
-    // pwd: '',
-    // pwd_check: '',
-    // nickname: '',
-    // email: ''
   });
   const [passwordMatch, setPasswordMatch] = useState(true);
   const handleInputChange = (event) => {
