@@ -14,7 +14,7 @@ const Comment_page = () => {
 
   const getCommentList = async () => {
     const resp = await axios.get(
-      `http://api.domarketdodo.shop/reply/view/${boardId}`,
+      `http://api.domarketdodo/reply/view/${boardId}`,
       {
         withCredentials: true,
       }
@@ -36,13 +36,14 @@ const Comment_page = () => {
       parentId: parentId,
     });
     await axios
-      .post(`http://api.domarketdodo.shop/reply/post/`, {
+      .post(`http://api.domarketdodo/reply/post/`, {
         comment: content,
         boardId: boardId,
         parentId: parentId,
       })
       .then((res) => {
         console.log("res", res.data);
+        setComments(res.data);
       })
       .catch((error) => {
         console.log("Error : ", error);
@@ -101,6 +102,7 @@ const Comment_page = () => {
           placeholder="댓글 달기"
           className={styles.commentInput}
         ></input>
+        <div className={styles.margin_div}></div>
       </div>
       <BottomBar index={"홈"}></BottomBar>
     </div>
