@@ -1,29 +1,32 @@
 .profile {
-     height: 46px;
-     margin-right: 1rem;
+  height: 46px;
+  margin-right: 1rem;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
-.commentList{
-    min-width: 687px;
+.commentList {
+  min-width: 687px;
 }
 @media (max-width: 720px) {
-    .commentList {
-      min-width: 100%;
-    }
+  .commentList {
+    min-width: 100%;
+  }
 }
 
-.commentBox{
-    margin-top: 2rem;
-    min-width: 687px;
+.commentBox {
+  margin-top: 2rem;
+  min-width: 687px;
 }
 
-.commentInput{
-    padding: 1rem;
-    width: 100%;
-    font-size: 1.25rem;
+.commentInput {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.25rem;
+}
+.hr {
+  width: 100%;
 }

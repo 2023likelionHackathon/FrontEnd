@@ -10,6 +10,8 @@ const Comment_page = () => {
   const { boardId } = useParams();
   const [content, setContent] = useState();
   const [comments, setComments] = useState();
+  const [parentId, setParentId] = useState("");
+
   const getCommentList = async () => {
     const resp = await axios.get(
       `http://api.domarketdodo.shop/reply/view/${boardId}`,
@@ -25,12 +27,27 @@ const Comment_page = () => {
     getCommentList(); // 1) feed 조회 함수 호출
   }, []);
 
+  axios.defaults.withCredentials = true;
+
   const createComment = async (content) => {
-    await axios.post(`http://api.domarketdodo.shop/reply/post/`, {
+    console.log("parentId", {
       comment: content,
       boardId: boardId,
-      parentId: null,
+      parentId: parentId,
     });
+    await axios
+      .post(`http://api.domarketdodo.shop/reply/post/`, {
+        comment: content,
+        boardId: boardId,
+        parentId: parentId,
+      })
+      .then((res) => {
+        console.log("res", res.data);
+      })
+      .catch((error) => {
+        console.log("Error : ", error);
+        alert(error.response.data.message);
+      });
   };
 
   return (
@@ -46,10 +63,15 @@ const Comment_page = () => {
         <h3>댓글</h3>
       </div>
       <div className={styles.commentList}>
+        <hr className={styles.h2} />
         {comments?.map((c) => {
           return (
-            <div>
-              <Comment {...c}></Comment>
+            <div
+              style={{
+                marginTop: "28px",
+              }}
+            >
+              <Comment setParentId={setParentId} {...c}></Comment>
               <div
                 style={{
                   marginLeft: "69px",
