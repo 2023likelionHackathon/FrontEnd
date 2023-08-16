@@ -25,7 +25,7 @@ const Write_content = () => {
   const [content, setContent] = useState("");
   //const [selectedImage, setSelectedImage] = useState(null);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
-  const [ratingValue, setRatingValue] = useState(0);
+  const [ratingValue, setRatingValue] = useState(0);        //별점 값
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState("");
@@ -57,7 +57,7 @@ const Write_content = () => {
   };
   const onSaveFiles = (e) => {
     const uploadFiles = Array.prototype.slice.call(e.target.files); // 파일선택창에서 선택한 파일들
-
+    
     uploadFiles.forEach((uploadFile) => {
       setFileList((prevFileList) => [...prevFileList, uploadFile]);
     });
