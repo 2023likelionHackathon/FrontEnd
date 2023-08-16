@@ -19,7 +19,7 @@ const Sijang_detail2 = ({ posts, store }) => {
             className={styles.Rating}
             name="star_rating"
             precision={0.2}
-            value={store.score} //임시값임 서버에서  받아와서 들어갈값
+            value={store.score != null ? store.score : 0} //임시값임 서버에서  받아와서 들어갈값
             readOnly
             emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
             icon={
