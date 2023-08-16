@@ -62,3 +62,6 @@
     43
   ) !important; /* parentId와 replyId가 같을 때 진한 핑크 색상 */
 }
+.margin_div {
+  height: 8vh;
+}
