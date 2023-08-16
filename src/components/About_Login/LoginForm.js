@@ -3,10 +3,14 @@ import SearchBar from "../SearchBar";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../../css/LoginForm.module.css";
+import { useDispatch } from "react-redux";
+import { login } from "../../store/Stored_info";
 const LoginForm = () => {
   // 아이디와 비밀번호를 저장할 상태(state) 정의
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatcher = useDispatch();
 
   const navigate = useNavigate();
   // 아이디와 비밀번호를 입력할 때마다 상태(state)를 업데이트하는 핸들러 함수들
@@ -37,6 +41,7 @@ const LoginForm = () => {
       .then((res) => {
         console.log("res", res);
         alert("로그인에 성공하셨습니다!");
+        dispatcher(login());
         navigate("/profile");
         setUsername("");
         setPassword("");
