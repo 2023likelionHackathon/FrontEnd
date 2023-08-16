@@ -3,7 +3,7 @@ import styles from "../../css/Loc_with_sijang.module.css";
 import { Link } from "react-router-dom";
 
 const Loc_with_sijang = () => {
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState("성동구");
 
   const handleLocationClick = (location) => {
     setSelectedLocation(location);

@@ -6,7 +6,7 @@ import { Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 
-const Sijang_detail9 = () => {
+const Sijang_detail9 = ({ posts, store }) => {
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
@@ -14,23 +14,23 @@ const Sijang_detail9 = () => {
         <div className={styles.title_star}>
           <div className={styles.title}>서울맛집</div>
           <Rating
-          className={styles.Rating}
-          name="star_rating"
-          precision={0.1}
-          value={4.0} //임시값임 서버에서  받아와서 들어갈값 
-          readOnly
-          emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
-          icon={
-            <StarIcon
-              style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
-            />
-          }
-          halfIcon={
-            <StarHalfIcon
-              style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
-            />
-          }
-        ></Rating>
+            className={styles.Rating}
+            name="star_rating"
+            precision={0.2}
+            value={store.score} //임시값임 서버에서  받아와서 들어갈값
+            readOnly
+            emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
+            icon={
+              <StarIcon
+                style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
+              />
+            }
+            halfIcon={
+              <StarHalfIcon
+                style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
+              />
+            }
+          ></Rating>
         </div>
         <div className={styles.loc}>
           뚝도시장 | 술집 <br />
@@ -63,7 +63,10 @@ const Sijang_detail9 = () => {
             </div>
           </div>
           <div className={styles.menu_img_text}>
-            <img src="pics/cream_gazami.png" className={styles.gazami_img} />
+            <img
+              src="pics/marketMenu/seoulMatMenu.jpg"
+              className={styles.gazami_img}
+            />
             <div className={styles.menu_text}>
               <span className={styles.title_menu}>크림가자미</span>
               <div className={styles.price}>20,000원</div>

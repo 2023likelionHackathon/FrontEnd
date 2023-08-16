@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
 import { useSelector } from "react-redux";
 
-const BottomBar = () => {
+const BottomBar = ({ index }) => {
   const [activeIcon, setActiveIcon] = useState(""); // 초기 활성 null
   const [isValid, setIsValid] = useState(false);
   const { isLoggedIn } = useSelector((store) => store);
@@ -31,9 +31,7 @@ const BottomBar = () => {
     <div className={styles.btBar}>
       <nav className={styles.wrapper}>
         <div
-          className={`${styles.icons} ${
-            activeIcon === "홈" ? styles.selected : ""
-          }`}
+          className={`${styles.icons} ${index === "홈" ? styles.selected : ""}`}
           onClick={() => handleIconClick("홈")}
         >
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
@@ -45,7 +43,7 @@ const BottomBar = () => {
         </div>
         <div
           className={`${styles.icons} ${
-            activeIcon === "글쓰기" ? styles.selected : ""
+            index === "글쓰기" ? styles.selected : ""
           }`}
           onClick={() => handleIconClick("글쓰기")}
         >
@@ -58,7 +56,7 @@ const BottomBar = () => {
         </div>
         <div
           className={`${styles.icons} ${
-            activeIcon === "시장 검색" ? styles.selected : ""
+            index === "시장 검색" ? styles.selected : ""
           }`}
           onClick={() => handleIconClick("시장 검색")}
         >
@@ -71,7 +69,7 @@ const BottomBar = () => {
         </div>
         <div
           className={`${styles.icons} ${
-            activeIcon === "프로필" ? styles.selected : ""
+            index === "프로필" ? styles.selected : ""
           }`}
           onClick={() => handleIconClick("프로필")}
         >

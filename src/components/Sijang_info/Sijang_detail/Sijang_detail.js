@@ -5,7 +5,7 @@ import Posts from "../../Feed/timeline/Posts";
 import { Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
-const Sijang_detail = () => {
+const Sijang_detail = ({ posts, store }) => {
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
@@ -13,25 +13,25 @@ const Sijang_detail = () => {
         <div className={styles.title_star}>
           <div className={styles.title}>성수물고기</div>
           <Rating
-          className={styles.Rating}
-          name="star_rating"
-          precision={0.1}
-          value={4.0} //임시값임 서버에서  받아와서 들어갈값 
-          readOnly
-          emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
-          icon={
-            <StarIcon
-              style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
-            />
-          }
-          halfIcon={
-            <StarHalfIcon
-              style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
-            />
-          }
-        ></Rating>
+            className={styles.Rating}
+            name="star_rating"
+            precision={0.2}
+            value={store.score} //임시값임 서버에서  받아와서 들어갈값
+            readOnly
+            emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
+            icon={
+              <StarIcon
+                style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
+              />
+            }
+            halfIcon={
+              <StarHalfIcon
+                style={{ color: " rgba(247, 128, 128)", fontSize: "30px" }}
+              />
+            }
+          ></Rating>
         </div>
-        
+
         <div className={styles.loc}>
           뚝도시장 | 와인,파스타 <br />
           서울특별시 성동구 성수동 2가 339-122
@@ -101,19 +101,19 @@ const Sijang_detail = () => {
             <div className={styles.price}>29,000원</div>
           </div>
           <div className={styles.menu2}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>똠얌부대전골</div>
 
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>26,000원</div>
           </div>
           <div className={styles.menu3}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>메론프로슈토</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>17,000원</div>
           </div>
         </div>
         <hr />

@@ -3,6 +3,7 @@ import SearchBar from "../SearchBar";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../../css/LoginForm.module.css";
+
 import { useDispatch } from "react-redux";
 import { login } from "../../store/Stored_info";
 const LoginForm = () => {
@@ -21,10 +22,9 @@ const LoginForm = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  ///===========지워!!!==============================
-  axios.defaults.withCredentials = true; // 전역 설정
+
   const axiosInstance = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "http://api.domarketdodo.shop",
     withCredentials: true, // CORS 정책에 따른 쿠키 전송 허용
   });
 
@@ -41,6 +41,7 @@ const LoginForm = () => {
       .then((res) => {
         console.log("res", res);
         alert("로그인에 성공하셨습니다!");
+        document.location.href = "/";
         dispatcher(login());
         navigate("/profile");
         setUsername("");

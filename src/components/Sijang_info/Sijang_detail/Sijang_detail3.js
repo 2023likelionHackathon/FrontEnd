@@ -15,7 +15,7 @@ const Sijang_detail3 = ({ posts, store }) => {
           <Rating
             className={styles.Rating}
             name="star_rating"
-            precision={0.1}
+            precision={0.2}
             value={store.score} //임시값임 서버에서  받아와서 들어갈값
             readOnly
             emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
@@ -40,25 +40,13 @@ const Sijang_detail3 = ({ posts, store }) => {
           <div className={styles.time}>영업시간</div>
           <div className={styles.field}>
             <div className={styles.days}>
+              <div className={styles.day}>정보없음</div>
               {/* <div className={styles.day}>화~목</div>
               <div className={styles.day}>금,토</div>
               <div className={styles.day}>일</div>
               <div className={`${styles.day} ${styles.rest}`}>휴무일</div> */}
             </div>
-            <div className={styles.lines}>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-            </div>
+            <div className={styles.lines}></div>
             <div className={styles.use_}>
               {/* <div className={styles.uses_}>오후 4시 - 자정 12시</div>
               <div className={styles.uses_}>오후 3시 - 오전 1시</div>
@@ -79,13 +67,14 @@ const Sijang_detail3 = ({ posts, store }) => {
             </div>
           </div>
           <div className={styles.menu_img_text}>
-            <img src="pics/cream_gazami.png" className={styles.gazami_img} />
+            <img
+              src="/pics/marketMenu/bigSeungmenu.jpg"
+              className={styles.gazami_img}
+            />
             <div className={styles.menu_text}>
-              <span className={styles.title_menu}>크림가자미</span>
-              <div className={styles.price}>20,000원</div>
-              <div className={styles.explain}>
-                버터에 구운 가자미에 크림소스와 감자를 곁들인 안주
-              </div>
+              <span className={styles.title_menu}>닭볶음탕</span>
+              <div className={styles.price}>55,000원</div>
+              <div className={styles.explain}>사장님의 특제소스 닭볶음탕</div>
             </div>
           </div>
         </div>
@@ -93,26 +82,26 @@ const Sijang_detail3 = ({ posts, store }) => {
         <div className={styles.menus_}>
           <div className={styles.menu_info}>메뉴정보</div>
           <div className={styles.menu1}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>닭백숙</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>55,000원</div>
           </div>
           <div className={styles.menu2}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>과매기(대)</div>
 
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>35,000원</div>
           </div>
           <div className={styles.menu3}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>청국장</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>7,000원</div>
           </div>
         </div>
         <hr />

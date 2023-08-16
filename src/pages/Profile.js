@@ -7,7 +7,6 @@ const Profile = () => {
   const [posts, setPosts] = useState();
   const [user, setUser] = useState();
 
-  //========지워!!!!====================
   axios.defaults.withCredentials = true; // 전역 설정
   const getUserInfo = async () => {
     const resp = await axios.get("http://localhost:8080/user/profile");
@@ -22,7 +21,7 @@ const Profile = () => {
     <div>
       <SearchBar />
       <Profile_info user={user} posts={posts} />
-      <BottomBar />
+      <BottomBar index={"프로필"} />
     </div>
   );
 };

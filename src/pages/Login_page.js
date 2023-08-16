@@ -7,7 +7,7 @@ const Login_page = () => {
     <div>
       <SearchBar />
       <LoginForm />
-      <BottomBar />
+      <BottomBar index={"프로필"} />
     </div>
   );
 };

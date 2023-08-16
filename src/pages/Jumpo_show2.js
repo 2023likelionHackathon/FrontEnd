@@ -8,7 +8,7 @@ const Jumpo_show2 = () => {
   const [posts, setPosts] = useState();
   const [store, setStore] = useState();
   const getPostList = async () => {
-    const resp = await axios.get("http://api.domarketdodo.shop/store/view/1");
+    const resp = await axios.get("http://api.domarketdodo.shop/store/view/2");
     setPosts(resp.data.boardList); // posts에 data 할당
     setStore(resp.data.store);
     console.log("resp", resp.data);
@@ -21,7 +21,7 @@ const Jumpo_show2 = () => {
     <div>
       <SearchBar />
       <Sijang_detail2 posts={posts} store={store} />
-      <BottomBar />
+      <BottomBar index={"시장 검색"} />
     </div>
   );
 };

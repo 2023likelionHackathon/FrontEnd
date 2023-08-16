@@ -23,16 +23,6 @@ const Profile_info = ({ user, posts }) => {
   }
   const viewPostDetail = async (boardId) => {
     console.log(boardId);
-    // try {
-    //   //========지워!!!!====================
-    //   axios.defaults.withCredentials = true; // 전역 설정
-    //   const resp = await axios.post(
-    //     `http://api.domarketdodo.shop/board/${boardId}`
-    //   );
-    // } catch (error) {
-    //   console.error("Error handling like:", error);
-    //   alert(error.response.data.message);
-    // }
   };
 
   return (

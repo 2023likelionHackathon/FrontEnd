@@ -27,7 +27,7 @@ const Write_page = () => {
     <div>
       <SearchBar />
       <Write_content />
-      <BottomBar />
+      <BottomBar index={"글쓰기"} />
     </div>
   );
 };
