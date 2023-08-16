@@ -30,3 +30,35 @@
 .hr {
   width: 100%;
 }
+.writer {
+  font-weight: bolder;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.comment {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.replyButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  color: lightpink; /* 연한 핑크 색상 */
+  transition: color 0.2s; /* 색상 변경 효과 */
+}
+
+.replyButton:hover {
+  color: rgb(237, 43, 43); /* 호버 시 핑크 색으로 변경 */
+}
+
+.selectedReplyButton {
+  color: rgb(
+    237,
+    43,
+    43
+  ) !important; /* parentId와 replyId가 같을 때 진한 핑크 색상 */
+}

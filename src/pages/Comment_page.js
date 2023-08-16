@@ -71,7 +71,11 @@ const Comment_page = () => {
                 marginTop: "28px",
               }}
             >
-              <Comment setParentId={setParentId} {...c}></Comment>
+              <Comment
+                parentId={parentId}
+                setParentId={setParentId}
+                {...c}
+              ></Comment>
               <div
                 style={{
                   marginLeft: "69px",
