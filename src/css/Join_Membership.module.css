@@ -107,8 +107,9 @@
   border-color: rgba(255, 0, 0, 0.5);
   box-shadow: 2px 2px #dad5d5;
 }
-.error {
-  color: black;
+.error__ {
+  color: grey;
+  font-size:15px;
 }
 
 .role_field {

@@ -18,8 +18,8 @@ const Sijang_detail3 = ({ posts, store }) => {
           <Rating
             className={styles.Rating}
             name="star_rating"
-            precision={0.2}
-            value={store.score != null ? store.score : 0} //임시값임 서버에서  받아와서 들어갈값
+            precision={0.1}
+            value={store.score} //임시값임 서버에서  받아와서 들어갈값
             readOnly
             emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
             icon={
@@ -109,22 +109,21 @@ const Sijang_detail3 = ({ posts, store }) => {
         </div>
         <hr />
         <div className={styles.timeline_posts}>
-          {posts &&
-            posts.map((post) => (
-              <Posts
-                boardId={post.boardId}
-                userId={post.userId}
-                writer={post.writer}
-                storeId={post.storeId}
-                storeName={post.storeName}
-                content={post.content}
-                score={post.score}
-                likes={post.likes}
-                imgUrlList={post.imgUrlList}
-                size_reply={post.size_reply}
-                createdDate={post.createdDate}
-              />
-            ))}
+          {posts.map((post) => (
+            <Posts
+              boardId={post.boardId}
+              userId={post.userId}
+              writer={post.writer}
+              storeId={post.storeId}
+              storeName={post.storeName}
+              content={post.content}
+              score={post.score}
+              likes={post.likes}
+              imgUrlList={post.imgUrlList}
+              size_reply={post.size_reply}
+              createdDate={post.createdDate}
+            />
+          ))}
         </div>
       </div>
       <div className={styles.margin_div}></div>

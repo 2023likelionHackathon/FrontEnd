@@ -5,7 +5,7 @@ const Join_Membership = () => {
   const [formData, setFormData] = useState({
     userId: "",
     pw: "",
-    pw_check: "",
+    pwd_check: "",
     email: "",
     name: "",
     nickname: "",
@@ -22,7 +22,9 @@ const Join_Membership = () => {
   };
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
-    setPasswordMatch(formData.pwd === formData.pwd_check);
+    setPasswordMatch(formData.pw === formData.pwd_check);
+    console.log("pwd",formData.pw);
+    console.log("pwd_check",formData.pwd_check);
   };
   const handleDuplicateCheckId = async (checkValue) => {
     //서버로 중복확인 요청 보내고 결과 받는 함수
@@ -122,7 +124,7 @@ const Join_Membership = () => {
           name="pw"
           autoComplete="off"
           required
-          value={formData.pwd}
+          value={formData.pw}
           onChange={(event) => {
             handleInputChange(event);
             handlePasswordCheck();
@@ -135,10 +137,10 @@ const Join_Membership = () => {
       <div className={styles.field}>
         <input
           type="password"
-          name="pw_check"
+          name="pwd_check"
           autoComplete="off"
           required
-          value={formData.pwd_check}
+          value= {formData.pwd_check}
           onChange={handleInputChange}
           onBlur={handlePasswordCheck}
         />
@@ -146,7 +148,7 @@ const Join_Membership = () => {
           <span className={styles.label_text}>비밀번호 확인</span>
         </label>
         {!passwordMatch && (
-          <p className={styles.error}>비밀번호가 일치하지 않습니다.</p>
+          <p className={styles.error__}>비밀번호가 일치하지 않습니다.</p>
         )}
       </div>
       <div className={styles.field}>

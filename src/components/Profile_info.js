@@ -37,7 +37,6 @@ const Profile_info = ({ user, posts }) => {
       <div className={styles.follows}>
         <div className={styles.follow}>적립금 {user.reward}</div>
         <div className={styles.sep}>|</div>
-        <div className={styles.following}>팔로워 91</div>
       </div>
       <div className={styles.timeline_posts}>
         {posts.map((post) => (
