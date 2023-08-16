@@ -9,6 +9,7 @@ export const markets = [
         name: "성수 물고기",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
+        image: '/pics/marketAppearance/1.seongsuFish.png',
         times: [
           {
             day: "화 ~ 목",
