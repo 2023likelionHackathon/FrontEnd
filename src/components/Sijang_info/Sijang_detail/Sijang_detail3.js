@@ -6,6 +6,9 @@ import { Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 const Sijang_detail3 = ({ posts, store }) => {
+  if (!store) {
+    return <div>로딩 중</div>;
+  }
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
@@ -16,7 +19,7 @@ const Sijang_detail3 = ({ posts, store }) => {
             className={styles.Rating}
             name="star_rating"
             precision={0.2}
-            value={store.score} //임시값임 서버에서  받아와서 들어갈값
+            value={store.score != null ? store.score : 0} //임시값임 서버에서  받아와서 들어갈값
             readOnly
             emptyIcon={<StarIcon style={{ opacity: 0.6, fontSize: "30px" }} />}
             icon={
@@ -106,21 +109,22 @@ const Sijang_detail3 = ({ posts, store }) => {
         </div>
         <hr />
         <div className={styles.timeline_posts}>
-          {posts.map((post) => (
-            <Posts
-              boardId={post.boardId}
-              userId={post.userId}
-              writer={post.writer}
-              storeId={post.storeId}
-              storeName={post.storeName}
-              content={post.content}
-              score={post.score}
-              likes={post.likes}
-              imgUrlList={post.imgUrlList}
-              size_reply={post.size_reply}
-              createdDate={post.createdDate}
-            />
-          ))}
+          {posts &&
+            posts.map((post) => (
+              <Posts
+                boardId={post.boardId}
+                userId={post.userId}
+                writer={post.writer}
+                storeId={post.storeId}
+                storeName={post.storeName}
+                content={post.content}
+                score={post.score}
+                likes={post.likes}
+                imgUrlList={post.imgUrlList}
+                size_reply={post.size_reply}
+                createdDate={post.createdDate}
+              />
+            ))}
         </div>
       </div>
       <div className={styles.margin_div}></div>
