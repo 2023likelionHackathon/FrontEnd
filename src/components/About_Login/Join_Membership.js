@@ -25,18 +25,40 @@ const Join_Membership = () => {
       ...prevData, //이전값 복사 코드
       [name]: value, //새값 업데이트
     }));
-    console.log(formData);
   };
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
     setPasswordMatch(formData.pwd === formData.pwd_check);
   };
-  const handleDuplicateCheck = (field) => {
+  const handleDuplicateCheckId = async (checkValue) => {
     //서버로 중복확인 요청 보내고 결과 받는 함수
     //예시로 true 나 false만  -> 로컬에서
-    const isDuplicate = field === "id" ? false : true;
-    return isDuplicate;
+    axios
+      .get(`http://api.domarketdodo.shop/user/userId/${checkValue}/exists`)
+      .then((res) => {
+        console.log("res", res);
+        alert("사용 가능한 아이디 입니다!");
+      })
+      .catch((error) => {
+        console.error("Error:", error.response.data.message);
+        alert(error.response.data.message);
+      });
   };
+  const handleDuplicateCheckNickname = async (checkValue) => {
+    //서버로 중복확인 요청 보내고 결과 받는 함수
+    //예시로 true 나 false만  -> 로컬에서
+    axios
+      .get(`http://api.domarketdodo.shop/user/nickname/${checkValue}/exists`)
+      .then((res) => {
+        console.log("res", res);
+        alert("사용 가능한 닉네임 입니다!");
+      })
+      .catch((error) => {
+        console.error("Error:", error.response.data.message);
+        alert(error.response.data.message);
+      });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (formData.pwd !== formData.pwd_check) {
@@ -92,9 +114,8 @@ const Join_Membership = () => {
 
         <button
           className={styles.duplicate}
-          onClick={() => {
-            const isDuplicate = handleDuplicateCheck("id");
-            console.log("id Duplicated?:", isDuplicate);
+          onClick={(e) => {
+            handleDuplicateCheckId(formData.userId);
           }}
         >
           중복확인
@@ -147,9 +168,8 @@ const Join_Membership = () => {
         </label>
         <button
           className={styles.duplicate}
-          onClick={() => {
-            const isDuplicate = handleDuplicateCheck("id");
-            console.log("nickname Duplicated?:", isDuplicate);
+          onClick={(e) => {
+            handleDuplicateCheckNickname(formData.nickname);
           }}
         >
           중복확인
