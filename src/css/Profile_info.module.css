@@ -1,15 +1,15 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    width: 707px;
-    position: absolute;
-    top: 11%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    font-family: Pretendard,'Noto Sans KR',sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 707px;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
 }
 .my_profile {
   display: flex;
@@ -72,4 +72,7 @@
   top: 11%;
   transform: translate(-50%, 0%);
   width: 707px;
+}
+.emptySpace {
+  height: 20px;
 }
