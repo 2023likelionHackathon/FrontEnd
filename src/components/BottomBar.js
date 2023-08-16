@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import styles from "../css/BottomBar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
+import { useSelector } from "react-redux";
 
 const BottomBar = () => {
   const [activeIcon, setActiveIcon] = useState(""); // 초기 활성 null
   const [isValid, setIsValid] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn } = useSelector((store) => store);
   const navigate = useNavigate();
   const handleIconClick = (iconName) => {
     setActiveIcon(iconName);
@@ -14,17 +15,9 @@ const BottomBar = () => {
   const toggleColor = () => {
     setIsValid(!isValid);
   };
-  const cookies = document.cookie.split(";");
-  for (let cookie of cookies) {
-    let trimmedCookie = cookie.trim();
-    if (trimmedCookie.startsWith("accessToken=")) {
-      let accessToken = trimmedCookie.substring("accessToken=".length);
 
-      console.log("accessToken: " + accessToken);
-      setIsLoggedIn(true);
-    }
-  }
   const handleProfileClick = () => {
+    console.log("isLoggedIn : ", isLoggedIn);
     if (isLoggedIn) {
       // 로그인 상태일 때는 프로필 페이지로 이동
       navigate("/profile");
