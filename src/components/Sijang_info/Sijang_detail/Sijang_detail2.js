@@ -17,25 +17,13 @@ const Sijang_detail2 = () => {
           <div className={styles.time}>영업시간</div>
           <div className={styles.field}>
             <div className={styles.days}>
+              <div className={styles.day}>정보없음</div>
               {/* <div className={styles.day}>화~목</div>
               <div className={styles.day}>금,토</div>
               <div className={styles.day}>일</div>
               <div className={`${styles.day} ${styles.rest}`}>휴무일</div> */}
             </div>
-            <div className={styles.lines}>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-              <div className={styles.line}>
-                <img src="pics/Vector39.png" className={styles.line__} />
-              </div>
-            </div>
+            <div className={styles.lines}></div>
             <div className={styles.use_}>
               {/* <div className={styles.uses_}>오후 4시 - 자정 12시</div>
               <div className={styles.uses_}>오후 3시 - 오전 1시</div>
@@ -56,13 +44,14 @@ const Sijang_detail2 = () => {
             </div>
           </div>
           <div className={styles.menu_img_text}>
-            <img src="pics/cream_gazami.png" className={styles.gazami_img} />
+            <img
+              src="/pics/marketMenu/2002Menu.jpg"
+              className={styles.gazami_img}
+            />
             <div className={styles.menu_text}>
-              <span className={styles.title_menu}>크림가자미</span>
-              <div className={styles.price}>20,000원</div>
-              <div className={styles.explain}>
-                버터에 구운 가자미에 크림소스와 감자를 곁들인 안주
-              </div>
+              <span className={styles.title_menu}>생선회</span>
+              <div className={styles.price}>30,000원</div>
+              <div className={styles.explain}>매번 사장님 직접 추천</div>
             </div>
           </div>
         </div>
@@ -70,26 +59,26 @@ const Sijang_detail2 = () => {
         <div className={styles.menus_}>
           <div className={styles.menu_info}>메뉴정보</div>
           <div className={styles.menu1}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>주인장추천</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>30,000원</div>
           </div>
           <div className={styles.menu2}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>가을전어</div>
 
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>10,000원</div>
           </div>
           <div className={styles.menu3}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>광어/우럭/숭어</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>20,000원부터</div>
           </div>
         </div>
         <hr />

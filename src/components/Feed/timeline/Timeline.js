@@ -6,7 +6,13 @@ import SearchBar from "../../SearchBar";
 import axios from "axios";
 const Timeline = ({ posts }) => {
   if (!posts) {
-    return <div style={{ overflow: "scroll" }}>로딩중</div>;
+    return (
+      <div className={styles.loadingScreen}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    );
   }
 
   if (posts.length === 0) {

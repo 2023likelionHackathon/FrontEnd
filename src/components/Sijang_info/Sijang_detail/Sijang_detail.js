@@ -77,19 +77,19 @@ const Sijang_detail = () => {
             <div className={styles.price}>29,000원</div>
           </div>
           <div className={styles.menu2}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>똠얌부대전골</div>
 
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>26,000원</div>
           </div>
           <div className={styles.menu3}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>메론프로슈토</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>17,000원</div>
           </div>
         </div>
         <hr />

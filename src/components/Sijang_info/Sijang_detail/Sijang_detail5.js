@@ -50,13 +50,14 @@ const Sijang_detail5 = () => {
             </div>
           </div>
           <div className={styles.menu_img_text}>
-            <img src="pics/cream_gazami.png" className={styles.gazami_img} />
+            <img
+              src="pics/marketMenu/ddukdoMenu.jpg"
+              className={styles.gazami_img}
+            />
             <div className={styles.menu_text}>
-              <span className={styles.title_menu}>크림가자미</span>
-              <div className={styles.price}>20,000원</div>
-              <div className={styles.explain}>
-                버터에 구운 가자미에 크림소스와 감자를 곁들인 안주
-              </div>
+              <span className={styles.title_menu}>생선회</span>
+              <div className={styles.price}>변동</div>
+              <div className={styles.explain}></div>
             </div>
           </div>
         </div>
@@ -64,26 +65,26 @@ const Sijang_detail5 = () => {
         <div className={styles.menus_}>
           <div className={styles.menu_info}>메뉴정보</div>
           <div className={styles.menu1}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>해신탕</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>100,000원</div>
           </div>
           <div className={styles.menu2}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>광어</div>
 
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>20,000원</div>
           </div>
           <div className={styles.menu3}>
-            <div className={styles.food}>젓갈플래터</div>
+            <div className={styles.food}>해산물 모둠</div>
             <div className={styles.line}>
               <img src="pics/Vector39.png" className={styles.line__} />
             </div>
-            <div className={styles.price}>29,000원</div>
+            <div className={styles.price}>30,000원</div>
           </div>
         </div>
         <hr />
