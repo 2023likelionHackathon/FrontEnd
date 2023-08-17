@@ -44,6 +44,8 @@
   flex-direction: row;
   margin-bottom: 32px;
   font-weight: 500;
+  background-color: rgb(247, 128, 128);
+  border-radius: 20px;
 }
 .sep {
   margin-left: 16px;
@@ -75,4 +77,8 @@
 }
 .emptySpace {
   height: 20px;
+}
+.coin_image{
+  width: 25px;
+  height: 25px;
 }
