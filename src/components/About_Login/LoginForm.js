@@ -45,7 +45,6 @@ const LoginForm = () => {
       .then((res) => {
         console.log("res", res);
         alert("로그인에 성공하셨습니다!");
-        document.location.href = "/";
         dispatcher(login());
         navigate("/profile");
         setUsername("");
