@@ -46,6 +46,13 @@
   font-weight: 500;
   background-color: rgb(247, 128, 128);
   border-radius: 20px;
+  width: 158px;
+  height: 37px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color:whitesmoke;
+  box-shadow: 3px 3px 3px lightgray;
 }
 .sep {
   margin-left: 16px;
