@@ -14,10 +14,10 @@ const DivGrid = ({ stores, marketId }) => {
               className={styles.Link_}
             >
               <div className={styles.box_}>
-                <img src={image} />
+                <img src={image} className={styles.images__} />
                 <div className={styles.text_box}>
                   <h3 className={styles.jumpo_name}>
-                    {i}. {name}
+                    {name}
                   </h3>
                   <span className={styles.detail_address}>{address}</span>
                 </div>

@@ -60,11 +60,10 @@
 }
 
 .jumpo {
-  transform: translateX(-220px);
+  transform: translateX(-280px);
   font-size: 24px;
   font-weight: 700;
   margin-top: 15px;
-  margin-left: 20px;
 }
 
 .margin_div {
@@ -84,6 +83,7 @@
   margin-top: 15px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 40px;
 }
 .text_box {
   display: flex;

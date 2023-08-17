@@ -48,7 +48,7 @@ export const markets = [
         name: "2002횟집",
         category: "횟집",
         image: "/pics/marketTitle/2002Title.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "서울특별시 성동구 성수이로 29 2002횟집",
         rating: 4,
         times: [],
         menu: [
@@ -78,7 +78,7 @@ export const markets = [
         name: "대성정",
         category: "한식",
         image: "/pics/marketTitle/bigTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "서울특별시 성동구 성덕정15길 3 대성정",
         rating: 3,
         times: [],
         menu: [
@@ -108,7 +108,7 @@ export const markets = [
         name: "떡마을",
         category: "떡",
         image: "/pics/marketTitle/ddeokTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "서울특별시 성동구 성덕정길 91",
         rating: 3,
         times: [
           {
@@ -147,7 +147,7 @@ export const markets = [
         name: "뚝도지기",
         category: "횟집",
         image: "/pics/marketTitle/ddukdoJigiTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "서울특별시 성동구 성수이로 30-4",
         rating: 3,
         times: [
           {
@@ -186,7 +186,7 @@ export const markets = [
         name: "뚱이네포차",
         category: "포차",
         image: "/pics/marketTitle/ddungTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "",
         rating: 3,
         times: [],
         menu: [
@@ -202,8 +202,8 @@ export const markets = [
       {
         name: "락지",
         category: "낙지 요리 전문점",
-        image: "/pics/marketTitle/rakjiTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        image: "/pics/marketTitle/rakjiTitle.jpg",
+        address: "서울특별시 성동구 성덕정15길 4-3 1층 락지",
         rating: 3,
         times: [
           {
@@ -242,7 +242,7 @@ export const markets = [
         name: "미정이네 코다리찜",
         category: "코다리 요리 전문점",
         image: "/pics/marketTitle/mijeongTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "서울특별시 성동구 성덕정15길 6-19",
         rating: 3,
         times: [],
         menu: [
@@ -272,7 +272,7 @@ export const markets = [
         name: "서울 맛집",
         category: "한식",
         image: "/pics/marketTitle/matTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        address: "서울특별시 성동구 성수동2가 335-64",
         rating: 3,
         times: [
           {
@@ -306,8 +306,8 @@ export const markets = [
       {
         name: "연탄 생고기",
         category: "생고기",
-        image: "/pics/marketTitle/yeontanTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        image: "/pics/marketTitle/YeonSaeng.png",
+        address: "",
         rating: 3,
         times: [],
         menu: [],
@@ -315,8 +315,8 @@ export const markets = [
       },
       {
         name: "연탄 요리집",
-        image: "/pics/marketTitle/yeontanTitle.jpg",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        image: "/pics/marketTitle/YeonYo.png",
+        address: "서울특별시 성동구 성덕정17길 3 1층",
         rating: 3,
         times: [
           {
@@ -350,8 +350,8 @@ export const markets = [
       {
         name: "영수 분식",
         category: "분식",
-        image: "/pics/marketTitle/seongSuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        image: "/pics/marketTitle/yeongsuTitle.jpg",
+        address: "서울 성동구 성덕정15길 4-8",
         rating: 3,
         times: [
           {
@@ -369,7 +369,7 @@ export const markets = [
         ],
         menu: [
           {
-            img: "/pics/marketMenu/yeongsuMenu.jpg",
+            img: "/pics/marketMenu/yeonsuMenu.jpg",
             name: "치즈곱창",
             price: "20,000원",
             description: "",
@@ -392,9 +392,9 @@ export const markets = [
       },
       {
         name: "우리동네 칼국수",
-        category: "",
-        image: "/pics/marketTitle/seongSuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        category: "칼국수, 만두",
+        image: "/pics/marketTitle/ourTitle.jpg",
+        address: "서울 성동구 성덕정15길 2-5 1층",
         rating: 3,
         times: [],
         menu: [
@@ -423,8 +423,8 @@ export const markets = [
       {
         name: "은식당",
         category: "",
-        image: "/pics/marketTitle/seongSuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        image: "/pics/marketTitle/silverTitle.jpg",
+        address: "서울특별시 성동구 성수이로 30-4",
         rating: 3,
         times: [
           {
@@ -463,13 +463,13 @@ export const markets = [
       {
         name: "지수 언니",
         category: "",
-        image: "/pics/marketTitle/jisuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        image: "/pics/marketTitle/jisuTitle.jpg",
+        address: "서울특별시 성동구 성덕정길 91",
         rating: 3,
         times: [
           {
             day: "매일",
-            time: "오전 12시 ~ 오후 8시",
+            time: "오후 12시 ~ 오후 8시",
           },
         ],
         menu: [
@@ -477,99 +477,91 @@ export const markets = [
             img: "/pics/marketMenu/jisuMenu.jpg",
             name: "컵케이크",
             price: "변동",
-            description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
+            description: "눈으로도 한입, 입으로도 한입, 지수 컵케이크",
           },
         ],
         submenu: [
           {
-            name: "젓갈 플래터",
-            price: "29,000",
+            name: "베이크 티라미수",
+            price: "2,500",
           },
           {
-            name: "똠얌부대전골",
-            price: "26,000",
-          },
-          {
-            name: "메론프로슈토",
-            price: "17,000",
+            name: "마들렌",
+            price: "1,500",
           },
         ],
       },
       {
-        name: "성수 물고기",
-        category: "",
-        image: "/pics/marketTitle/seongSuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        name: "호랑이식탁",
+        category: "한식,파스타",
+        image: "/pics/marketTitle/tigerTitle.jpg",
+        address: "서울특별시 성동구 성수이로 32-10",
         rating: 3,
         times: [
           {
-            day: "화 ~ 목",
+            day: "월~금",
             time: "오후 4시 ~ 자정 12시",
           },
           {
+            day:"토",
+            time: "오전 11시 ~ 오후 9시"
+          },
+          {
+            day:"브레이크타임",
+            time: "오후 3시 ~ 오후 5시"
+          },  
+          {
             day: "휴무일",
-            time: "매주 월요일",
+            time: "매주 일요일",
           },
         ],
         menu: [
           {
             img: "/pics/cream_gazami.png",
-            name: "크림가자미",
-            price: "20,000원",
-            description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
+            name: "우삼겹덮밥",
+            price: "9,000원",
+            description: "우삼겹이 올라간 맛있는 덮밥",
           },
         ],
         submenu: [
           {
-            name: "젓갈 플래터",
-            price: "29,000",
+            name: "명란버섯파스타",
+            price: "9,000",
           },
           {
-            name: "똠얌부대전골",
-            price: "26,000",
-          },
-          {
-            name: "메론프로슈토",
-            price: "17,000",
+            name: "명란감자전",
+            price: "12,000",
           },
         ],
       },
       {
-        name: "성수 물고기",
-        category: "",
-        image: "/pics/marketTitle/seongSuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
+        name: "훈이네",
+        category: "한식,닭요리",
+        image: "/pics/marketTitle/hunTitle.jpg",
+        address: "서울특별시 성동구 성수이로 32-3",
         rating: 3,
         times: [
-          {
-            day: "화 ~ 목",
-            time: "오후 4시 ~ 자정 12시",
-          },
-          {
-            day: "휴무일",
-            time: "매주 월요일",
-          },
         ],
         menu: [
           {
-            img: "/pics/cream_gazami.png",
-            name: "크림가자미",
-            price: "20,000원",
-            description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
+            img: "/pics/marketMenu/hunMenu.jpg",
+            name: "내장탕",
+            price: "20,000원(중)",
+            description: "얼큰한 국물과 재밌는 식감의 내장의 조화",
           },
         ],
         submenu: [
           {
-            name: "젓갈 플래터",
-            price: "29,000",
+            name: "닭도리탕",
+            price: "27,000",
           },
           {
-            name: "똠얌부대전골",
-            price: "26,000",
+            name: "닭내장탕(1인)",
+            price: "10,000",
           },
           {
-            name: "메론프로슈토",
-            price: "17,000",
+            name: "돼지껍데기볶음",
+            price: "10,000",
           },
         ],
       },
