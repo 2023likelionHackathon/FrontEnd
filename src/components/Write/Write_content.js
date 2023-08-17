@@ -27,7 +27,7 @@ const Write_content = () => {
   const [content, setContent] = useState("");
   //const [selectedImage, setSelectedImage] = useState(null);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
-  const [ratingValue, setRatingValue] = useState(0);        //별점 값
+  const [ratingValue, setRatingValue] = useState(0); //별점 값
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState("");
@@ -59,7 +59,7 @@ const Write_content = () => {
   };
   const onSaveFiles = (e) => {
     const uploadFiles = Array.prototype.slice.call(e.target.files); // 파일선택창에서 선택한 파일들
-    
+
     uploadFiles.forEach((uploadFile) => {
       setFileList((prevFileList) => [...prevFileList, uploadFile]);
     });
@@ -87,25 +87,25 @@ const Write_content = () => {
       new Blob([JSON.stringify(boardDto)], { type: "application/json" })
     ); // 직렬화하여 객체 저장
 
-    // try {
-    //   const response = axios
-    //     .post("http://api.domarketdodo.shop/board/post", formData, {
-    //       headers: {
-    //         "Content-Type": "multipart/form-data", // Content-Type 설정
-    //       },
-    //     })
-    //     .then((response) => {
-    //       console.log(response.data);
-    //       alert("글 등록에 성공하셨습니다!");
-    //       navigate("/");
-    //     })
-    //     .catch((error) => {
-    //       alert(error.response.data.message);
-    //       console.error("Error:", error);
-    //     });
-    // } catch (error) {
-    //   console.error("Error:", error);
-    // }
+    try {
+      const response = axios
+        .post("http://api.domarketdodo.shop/board/post", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data", // Content-Type 설정
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          alert("글 등록에 성공하셨습니다!");
+          navigate("/");
+        })
+        .catch((error) => {
+          alert(error.response.data.message);
+          console.error("Error:", error);
+        });
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
