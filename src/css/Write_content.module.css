@@ -174,8 +174,7 @@ hr {
 .modalContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   overflow: scroll;
 }
 
