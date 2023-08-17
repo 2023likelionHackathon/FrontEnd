@@ -75,7 +75,9 @@ const BottomBar = ({ index }) => {
         >
           <Link
             to="#"
-            onClick={handleProfileClick}
+            onClick={(e) => {
+              handleProfileClick();
+            }}
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className={styles.pics}>
