@@ -19,8 +19,8 @@ const modalStyle = {
   zIndex: "1000",
   border: "1px solid black",
   width: "300px",
-  height: "450px",
-  maxHeight: "450px",
+  height: "600px",
+  maxHeight: "600px",
   overflow: "scroll",
 };
 
