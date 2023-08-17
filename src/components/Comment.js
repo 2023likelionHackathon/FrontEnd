@@ -1,4 +1,5 @@
 import styles from "../css/Comment.module.css";
+
 const Comment = ({
   parentId,
   setParentId,

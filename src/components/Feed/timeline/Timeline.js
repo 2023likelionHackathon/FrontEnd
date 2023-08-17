@@ -18,7 +18,12 @@ const Timeline = ({ posts }) => {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <div className={styles.container}>
         <div className={styles.timeline}>
           <div className={styles.emptySpace} />
