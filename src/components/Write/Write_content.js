@@ -17,9 +17,9 @@ const modalStyle = {
   transform: "translate(-50%,-50%)",
   backgroundColor: "white",
   zIndex: "1000",
-  width: "300px",
-  heigth: "300px",
   border: "1px solid black",
+  width:"300px",
+  height:"450px",
 };
 
 const Write_content = () => {

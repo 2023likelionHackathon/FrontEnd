@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../css/Join_Membership.module.css";
 import axios from "axios";
+import { Height } from "@mui/icons-material";
 const Join_Membership = () => {
   const [formData, setFormData] = useState({
     userId: "",
@@ -83,7 +84,8 @@ const Join_Membership = () => {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.field}>
+      <div className={styles.margin_div}></div>
+      <div className={styles.field}>  
         <input
           type="text"
           name="name"
@@ -216,6 +218,10 @@ const Join_Membership = () => {
             required
             value={formData.code}
             onChange={handleInputChange}
+            style={{
+              paddingTop:"15px",
+              Height: "40px"
+            }}
           />
           <label for="code" className={styles.label_wrapper}>
             <span className={styles.label_text}>사장님 코드</span>

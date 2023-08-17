@@ -176,7 +176,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
+  height: 400px;
 }
 
 .Ok_btn {
@@ -244,4 +244,7 @@ hr {
 }
 .emptySpace2 {
   height: 40px; /* 원하는 높이로 조정 */
+}
+.select_btns{
+  margin-top:0;
 }
