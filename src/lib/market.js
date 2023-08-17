@@ -6,7 +6,47 @@ export const markets = [
     timeline: "매일 09:00 ~ 23:00",
     stores: [
       {
+        name: "성수 물고기",
+        category: "횟집",
+        image: "/pics/marketTitle/seongSuTitle.png",
+        address: "서울특별시 성동구 성수동 2가 339-122",
+        rating: 3,
+        times: [
+          {
+            day: "화 ~ 목",
+            time: "오후 4시 ~ 자정 12시",
+          },
+          {
+            day: "휴무일",
+            time: "매주 월요일",
+          },
+        ],
+        menu: [
+          {
+            img: "/pics/cream_gazami.png",
+            name: "크림가자미",
+            price: "20,000원",
+            description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
+          },
+        ],
+        submenu: [
+          {
+            name: "젓갈 플래터",
+            price: "29,000",
+          },
+          {
+            name: "똠얌부대전골",
+            price: "26,000",
+          },
+          {
+            name: "메론프로슈토",
+            price: "17,000",
+          },
+        ],
+      },
+      {
         name: "2002횟집",
+        category: "횟집",
         image: "/pics/marketTitle/2002Title.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 4,
@@ -36,6 +76,7 @@ export const markets = [
       },
       {
         name: "대성정",
+        category: "한식",
         image: "/pics/marketTitle/bigTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -65,6 +106,7 @@ export const markets = [
       },
       {
         name: "떡마을",
+        category: "떡",
         image: "/pics/marketTitle/ddeokTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -103,6 +145,7 @@ export const markets = [
       },
       {
         name: "뚝도지기",
+        category: "횟집",
         image: "/pics/marketTitle/ddukdoJigiTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -141,6 +184,7 @@ export const markets = [
       },
       {
         name: "뚱이네포차",
+        category: "포차",
         image: "/pics/marketTitle/ddungTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -157,6 +201,7 @@ export const markets = [
       },
       {
         name: "락지",
+        category: "낙지 요리 전문점",
         image: "/pics/marketTitle/rakjiTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -195,6 +240,7 @@ export const markets = [
       },
       {
         name: "미정이네 코다리찜",
+        category: "코다리 요리 전문점",
         image: "/pics/marketTitle/mijeongTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -224,6 +270,7 @@ export const markets = [
       },
       {
         name: "서울 맛집",
+        category: "한식",
         image: "/pics/marketTitle/matTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -258,6 +305,7 @@ export const markets = [
       },
       {
         name: "연탄 생고기",
+        category: "생고기",
         image: "/pics/marketTitle/yeontanTitle.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -301,6 +349,7 @@ export const markets = [
       },
       {
         name: "영수 분식",
+        category: "분식",
         image: "/pics/marketTitle/seongSuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -343,6 +392,7 @@ export const markets = [
       },
       {
         name: "우리동네 칼국수",
+        category: "",
         image: "/pics/marketTitle/seongSuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -372,6 +422,7 @@ export const markets = [
       },
       {
         name: "은식당",
+        category: "",
         image: "/pics/marketTitle/seongSuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -411,6 +462,7 @@ export const markets = [
       },
       {
         name: "지수 언니",
+        category: "",
         image: "/pics/marketTitle/jisuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -445,6 +497,7 @@ export const markets = [
       },
       {
         name: "성수 물고기",
+        category: "",
         image: "/pics/marketTitle/seongSuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
@@ -483,6 +536,7 @@ export const markets = [
       },
       {
         name: "성수 물고기",
+        category: "",
         image: "/pics/marketTitle/seongSuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
