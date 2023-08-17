@@ -105,10 +105,16 @@ const Posts = ({
           </div>
           <CustomRating score={score} />
         </div>
-        <Link to={`/market/0/store/${storeId}`} className={styles.jumpoLink}>
-          <div className={styles.users_jumpo} >{storeName}</div>
-        </Link>
-        
+
+        <div className={styles.loc_div}>
+          <div className={styles.empty_div}></div>
+          <Link to={`/market/0/store/${storeId}`} className={styles.jumpoLink}>
+            <img src="pics/location_store.png" />
+            <div className={styles.users_jumpo} >{storeName}</div>
+          </Link>
+        </div>
+
+
         <div className={styles.post_image}>
           <img src={imgUrlList[0]} alt="image" />
         </div>
