@@ -20,6 +20,7 @@ const modalStyle = {
   border: "1px solid black",
   width:"300px",
   height:"450px",
+  maxHeight:"450px",
 };
 
 const Write_content = () => {
