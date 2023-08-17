@@ -18,8 +18,8 @@ const modalStyle = {
   backgroundColor: "white",
   zIndex: "1000",
   border: "1px solid black",
-  width:"300px",
-  height:"450px",
+  width: "300px",
+  height: "450px",
 };
 
 const Write_content = () => {
