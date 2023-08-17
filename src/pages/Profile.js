@@ -9,7 +9,7 @@ const Profile = () => {
 
   axios.defaults.withCredentials = true; // 전역 설정
   const getUserInfo = async () => {
-    const resp = await axios.get("http://localhost:8080/user/profile");
+    const resp = await axios.get("http://api.domarketdodo.shop/user/profile");
     setPosts(resp.data.boardList);
     setUser(resp.data.user);
   };
