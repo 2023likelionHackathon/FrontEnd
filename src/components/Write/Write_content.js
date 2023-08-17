@@ -158,7 +158,7 @@ const Write_content = () => {
           onClick={toggleDropdown}
         >
           <span className={styles.dropDownText}>
-            <img src="pics/addLoc.png"></img>
+            <img src="pics/addLoc.png"/>
           </span>
           <div className={styles.dropDownContent}>
             <ul>
