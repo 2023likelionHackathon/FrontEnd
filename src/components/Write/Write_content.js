@@ -27,7 +27,7 @@ const Write_content = () => {
   const [content, setContent] = useState("");
   //const [selectedImage, setSelectedImage] = useState(null);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
-  const [ratingValue, setRatingValue] = useState(0);        //별점 값
+  const [ratingValue, setRatingValue] = useState(0); //별점 값
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState("");
@@ -59,7 +59,7 @@ const Write_content = () => {
   };
   const onSaveFiles = (e) => {
     const uploadFiles = Array.prototype.slice.call(e.target.files); // 파일선택창에서 선택한 파일들
-    
+
     uploadFiles.forEach((uploadFile) => {
       setFileList((prevFileList) => [...prevFileList, uploadFile]);
     });
@@ -319,34 +319,34 @@ const Write_content = () => {
                 <span className={styles.no_jumpo}>등록된 점포가 없습니다.</span>
               </>
             )}
+            <div className={styles.select__btns}>
+              <button
+                className={styles.Ok_btn}
+                onClick={() => {
+                  toggleModal();
+                }}
+              >
+                확인
+              </button>
+              <button
+                className={styles.cancel_btn}
+                onClick={() => {
+                  toggleModal();
+                }}
+              >
+                취소
+              </button>
+              <button
+                className={styles.init_btn}
+                onClick={() => {
+                  handlePlaceSelect("");
+                  handleTagSelect("");
+                }}
+              >
+                초기화
+              </button>
+            </div>
           </ul>
-          <div className={styles.select__btns}>
-            <button
-              className={styles.Ok_btn}
-              onClick={() => {
-                toggleModal();
-              }}
-            >
-              확인
-            </button>
-            <button
-              className={styles.cancel_btn}
-              onClick={() => {
-                toggleModal();
-              }}
-            >
-              취소
-            </button>
-            <button
-              className={styles.init_btn}
-              onClick={() => {
-                handlePlaceSelect("");
-                handleTagSelect("");
-              }}
-            >
-              초기화
-            </button>
-          </div>
         </div>
       </Modal>
       <div className={styles.star_box}>
