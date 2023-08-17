@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../../css/Loc_with_sijang.module.css";
 import { Link } from "react-router-dom";
 
-const Loc_with_sijang = () => {
+const MarketList = () => {
   const [selectedLocation, setSelectedLocation] = useState("성동구");
 
   const handleLocationClick = (location) => {
@@ -21,7 +21,7 @@ const Loc_with_sijang = () => {
       <div className={styles.box}>
         <div className={styles.intro}>성동구의 시장</div>
         <div className={`${styles.ddukdo} ${styles.sijangs}`}>
-          <Link to="/ddukdo" className={styles.link_}>
+          <Link to="/market/0" className={styles.link_}>
             <div className={styles.sijang_info}>
               <div className={styles.dd_pic}></div>
               <div className={styles.about}>
@@ -96,4 +96,4 @@ const Loc_with_sijang = () => {
   );
 };
 
-export default Loc_with_sijang;
+export default MarketList;

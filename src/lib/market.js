@@ -423,8 +423,8 @@ export const markets = [
         menu: [
           {
             img: "/pics/marketMenu/jisuMenu.jpg",
-            name: "크림가자미",
-            price: "20,000원",
+            name: "컵케이크",
+            price: "변동",
             description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
           },
         ],
