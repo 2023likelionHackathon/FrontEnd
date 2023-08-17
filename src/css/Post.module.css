@@ -81,7 +81,7 @@
   color: rgb(174, 167, 167);
 }
 hr {
-  width: 100%;
+  width: 100vw;
   border-color: rgb(247, 128, 128);
   border-top: 0.7px solid rgb(247, 128, 128);
   margin: 10px 0;

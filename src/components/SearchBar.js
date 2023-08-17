@@ -7,13 +7,13 @@ const SearchBar = ({ isSearch = false, search, setSearch }) => {
       <div className={styles.container}>
         <div className={styles.logoBar}>
           <Link to="/">
-            <img src="/pics/LogoLogo.png" alt="Logo" />
+            <img src="/pics/LOGO_FINAL.png" alt="Logo" />
           </Link>
           {isSearch && (
             <input
               type="search"
               value={search}
-              placeholder="       시장 또는 가계명을 검색해보세요"
+              placeholder="       가게명을 검색해보세요"
               onChange={(e) => setSearch(e.target.value)}
             />
           )}

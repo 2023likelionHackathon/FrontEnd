@@ -142,4 +142,9 @@
 .title_star {
   display: flex;
   flex-direction: row;
+  
+}
+hr{
+  width: 100%;
+  box-shadow: 2px lightgrey;
 }
