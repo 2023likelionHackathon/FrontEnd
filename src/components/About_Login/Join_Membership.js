@@ -23,8 +23,8 @@ const Join_Membership = () => {
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
     setPasswordMatch(formData.pw === formData.pwd_check);
-    console.log("pwd",formData.pw);
-    console.log("pwd_check",formData.pwd_check);
+    //console.log("pwd", formData.pw);
+    //console.log("pwd_check", formData.pwd_check);
   };
   const handleDuplicateCheckId = async (checkValue) => {
     //서버로 중복확인 요청 보내고 결과 받는 함수
@@ -57,7 +57,7 @@ const Join_Membership = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formData.pwd !== formData.pwd_check) {
+    if (formData.pw !== formData.pwd_check) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
@@ -140,7 +140,7 @@ const Join_Membership = () => {
           name="pwd_check"
           autoComplete="off"
           required
-          value= {formData.pwd_check}
+          value={formData.pwd_check}
           onChange={handleInputChange}
           onBlur={handlePasswordCheck}
         />
