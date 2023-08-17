@@ -30,23 +30,27 @@ const getDayMinuteCounter = (props) => {
     return "";
   }
   const today = moment();
+  console.log("today", today);
+
   const postingDate = moment(props.date);
+  console.log("실 data", props.date);
+  console.log("postingdate", postingDate);
   const dayDiff = postingDate.diff(today, "days");
   const hourDiff = postingDate.diff(today, "hours");
   const minutesDiff = postingDate.diff(today, "minutes");
-
+  console.log("dayDiff", dayDiff);
+  console.log("hourDiff", hourDiff);
   if (dayDiff === 0 && hourDiff === 0) {
     // 작성한지 1시간도 안지났을때
     const minutes = Math.ceil(-minutesDiff);
     return minutes + "분 전"; // '분' 로 표시
-  }
-
-  if (dayDiff === 0 && hourDiff <= 24) {
+  } else if (dayDiff === 0 && hourDiff <= 24) {
     // 작성한지 1시간은 넘었지만 하루는 안지났을때,
     const hour = Math.ceil(-hourDiff);
+
     return hour + "시간 전"; // '시간'으로 표시
   }
-  console.log(-dayDiff + "일 전");
+
   return -dayDiff + "일 전";
 };
 
