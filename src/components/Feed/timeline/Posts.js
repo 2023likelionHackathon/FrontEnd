@@ -88,7 +88,6 @@ const Posts = ({
       alert(error.response.data.message);
     }
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.post}>
@@ -106,6 +105,10 @@ const Posts = ({
           </div>
           <CustomRating score={score} />
         </div>
+        <Link to={`/market/0/store/${storeId}`} className={styles.jumpoLink}>
+          <div className={styles.users_jumpo} >{storeName}</div>
+        </Link>
+        
         <div className={styles.post_image}>
           <img src={imgUrlList[0]} alt="image" />
         </div>
