@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../css/BottomBar.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import styled from "@emotion/styled";
 import { useSelector } from "react-redux";
 
 const BottomBar = ({ index }) => {
@@ -9,9 +8,11 @@ const BottomBar = ({ index }) => {
   const [isValid, setIsValid] = useState(false);
   const { isLoggedIn } = useSelector((store) => store);
   const navigate = useNavigate();
+
   const handleIconClick = (iconName) => {
     setActiveIcon(iconName);
   };
+
   const toggleColor = () => {
     setIsValid(!isValid);
   };
@@ -31,7 +32,9 @@ const BottomBar = ({ index }) => {
     <div className={styles.btBar}>
       <nav className={styles.wrapper}>
         <div
-          className={`${styles.icons} ${index === "홈" ? styles.selected : ""}`}
+          className={`${styles.icons} ${
+            index === activeIcon ? styles.selected : ""
+          }`}
           onClick={() => handleIconClick("홈")}
         >
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
@@ -75,7 +78,9 @@ const BottomBar = ({ index }) => {
         >
           <Link
             to="#"
-            onClick={handleProfileClick}
+            onClick={(e) => {
+              handleProfileClick();
+            }}
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className={styles.pics}>

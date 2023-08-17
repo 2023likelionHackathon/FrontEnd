@@ -21,6 +21,10 @@ const LoginForm = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+
+    if (e.key === "Enter") {
+      handleLogin();
+    }
   };
 
   const axiosInstance = axios.create({
@@ -41,7 +45,6 @@ const LoginForm = () => {
       .then((res) => {
         console.log("res", res);
         alert("로그인에 성공하셨습니다!");
-        document.location.href = "/";
         dispatcher(login());
         navigate("/profile");
         setUsername("");
@@ -55,7 +58,7 @@ const LoginForm = () => {
   return (
     <div className={styles.container}>
       <div className={styles.white_page}>
-        <img src="pics/NewLogo.png"></img>
+        <img src="pics/LOGO_FINAL.png"></img>
       </div>
       <div className={styles.idPassword}>
         <label className={styles.label_}>
@@ -73,6 +76,7 @@ const LoginForm = () => {
             type="password"
             value={password}
             onChange={handlePasswordChange}
+            onKeyDown={handlePasswordChange}
             placeholder=" 비밀번호"
           />
         </label>

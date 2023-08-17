@@ -14,7 +14,7 @@ const Timeline = ({ posts }) => {
   }
 
   if (posts.length === 0) {
-    return <div>여기 게시글이 없어</div>;
+    return <div></div>;
   }
 
   return (

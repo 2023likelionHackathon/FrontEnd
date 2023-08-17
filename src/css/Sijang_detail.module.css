@@ -10,6 +10,7 @@
   left: 50%;
   transform: translate(-50%, 0%);
   font-family: Pretendard, "Noto Sans KR", sans-serif;
+  margin: 50px;
 }
 .margin_div {
   margin-bottom: 15vh;
@@ -135,6 +136,7 @@
 .food {
   margin-right: 5px;
   color: grey;
+  width: 18%;
 }
 .price {
   margin-left: 5px;
@@ -142,4 +144,8 @@
 .title_star {
   display: flex;
   flex-direction: row;
+}
+hr {
+  width: 100%;
+  box-shadow: 2px lightgrey;
 }

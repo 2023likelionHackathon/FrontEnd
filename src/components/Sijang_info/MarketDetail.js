@@ -1,33 +1,37 @@
 import React from "react";
 import styles from "../../css/Ddukdo_info.module.css";
 import { Link, useParams } from "react-router-dom";
-import {markets} from '../../lib/market';
-const DivGrid = ({stores, marketId}) => {
+import { markets } from "../../lib/market";
+const DivGrid = ({ stores, marketId }) => {
   return (
     <div className={styles.grid}>
       {stores.map((store, i) => {
-        const {image, address, name} = store;
+        const { image, address, name } = store;
         return (
-          <Link to={`/market/${marketId}/store/${i}`} className={styles.Link_}>
-            <div className={styles.box_}>
-              <img src={image}/>
-              <div className={styles.text_box}>
-                <h3 className={styles.jumpo_name}>{i}. {name}</h3>
-                <span className={styles.detail_address}>
-                  {address}
-                </span>
+          <div>
+            <Link
+              to={`/market/${marketId}/store/${i}`}
+              className={styles.Link_}
+            >
+              <div className={styles.box_}>
+                <img src={image} className={styles.images__} />
+                <div className={styles.text_box}>
+                  <h3 className={styles.jumpo_name}>
+                    {name}
+                  </h3>
+                  <span className={styles.detail_address}>{address}</span>
+                </div>
               </div>
-            </div>
-          </Link>
-        )
+            </Link>
+          </div>
+        );
       })}
     </div>
   );
 };
 
-
 const MarketDetail = () => {
-  const {marketId} = useParams();
+  const { marketId } = useParams();
   const market = markets[marketId];
 
   return (
@@ -52,7 +56,9 @@ const MarketDetail = () => {
           </div>
           <div className={styles.liner}>
             <img src="/pics/parking.png" className={styles.images}></img>
-            <p className={styles.infos}>{market.isParking ? '주차 가능': '주차 불가능'}</p>
+            <p className={styles.infos}>
+              {market.isParking ? "주차 가능" : "주차 불가능"}
+            </p>
           </div>
         </div>
       </div>

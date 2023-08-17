@@ -12,7 +12,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const CustomRating = (props) => {
-  console.log("score", props.score);
+  // console.log("score", props.score);
   return (
     <Rating
       name="custom-rating"
@@ -30,23 +30,25 @@ const getDayMinuteCounter = (props) => {
     return "";
   }
   const today = moment();
-  const postingDate = moment(props.date);
+
+  const postingDate = moment(props.date).add(9, "h");
+
   const dayDiff = postingDate.diff(today, "days");
   const hourDiff = postingDate.diff(today, "hours");
   const minutesDiff = postingDate.diff(today, "minutes");
-
+  console.log("dayDiff", dayDiff);
+  console.log("hourDiff", hourDiff);
   if (dayDiff === 0 && hourDiff === 0) {
     // 작성한지 1시간도 안지났을때
     const minutes = Math.ceil(-minutesDiff);
     return minutes + "분 전"; // '분' 로 표시
-  }
-
-  if (dayDiff === 0 && hourDiff <= 24) {
+  } else if (dayDiff === 0 && hourDiff <= 24) {
     // 작성한지 1시간은 넘었지만 하루는 안지났을때,
     const hour = Math.ceil(-hourDiff);
+
     return hour + "시간 전"; // '시간'으로 표시
   }
-  console.log(-dayDiff + "일 전");
+
   return -dayDiff + "일 전";
 };
 
@@ -63,7 +65,7 @@ const Posts = ({
   size_reply,
   createdDate,
 }) => {
-  console.log("cookie", document.cookie);
+  console.log("createdDate", createdDate);
   const [isLiked, setIsLiked] = useState(likes.isLiked);
   const [likeCount, setLikeCount] = useState(likes.likes_cnt);
 
@@ -88,7 +90,6 @@ const Posts = ({
       alert(error.response.data.message);
     }
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.post}>
@@ -106,6 +107,14 @@ const Posts = ({
           </div>
           <CustomRating score={score} />
         </div>
+        <div className={styles.loc_div}>
+          <div className={styles.empty_div}></div>
+          <Link to={`/market/0/store/${storeId}`} className={styles.jumpoLink}>
+            <img src="pics/location_store.png" />
+            <div className={styles.users_jumpo} >{storeName}</div>
+          </Link>
+        </div>
+
         <div className={styles.post_image}>
           <img src={imgUrlList[0]} alt="image" />
         </div>

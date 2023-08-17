@@ -4,10 +4,13 @@ import Posts from "./Feed/timeline/Posts";
 import axios from "axios";
 const Profile_info = ({ user, posts }) => {
   if (!posts) {
-    return <div>로딩중</div>;
-  } else {
-    posts.map((post) => console.log(post.imgUrlList[0]));
-    console.log(posts);
+    return (
+      <div className={styles.loadingScreen}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    );
   }
 
   console.log("?");
@@ -35,9 +38,8 @@ const Profile_info = ({ user, posts }) => {
       </div>
       <div className={styles.nickname}>{user.nickname}</div>
       <div className={styles.follows}>
-        <div className={styles.follow}>적립금 {user.reward}</div>
-        <div className={styles.sep}>|</div>
-        <div className={styles.following}>팔로워 91</div>
+        <img src="pics/coin.png" className={styles.coin_image}/>
+        <div className={styles.follow}>마켓머니 {user.reward}</div> 
       </div>
       <div className={styles.timeline_posts}>
         {posts.map((post) => (

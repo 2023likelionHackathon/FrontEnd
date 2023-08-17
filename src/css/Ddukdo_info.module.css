@@ -1,107 +1,108 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    width: 707px;
-    position: absolute;
-    top: 11%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    font-family: Pretendard,'Noto Sans KR',sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 707px;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
 }
 
 .title {
-    font-size: 36px;
-    font-weight: bold;
-    color: black;
-    margin-top: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  margin-top: 30px;
 }
 
 .dduk_pic {
-    background-image: url("../../public/pics/Ddukdo_2.png");
-    width: 667px;
-    height: 365px;
+  background-image: url("../../public/pics/Ddukdo_2.png");
+  width: 667px;
+  height: 365px;
 }
 
 .icon_text {
-    margin-top: 30px;
-    transform: translateX(-100px);
+  margin-top: 30px;
+  transform: translateX(-100px);
 }
 .images {
-    width: 14px;
-    height: 18.67px;
-    margin-right: 28px;
+  width: 14px;
+  height: 18.67px;
+  margin-right: 28px;
 }
 
 .infos {
-    font-size: 20px;
-    font-weight: 400;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .liner {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 6px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
 }
 
 .phone_call {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .hr_bar {
-    width: 100%;
-    border-color: rgb(247, 128, 128);
-    border-top: 1.5px solid rgb(247, 128, 128);
-    margin: 10px 0;
+  width: 100%;
+  border-color: rgb(247, 128, 128);
+  border-top: 1.5px solid rgb(247, 128, 128);
+  margin: 10px 0;
 }
 
 .jumpo {
-    transform: translateX(-220px);
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 15px;
+  transform: translateX(-280px);
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
 }
 
 .margin_div {
-    margin-bottom: 15vh;
-    background-color: white;
+  margin-bottom: 15vh;
+  background-color: white;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-    margin-top:32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-top: 32px;
 }
-.box_{
-    width: 250px;
-    height: 113px;
-    margin-top:15px;
-    display: flex;
-    flex-direction: row;
+.box_ {
+  width: 340px;
+  height: 113px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
 }
-.text_box{
-    display: flex;
-    flex-direction: column;
-    margin-left:15px;
+.text_box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
 }
-.jumpo_name{
-    font-size:24px;
-    font-weight: bold;
-    text-decoration: none;
-    width:119px;
-    margin-top:0;
-    margin-bottom: 0;
+.jumpo_name {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 119px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.Link_{
-    text-decoration: none;
-    color:black
+.Link_ {
+  text-decoration: none;
+  color: black;
 }
-.images__{
-    width: 155px;
-    height: 155px;
+.images__ {
+  width: 155px;
+  height: 155px;
 }

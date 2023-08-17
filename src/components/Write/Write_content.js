@@ -87,25 +87,25 @@ const Write_content = () => {
       new Blob([JSON.stringify(boardDto)], { type: "application/json" })
     ); // 직렬화하여 객체 저장
 
-    // try {
-    //   const response = axios
-    //     .post("http://api.domarketdodo.shop/board/post", formData, {
-    //       headers: {
-    //         "Content-Type": "multipart/form-data", // Content-Type 설정
-    //       },
-    //     })
-    //     .then((response) => {
-    //       console.log(response.data);
-    //       alert("글 등록에 성공하셨습니다!");
-    //       navigate("/");
-    //     })
-    //     .catch((error) => {
-    //       alert(error.response.data.message);
-    //       console.error("Error:", error);
-    //     });
-    // } catch (error) {
-    //   console.error("Error:", error);
-    // }
+    try {
+      const response = axios
+        .post("http://api.domarketdodo.shop/board/post", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data", // Content-Type 설정
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          alert("글 등록에 성공하셨습니다!");
+          navigate("/");
+        })
+        .catch((error) => {
+          alert(error.response.data.message);
+          console.error("Error:", error);
+        });
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
