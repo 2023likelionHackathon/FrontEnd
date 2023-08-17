@@ -100,11 +100,23 @@ hr {
   font-size:15px;
   margin-bottom: 10px;
   margin-left:5px;
-  margin-top:2px;
   font-weight: bold;
   color: rgb(78, 78, 123);
   cursor: pointer;
 }
 .jumpoLink{
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin-left:16px;
+  margin-top:4px;
+}
+.loc_div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+}
+.empty_div{
+  color:white;
 }
