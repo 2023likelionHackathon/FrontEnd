@@ -20,6 +20,8 @@ const modalStyle = {
   border: "1px solid black",
   width: "300px",
   height: "450px",
+  maxHeight: "450px",
+  overflow: "scroll",
 };
 
 const Write_content = () => {
@@ -158,7 +160,7 @@ const Write_content = () => {
           onClick={toggleDropdown}
         >
           <span className={styles.dropDownText}>
-            <img src="pics/addLoc.png"></img>
+            <img src="pics/addLoc.png" />
           </span>
           <div className={styles.dropDownContent}>
             <ul>
