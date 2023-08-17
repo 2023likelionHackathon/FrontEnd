@@ -12,7 +12,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const CustomRating = (props) => {
-  console.log("score", props.score);
+  // console.log("score", props.score);
   return (
     <Rating
       name="custom-rating"
@@ -30,11 +30,9 @@ const getDayMinuteCounter = (props) => {
     return "";
   }
   const today = moment();
-  console.log("today", today);
 
-  const postingDate = moment(props.date);
-  console.log("실 data", props.date);
-  console.log("postingdate", postingDate);
+  const postingDate = moment(props.date).add(9, "h");
+
   const dayDiff = postingDate.diff(today, "days");
   const hourDiff = postingDate.diff(today, "hours");
   const minutesDiff = postingDate.diff(today, "minutes");
@@ -67,7 +65,7 @@ const Posts = ({
   size_reply,
   createdDate,
 }) => {
-  console.log("cookie", document.cookie);
+  console.log("createdDate", createdDate);
   const [isLiked, setIsLiked] = useState(likes.isLiked);
   const [likeCount, setLikeCount] = useState(likes.likes_cnt);
 
@@ -109,7 +107,6 @@ const Posts = ({
           </div>
           <CustomRating score={score} />
         </div>
-
         <div className={styles.loc_div}>
           <div className={styles.empty_div}></div>
           <Link to={`/market/0/store/${storeId}`} className={styles.jumpoLink}>
@@ -117,7 +114,6 @@ const Posts = ({
             <div className={styles.users_jumpo} >{storeName}</div>
           </Link>
         </div>
-
 
         <div className={styles.post_image}>
           <img src={imgUrlList[0]} alt="image" />
