@@ -6,44 +6,6 @@ export const markets = [
     timeline: "매일 09:00 ~ 23:00",
     stores: [
       {
-        name: "성수 물고기",
-        image: "/pics/marketTitle/seongSuTitle.png",
-        address: "서울특별시 성동구 성수동 2가 339-122",
-        rating: 3,
-        times: [
-          {
-            day: "화 ~ 목",
-            time: "오후 4시 ~ 자정 12시",
-          },
-          {
-            day: "휴무일",
-            time: "매주 월요일",
-          },
-        ],
-        menu: [
-          {
-            img: "/pics/cream_gazami.png",
-            name: "크림가자미",
-            price: "20,000원",
-            description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
-          },
-        ],
-        submenu: [
-          {
-            name: "젓갈 플래터",
-            price: "29,000",
-          },
-          {
-            name: "똠얌부대전골",
-            price: "26,000",
-          },
-          {
-            name: "메론프로슈토",
-            price: "17,000",
-          },
-        ],
-      },
-      {
         name: "2002횟집",
         image: "/pics/marketTitle/2002Title.jpg",
         address: "서울특별시 성동구 성수동 2가 339-122",
@@ -409,61 +371,58 @@ export const markets = [
         ],
       },
       {
-        name: "성수 물고기",
+        name: "은식당",
         image: "/pics/marketTitle/seongSuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
         times: [
           {
-            day: "화 ~ 목",
-            time: "오후 4시 ~ 자정 12시",
+            day: "월 ~ 금",
+            time: "오전 11시 ~ 오후 10시",
+          },
+          {
+            day: "토요일",
+            time: "오전 11시 ~ 오후 3시",
+          },
+          {
+            day: "브레이크타임",
+            time: "오후 3시 ~ 오후 5시",
           },
           {
             day: "휴무일",
-            time: "매주 월요일",
+            time: "매주 일요일",
           },
         ],
-        menu: [
-          {
-            img: "/pics/cream_gazami.png",
-            name: "크림가자미",
-            price: "20,000원",
-            description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
-          },
-        ],
+        menu: [],
         submenu: [
           {
-            name: "젓갈 플래터",
-            price: "29,000",
+            name: "나혼자 갈비찜",
+            price: "15,000",
           },
           {
-            name: "똠얌부대전골",
-            price: "26,000",
+            name: "매운 갈비찜",
+            price: "28,000",
           },
           {
-            name: "메론프로슈토",
-            price: "17,000",
+            name: "콩비지 찌개",
+            price: "8,000",
           },
         ],
       },
       {
-        name: "성수 물고기",
-        image: "/pics/marketTitle/seongSuTitle.png",
+        name: "지수 언니",
+        image: "/pics/marketTitle/jisuTitle.png",
         address: "서울특별시 성동구 성수동 2가 339-122",
         rating: 3,
         times: [
           {
-            day: "화 ~ 목",
-            time: "오후 4시 ~ 자정 12시",
-          },
-          {
-            day: "휴무일",
-            time: "매주 월요일",
+            day: "매일",
+            time: "오전 12시 ~ 오후 8시",
           },
         ],
         menu: [
           {
-            img: "/pics/cream_gazami.png",
+            img: "/pics/marketMenu/jisuMenu.jpg",
             name: "크림가자미",
             price: "20,000원",
             description: "버터에 구운 가자미에 크림소스와 감자를 곁들인 안주",
