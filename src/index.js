@@ -15,6 +15,7 @@ import { createStore } from "redux";
 import reducer from "./store/Stored_info";
 import { Provider } from "react-redux";
 import StoreDetail from "./components/Sijang_info/StoreDetail";
+import Gn from "./pages/Gn";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
     path: "/comment/:boardId",
     element: <Comment_page />,
   },
+  {
+    path: "/gn",
+    element: <Gn/>,
+  }
 ]);
 
 const store = createStore(reducer);
