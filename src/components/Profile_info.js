@@ -4,10 +4,13 @@ import Posts from "./Feed/timeline/Posts";
 import axios from "axios";
 const Profile_info = ({ user, posts }) => {
   if (!posts) {
-    return <div>로딩중</div>;
-  } else {
-    posts.map((post) => console.log(post.imgUrlList[0]));
-    console.log(posts);
+    return (
+      <div className={styles.loadingScreen}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    );
   }
 
   console.log("?");
