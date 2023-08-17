@@ -21,6 +21,7 @@ const modalStyle = {
   width:"300px",
   height:"450px",
   maxHeight:"450px",
+  overflow:"scroll",
 };
 
 const Write_content = () => {
