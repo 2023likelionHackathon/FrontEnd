@@ -140,3 +140,9 @@
 .emptySpace {
   height: 80px; /* 원하는 높이로 조정 */
 }
+.margin_div{
+  margin-top:20px;
+}
+.sajangnim_{
+  padding-top: 0;
+}
