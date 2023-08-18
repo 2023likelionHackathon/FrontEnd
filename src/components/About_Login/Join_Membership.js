@@ -138,7 +138,7 @@ const Join_Membership = () => {
         <label for="userId" className={styles.label_wrapper}>
           <span className={styles.label_text}>아이디</span>
         </label>
-        <p className={styles.red_text}>아이디는 필수 입력값입니다.</p>
+
         <button
           className={styles.duplicate}
           onClick={(e) => {
@@ -163,10 +163,7 @@ const Join_Membership = () => {
         <label for="pw" className={styles.label_wrapper}>
           <span className={styles.label_text}>비밀번호</span>
         </label>
-        <p className={styles.red_text}>
-          비밀번호는 영문자와 숫자, 특수기호가 적어도 1개 이상 포함된 6자~12자의
-          비밀번호여야 합니다.
-        </p>
+        <p className={styles.red_text}>아이디는 필수 입력값입니다.</p>
       </div>
       <div className={styles.field}>
         <input
@@ -181,6 +178,10 @@ const Join_Membership = () => {
         <label for="pw_check" className={styles.label_wrapper}>
           <span className={styles.label_text}>비밀번호 확인</span>
         </label>
+        <p className={styles.red_text}>
+          비밀번호는 영문자와 숫자, 특수기호가 적어도 1개 이상 포함된 6자~12자의
+          비밀번호여야 합니다.
+        </p>
         {!passwordMatch && (
           <p className={styles.error__}>비밀번호가 일치하지 않습니다.</p>
         )}
@@ -197,7 +198,7 @@ const Join_Membership = () => {
         <label for="nickname" className={styles.label_wrapper}>
           <span className={styles.label_text}>닉네임</span>
         </label>
-        <p className={styles.red_text}>닉네임은 필수 입력값입니다.</p>
+
         <button
           className={styles.duplicate}
           onClick={(e) => {
@@ -219,6 +220,7 @@ const Join_Membership = () => {
         <label for="email" className={styles.label_wrapper}>
           <span className={styles.label_text}>이메일</span>
         </label>
+        <p className={styles.red_text}>닉네임은 필수 입력값입니다.</p>
       </div>
       <div className={styles.role_field}>
         <label className={styles.radioButtonLabel}>
@@ -256,10 +258,10 @@ const Join_Membership = () => {
               Height: "40px",
             }}
           />
-          <p className={styles.red_text}>코드를 입력해주세요.</p>
           <label for="code" className={styles.label_wrapper}>
-            <span className={styles.label_text}>사장님 코드</span>
+            <span className={styles.label_text}>코드</span>
           </label>
+          <p className={styles.red_text}>코드를 입력해주세요.</p>
         </div>
       )}
       <div>
