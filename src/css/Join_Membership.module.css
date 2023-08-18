@@ -1,5 +1,5 @@
 /* 기본 스타일링 */
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 .container {
   margin: 0;
   display: flex;
@@ -13,7 +13,7 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: auto;
-  font-family: Pretendard,'Noto Sans KR',sans-serif;
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
 }
 .field {
   display: flex;
@@ -87,9 +87,9 @@
   box-shadow: 3px 3px 3px lightgrey;
   transition: background-color 0.3s, transform 0.3s;
 }
-.btn:active{
-  background-color: rgba(247, 128, 128,0.85);
-  transform: translateY(2px); 
+.btn:active {
+  background-color: rgba(247, 128, 128, 0.85);
+  transform: translateY(2px);
 }
 .duplicate {
   background-color: white;
@@ -109,7 +109,7 @@
 }
 .error__ {
   color: grey;
-  font-size:15px;
+  font-size: 15px;
 }
 
 .role_field {
@@ -140,9 +140,13 @@
 .emptySpace {
   height: 80px; /* 원하는 높이로 조정 */
 }
-.margin_div{
-  margin-top:20px;
+.margin_div {
+  margin-top: 20px;
 }
-.sajangnim_{
+.sajangnim_ {
   padding-top: 0;
+}
+.red_text {
+  color: rgba(211, 16, 16, 0.649);
+  font-size: 1px;
 }
