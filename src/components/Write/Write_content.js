@@ -11,15 +11,15 @@ import { useNavigate } from "react-router-dom";
 const CustomBackdrop = styled("div")({});
 
 const modalStyle = {
-  display: "absolute",
-  top: "50%",
+  display: "flex",
+  top: "40%",
   left: "50%",
-  transform: "translate(-50%,-50%)",
   backgroundColor: "white",
   zIndex: "1000",
   width: "300px",
-  heigth: "300px",
+  heigth: "50px",
   border: "1px solid black",
+  bottom: "40px",
 };
 
 const Write_content = () => {
