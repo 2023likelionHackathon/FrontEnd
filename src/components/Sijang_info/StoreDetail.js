@@ -10,6 +10,7 @@ import Timeline from "../Feed/timeline/Timeline";
 import axios from "axios";
 import BottomBar from "../BottomBar";
 import SearchBar from "../SearchBar";
+import Posts from "../Feed/timeline/Posts";
 
 const StoreDetail = () => {
   const [posts, setPosts] = useState([]);
@@ -130,7 +131,24 @@ const StoreDetail = () => {
             })}
           </div>
           <hr />
-          <Timeline posts={posts}></Timeline>
+          <div className={styles.timeline_posts}>
+            {posts.map((post) => (
+              //   <img src={post.imgUrlList[0]} className={styles.images__} />
+              <Posts
+                boardId={post.boardId}
+                userId={post.userId}
+                writer={post.writer}
+                storeId={post.storeId}
+                storeName={post.storeName}
+                content={post.content}
+                score={post.score}
+                likes={post.likes}
+                imgUrlList={post.imgUrlList}
+                size_reply={post.size_reply}
+                createdDate={post.createdDate}
+              />
+            ))}
+          </div>
         </div>
         <div className={styles.margin_div}></div>
       </div>
