@@ -159,3 +159,27 @@
   width: 25px;
   height: 25px;
 }
+.logout_{
+  background-color: rgb(247, 128, 128);
+  border-style: none;
+  width: 65px;
+  height: 30px;
+  border-radius: 20px ;
+  font-weight: bold;
+  box-shadow: 2px lightgrey;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.logout_:active{
+  background-color: rgb(247, 128, 128,0.85);
+  transform: translateY(2px); 
+}
+.log_out_div{
+  width: 100%;
+  transform: translateX(85%);
+}
+.logout_icon{
+  color:white;
+  height: 80%;
+  width: 80%;
+}
