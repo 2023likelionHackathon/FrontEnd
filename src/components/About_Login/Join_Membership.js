@@ -58,7 +58,8 @@ const Join_Membership = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formData.pw !== formData.pwd_check) {
+    console.log(!passwordMatch);
+    if (!passwordMatch) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
@@ -85,7 +86,7 @@ const Join_Membership = () => {
   return (
     <div className={styles.container}>
       <div className={styles.margin_div}></div>
-      <div className={styles.field}>  
+      <div className={styles.field}>
         <input
           type="text"
           name="name"
@@ -219,8 +220,8 @@ const Join_Membership = () => {
             value={formData.code}
             onChange={handleInputChange}
             style={{
-              paddingTop:"15px",
-              Height: "40px"
+              paddingTop: "15px",
+              Height: "40px",
             }}
           />
           <label for="code" className={styles.label_wrapper}>
