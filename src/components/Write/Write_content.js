@@ -157,7 +157,9 @@ const Write_content = () => {
             }`}
             onClick={toggleDropdown}
           >
-            <span className={styles.dropDownText}></span>
+            <span className={styles.dropDownText}>
+              <img src="pics/addLoc.png"></img>
+            </span>
             <div className={styles.dropDownContent}>
               <ul>
                 <li onClick={() => handlePlaceSelect("뚝도청춘시장")}>
