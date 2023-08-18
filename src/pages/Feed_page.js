@@ -4,6 +4,7 @@ import BottomBar from "../components/BottomBar";
 import SearchBar from "../components/SearchBar";
 import Timeline from "../components/Feed/timeline/Timeline";
 import axios from "axios";
+import styles from "../css/bodyAttribute.module.css";
 const Feed_page = () => {
   const [posts, setPosts] = useState();
   const [search, setSearch] = useState("");
@@ -19,7 +20,7 @@ const Feed_page = () => {
     getPostList(); // 1) feed 조회 함수 호출
   }, []);
   return (
-    <div>
+    <div className={styles.root}>
       <SearchBar isSearch search={search} setSearch={setSearch} />
       <Timeline
         posts={posts?.filter((post) => post.storeName.indexOf(search) !== -1)}

@@ -176,14 +176,11 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  overflow: hidden;
+  overflow: scroll;
   width: 300px;
   height: 450px;
   padding: 10px;
-}
-.choose_ {
-  text-align: center;
+  -ms-overflow-style: none;
 }
 .modalContent::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
