@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../css/Join_Membership.module.css";
 import axios from "axios";
+import { Height } from "@mui/icons-material";
 const Join_Membership = () => {
   const [formData, setFormData] = useState({
     userId: "",
@@ -22,9 +23,14 @@ const Join_Membership = () => {
   };
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
-    setPasswordMatch(formData.pw === formData.pwd_check);
-    console.log("pwd",formData.pw);
-    console.log("pwd_check",formData.pwd_check);
+    console.log("비교:", formData.pw === formData.pwd_check);
+    if (formData.pw === formData.pwd_check) {
+      setPasswordMatch(true);
+    }
+    //setPasswordMatch(formData.pw === formData.pwd_check);
+    console.log("pwd", formData.pw);
+    console.log("pwd_check", formData.pwd_check);
+    console.log(passwordMatch);
   };
   const handleDuplicateCheckId = async (checkValue) => {
     //서버로 중복확인 요청 보내고 결과 받는 함수
@@ -57,7 +63,8 @@ const Join_Membership = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formData.pwd !== formData.pwd_check) {
+    console.log(!passwordMatch);
+    if (!passwordMatch) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
@@ -83,6 +90,7 @@ const Join_Membership = () => {
   };
   return (
     <div className={styles.container}>
+      <div className={styles.margin_div}></div>
       <div className={styles.field}>
         <input
           type="text"
@@ -140,7 +148,7 @@ const Join_Membership = () => {
           name="pwd_check"
           autoComplete="off"
           required
-          value= {formData.pwd_check}
+          value={formData.pwd_check}
           onChange={handleInputChange}
           onBlur={handlePasswordCheck}
         />
@@ -216,6 +224,10 @@ const Join_Membership = () => {
             required
             value={formData.code}
             onChange={handleInputChange}
+            style={{
+              paddingTop: "15px",
+              Height: "40px",
+            }}
           />
           <label for="code" className={styles.label_wrapper}>
             <span className={styles.label_text}>사장님 코드</span>

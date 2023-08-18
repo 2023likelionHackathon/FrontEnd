@@ -20,6 +20,7 @@ const modalStyle = {
   heigth: "50px",
   border: "1px solid black",
   bottom: "40px",
+
 };
 
 const Write_content = () => {
@@ -158,7 +159,7 @@ const Write_content = () => {
           onClick={toggleDropdown}
         >
           <span className={styles.dropDownText}>
-            <img src="pics/addLoc.png"></img>
+            <img src="pics/addLoc.png" />
           </span>
           <div className={styles.dropDownContent}>
             <ul>
@@ -179,6 +180,11 @@ const Write_content = () => {
         style={modalStyle}
       >
         <div className={styles.modalContent}>
+          <div className={styles.margin_div_1}>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
           <h2 className={styles.choose_}>장소 선택</h2>
           <ul>
             {selectedPlace === "뚝도청춘시장" && (

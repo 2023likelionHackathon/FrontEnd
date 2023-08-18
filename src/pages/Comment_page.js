@@ -53,6 +53,25 @@ const Comment_page = () => {
         alert(error.response.data.message);
       });
   };
+  if (!comments) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <SearchBar></SearchBar>
+        <div className={styles.loadingScreen}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <BottomBar index={"홈"}></BottomBar>
+      </div>
+    );
+  }
 
   return (
     <div
