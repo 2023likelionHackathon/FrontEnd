@@ -11,17 +11,16 @@ import { useNavigate } from "react-router-dom";
 const CustomBackdrop = styled("div")({});
 
 const modalStyle = {
-  display: "absolute",
-  top: "50%",
+  display: "flex",
+  top: "40%",
   left: "50%",
-  transform: "translate(-50%,-50%)",
   backgroundColor: "white",
   zIndex: "1000",
-  border: "1px solid black",
   width: "300px",
-  height: "500px",
-  maxHeight: "500px",
-  overflow: "scroll",
+  heigth: "50px",
+  border: "1px solid black",
+  bottom: "40px",
+
 };
 
 const Write_content = () => {
@@ -326,34 +325,34 @@ const Write_content = () => {
                 <span className={styles.no_jumpo}>등록된 점포가 없습니다.</span>
               </>
             )}
+            <div className={styles.select__btns}>
+              <button
+                className={styles.Ok_btn}
+                onClick={() => {
+                  toggleModal();
+                }}
+              >
+                확인
+              </button>
+              <button
+                className={styles.cancel_btn}
+                onClick={() => {
+                  toggleModal();
+                }}
+              >
+                취소
+              </button>
+              <button
+                className={styles.init_btn}
+                onClick={() => {
+                  handlePlaceSelect("");
+                  handleTagSelect("");
+                }}
+              >
+                초기화
+              </button>
+            </div>
           </ul>
-          <div className={styles.select__btns}>
-            <button
-              className={styles.Ok_btn}
-              onClick={() => {
-                toggleModal();
-              }}
-            >
-              확인
-            </button>
-            <button
-              className={styles.cancel_btn}
-              onClick={() => {
-                toggleModal();
-              }}
-            >
-              취소
-            </button>
-            <button
-              className={styles.init_btn}
-              onClick={() => {
-                handlePlaceSelect("");
-                handleTagSelect("");
-              }}
-            >
-              초기화
-            </button>
-          </div>
         </div>
       </Modal>
       <div className={styles.star_box}>
