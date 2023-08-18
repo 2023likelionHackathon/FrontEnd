@@ -176,16 +176,19 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: scroll;
+  overflow: hidden;
   width: 300px;
   height: 450px;
   padding: 10px;
+
   -ms-overflow-style: none;
 }
 .modalContent::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
-
+.choose_ {
+  text-align: center;
+}
 .Ok_btn {
   background-color: rgb(247, 128, 128);
   width: 60px;
