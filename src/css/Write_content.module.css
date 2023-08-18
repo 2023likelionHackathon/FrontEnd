@@ -150,7 +150,8 @@ hr {
 }
 
 .dropDown.active .dropDownContent {
-  display: block;
+  display: flex;
+  overflow: hidden;
 }
 .dropDown.active .dropDownText img {
   transform: rotate(90deg); /* 클릭 시 180도 회전 */
@@ -175,10 +176,19 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 400px;
-}
+  overflow: hidden;
+  width: 300px;
+  height: 450px;
+  padding: 10px;
 
+  -ms-overflow-style: none;
+}
+.modalContent::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.choose_ {
+  text-align: center;
+}
 .Ok_btn {
   background-color: rgb(247, 128, 128);
   width: 60px;
@@ -244,7 +254,4 @@ hr {
 }
 .emptySpace2 {
   height: 40px; /* 원하는 높이로 조정 */
-}
-.select_btns{
-  margin-top:0;
 }

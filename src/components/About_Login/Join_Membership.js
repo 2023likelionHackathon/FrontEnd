@@ -23,9 +23,14 @@ const Join_Membership = () => {
   };
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
-    setPasswordMatch(formData.pw === formData.pwd_check);
-    //console.log("pwd", formData.pw);
-    //console.log("pwd_check", formData.pwd_check);
+    console.log("비교:", formData.pw === formData.pwd_check);
+    if (formData.pw === formData.pwd_check) {
+      setPasswordMatch(true);
+    }
+    //setPasswordMatch(formData.pw === formData.pwd_check);
+    console.log("pwd", formData.pw);
+    console.log("pwd_check", formData.pwd_check);
+    console.log(passwordMatch);
   };
   const handleDuplicateCheckId = async (checkValue) => {
     //서버로 중복확인 요청 보내고 결과 받는 함수
@@ -58,9 +63,32 @@ const Join_Membership = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formData.pw !== formData.pwd_check) {
+    console.log(!passwordMatch);
+    if (!passwordMatch) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
+    }
+    if (formData.userId === "") {
+      alert("아이디는 필수값 입니다.");
+      return;
+    }
+    if (formData.pw === "") {
+      alert("비밀번호는 필수값 입니다.");
+      return;
+    }
+    if (formData.nickname === "") {
+      alert("닉네임은 필수값 입니다.");
+      return;
+    }
+    if (formData.role === "") {
+      alert("일반 사용자 또는 사장님을 선택해주세요.");
+      return;
+    }
+    if (formData.role === "MERCHANT") {
+      if (formData.code === "") {
+        alert("인증을 위한 코드를 입력해주세요.");
+        return;
+      }
     }
     console.log("Form Data:", formData);
     axios
@@ -85,7 +113,7 @@ const Join_Membership = () => {
   return (
     <div className={styles.container}>
       <div className={styles.margin_div}></div>
-      <div className={styles.field}>  
+      <div className={styles.field}>
         <input
           type="text"
           name="name"
@@ -135,6 +163,7 @@ const Join_Membership = () => {
         <label for="pw" className={styles.label_wrapper}>
           <span className={styles.label_text}>비밀번호</span>
         </label>
+        <p className={styles.red_text}>아이디는 필수 입력값입니다.</p>
       </div>
       <div className={styles.field}>
         <input
@@ -149,6 +178,10 @@ const Join_Membership = () => {
         <label for="pw_check" className={styles.label_wrapper}>
           <span className={styles.label_text}>비밀번호 확인</span>
         </label>
+        <p className={styles.red_text}>
+          비밀번호는 영문자와 숫자, 특수기호가 적어도 1개 이상 포함된 6자~12자의
+          비밀번호여야 합니다.
+        </p>
         {!passwordMatch && (
           <p className={styles.error__}>비밀번호가 일치하지 않습니다.</p>
         )}
@@ -165,6 +198,7 @@ const Join_Membership = () => {
         <label for="nickname" className={styles.label_wrapper}>
           <span className={styles.label_text}>닉네임</span>
         </label>
+
         <button
           className={styles.duplicate}
           onClick={(e) => {
@@ -186,6 +220,7 @@ const Join_Membership = () => {
         <label for="email" className={styles.label_wrapper}>
           <span className={styles.label_text}>이메일</span>
         </label>
+        <p className={styles.red_text}>닉네임은 필수 입력값입니다.</p>
       </div>
       <div className={styles.role_field}>
         <label className={styles.radioButtonLabel}>
@@ -219,13 +254,14 @@ const Join_Membership = () => {
             value={formData.code}
             onChange={handleInputChange}
             style={{
-              paddingTop:"15px",
-              Height: "40px"
+              paddingTop: "15px",
+              Height: "40px",
             }}
           />
           <label for="code" className={styles.label_wrapper}>
-            <span className={styles.label_text}>사장님 코드</span>
+            <span className={styles.label_text}>코드</span>
           </label>
+          <p className={styles.red_text}>코드를 입력해주세요.</p>
         </div>
       )}
       <div>

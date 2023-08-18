@@ -1,10 +1,10 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
-  /* left: 50%; */
-  /* top: 11%; */
-  /* transform: translate(-50%, 0%); */
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  transform: translate(-50%, 0%);
   width: 707px;
 }
 
@@ -82,6 +82,10 @@
     transform: scale(1.2); /* 1.2배 */
   }
 }
+
 .emptySpace {
   height: 20px; /* 원하는 높이로 조정 */
+}
+.container {
+  box-shadow: 3px 3px 3px;
 }

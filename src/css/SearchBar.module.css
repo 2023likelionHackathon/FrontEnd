@@ -18,6 +18,8 @@
   background-color: rgb(243, 239, 239);
   border-radius: 15px;
   border-style: none;
+}
+.logoBar input {
   background-image: url("/public/pics/search.png");
   background-repeat: no-repeat;
   background-size: 20px; /* 배경 이미지 크기 설정 */
