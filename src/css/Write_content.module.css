@@ -245,6 +245,9 @@ hr {
 .emptySpace2 {
   height: 40px; /* 원하는 높이로 조정 */
 }
-.select_btns{
-  margin-top:0;
+.select_btns {
+  margin-top: 0;
+}
+.margin_div1 {
+  margin-top: 100px;
 }

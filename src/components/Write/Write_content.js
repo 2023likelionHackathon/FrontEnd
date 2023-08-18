@@ -19,8 +19,8 @@ const modalStyle = {
   zIndex: "1000",
   border: "1px solid black",
   width: "300px",
-  height: "600px",
-  maxHeight: "600px",
+  height: "500px",
+  maxHeight: "500px",
   overflow: "scroll",
 };
 
@@ -181,6 +181,11 @@ const Write_content = () => {
         style={modalStyle}
       >
         <div className={styles.modalContent}>
+          <div className={styles.margin_div_1}>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
           <h2 className={styles.choose_}>장소 선택</h2>
           <ul>
             {selectedPlace === "뚝도청춘시장" && (
