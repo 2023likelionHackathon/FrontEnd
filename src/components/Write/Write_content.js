@@ -320,7 +320,9 @@ const Write_content = () => {
                     </span>
                   </>
                 )}
-                <div className={styles.select__btns}>
+                
+              </ul>
+              <div className={styles.select__btns}>
                   <button
                     className={styles.Ok_btn}
                     onClick={() => {
@@ -347,7 +349,6 @@ const Write_content = () => {
                     초기화
                   </button>
                 </div>
-              </ul>
             </div>
           </Modal>
         </div>
