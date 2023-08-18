@@ -23,9 +23,14 @@ const Join_Membership = () => {
   };
   const handlePasswordCheck = () => {
     //비번 확인 비교 함수
-    setPasswordMatch(formData.pw === formData.pwd_check);
-    //console.log("pwd", formData.pw);
-    //console.log("pwd_check", formData.pwd_check);
+    console.log("비교:", formData.pw === formData.pwd_check);
+    if (formData.pw === formData.pwd_check) {
+      setPasswordMatch(true);
+    }
+    //setPasswordMatch(formData.pw === formData.pwd_check);
+    console.log("pwd", formData.pw);
+    console.log("pwd_check", formData.pwd_check);
+    console.log(passwordMatch);
   };
   const handleDuplicateCheckId = async (checkValue) => {
     //서버로 중복확인 요청 보내고 결과 받는 함수
